@@ -15,7 +15,11 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<LayoutPost title={frontmatter.title} publishedAt={frontmatter.publishedAt}>
+<LayoutPost
+    title={frontmatter.title}
+    description={frontmatter.excerpt}
+    publishedAt={frontmatter.publishedAt}
+>
     <Content />
 </LayoutPost>
 
