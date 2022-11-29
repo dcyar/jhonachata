@@ -1,0 +1,29 @@
+---
+import LayoutPost from '../layouts/LayoutPost.astro';
+
+export async function getStaticPaths() {
+    const posts = await Astro.glob('../posts/*.md');
+
+    return posts.map((post) => ({
+        params: {
+            slug: post.frontmatter.slug,
+        },
+        props: { post },
+    }));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<LayoutPost title={frontmatter.title} publishedAt={frontmatter.publishedAt}>
+    <Content />
+</LayoutPost>
+
+<script>
+    const pre = document.querySelectorAll('.astro-code');
+
+    pre.forEach((p) => {
+        p.style.cssText =
+            'background-color: #0d1117; overflow-x: auto; padding: 15px; margin: 15px 0;border-radius:10px;';
+    });
+</script>

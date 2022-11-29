@@ -1,0 +1,30 @@
+---
+import MainLayout from './MainLayout.astro';
+import Footer from '../shared/Footer.astro';
+
+import { formatDate } from '../helpers';
+
+export interface Props {
+    title: string;
+    publishedAt: string;
+}
+
+const { title, publishedAt } = Astro.props;
+---
+
+<MainLayout title={`${title} — Jhon Achata`}>
+    <div class="grow my-10">
+        <div class="text-sm font-semibold flex justify-between mb-24">
+            <a href="/">« Atrás</a>
+            <p class="text-gray-600">
+                Escrito por Jhon Achata el {formatDate(publishedAt)}
+            </p>
+        </div>
+        <h2 class="text-4xl font-extrabold mb-6">{title}</h2>
+
+        <div class="mb-8 max-w-none prose">
+            <slot />
+        </div>
+    </div>
+    <Footer />
+</MainLayout>
