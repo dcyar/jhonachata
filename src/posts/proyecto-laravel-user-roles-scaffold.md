@@ -12,7 +12,7 @@ url: https://github.com/dcyar/laravel-user-role-scaffold
 
 ![OREC-EX Dashboard](/images/laravel-role-scaffold/dashboard.png)
 
-> Puedes ver mas en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User-Role Scaffold</a>
+> Puedes ver más en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User-Role Scaffold</a>
 
 ## Caracteristicas del Sistema:
 
