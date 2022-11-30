@@ -19,6 +19,7 @@ const { Content, frontmatter } = Astro.props.post;
     title={frontmatter.title}
     description={frontmatter.excerpt}
     publishedAt={frontmatter.publishedAt}
+    path={`/${frontmatter.slug}`}
 >
     <Content />
 </LayoutPost>

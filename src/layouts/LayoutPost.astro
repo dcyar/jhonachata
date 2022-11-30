@@ -4,10 +4,10 @@ import Footer from '../shared/Footer.astro';
 
 import { formatDate } from '../helpers';
 
-const { title, description, publishedAt } = Astro.props;
+const { title, description, publishedAt, path } = Astro.props;
 ---
 
-<MainLayout title={`${title} — Jhon Achata`} description={description}>
+<MainLayout title={`${title} — Jhon Achata`} description={description} path={path}>
     <div class="grow my-10">
         <div class="text-sm font-semibold flex justify-between mb-24">
             <a href="/">« Atrás</a>

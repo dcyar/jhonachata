@@ -3,10 +3,10 @@ import MainLayout from './MainLayout.astro';
 import Header from '../shared/Header.astro';
 import Footer from '../shared/Footer.astro';
 
-const { title, description } = Astro.props;
+const { title, description, path } = Astro.props;
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} path={path}>
     <Header />
     <div class="grow my-10">
         <slot />
