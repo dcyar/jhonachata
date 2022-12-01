@@ -1,5 +1,8 @@
 export const formatDate = (date) => {
-    return new Date(date).toLocaleDateString('es-PE', {
+    const dateFormated = new Date(date);
+    dateFormated.setHours(dateFormated.getHours() + 5);
+
+    return dateFormated.toLocaleDateString('es-PE', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',

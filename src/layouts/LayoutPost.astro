@@ -7,19 +7,25 @@ import { formatDate } from '../helpers';
 const { title, description, publishedAt, path } = Astro.props;
 ---
 
-<MainLayout title={`${title} — Jhon Achata`} description={description} path={path}>
+<MainLayout
+    title={`${title} — Jhon Achata`}
+    description={description}
+    path={path}
+>
     <div class="grow my-10">
-        <div class="text-sm font-semibold flex justify-between mb-24">
-            <a href="/">« Atrás</a>
-            <p class="text-gray-600">
+        <div
+            class="text-sm font-semibold flex justify-between items-center space-x-4 mb-12 md:mb-24"
+        >
+            <a href="/" class="min-w-max">« Atrás</a>
+            <p class="text-gray-600 text-end">
                 Escrito por Jhon Achata el {formatDate(publishedAt)}
             </p>
         </div>
-        <h2 class="text-4xl font-extrabold mb-6">{title}</h2>
+        <h1 class="md:text-4xl text-3xl font-extrabold mb-6">{title}</h1>
 
-        <div class="mb-8 max-w-none prose">
+        <article class="mb-8 max-w-none prose">
             <slot />
-        </div>
+        </article>
     </div>
     <Footer />
 </MainLayout>
