@@ -25,9 +25,7 @@ const { Content, frontmatter } = Astro.props.post;
 </LayoutPost>
 
 <script>
-    const pre = document.querySelectorAll('.astro-code');
-
-    pre.forEach((p) => {
+    document.querySelectorAll('.astro-code').forEach((p) => {
         p.classList.add(
             'bg-slate-900',
             'overflow-x-auto',
@@ -37,9 +35,7 @@ const { Content, frontmatter } = Astro.props.post;
         );
     });
 
-    const code = document.querySelectorAll('p > code');
-
-    code.forEach((c) => {
+    document.querySelectorAll('p > code').forEach((c) => {
         c.classList.add(
             'bg-lime-100',
             'p-1',
