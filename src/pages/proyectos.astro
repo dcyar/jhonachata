@@ -27,7 +27,7 @@ const posts = allPost
             posts.map(({ frontmatter }) => (
                 <PostCard
                     title={frontmatter.title}
-                    href={frontmatter.slug}
+                    href={`/${frontmatter.slug}`}
                     body={frontmatter.excerpt}
                     date={formatDate(frontmatter.publishedAt)}
                     type={frontmatter.type}
