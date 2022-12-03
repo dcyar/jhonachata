@@ -1,5 +1,5 @@
 ---
-type: project
+type: proyecto
 title: Proyecto Bookstore
 slug: proyecto-bookstore
 publishedAt: 2019-12-07

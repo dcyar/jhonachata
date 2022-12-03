@@ -1,5 +1,5 @@
 ---
-type: article
+type: artículo
 title: UUID's en laravel
 slug: uuid-en-laravel
 publishedAt: 2022-11-29
@@ -48,7 +48,7 @@ cd ~/your-path/uuid
 
 ![Crear modelo Task](/images/uuids-en-laravel/make-model.png)
 
-Usamos la opción _**-m**_, para generar tambien la migración.
+Usamos la opción `-m`, para generar tambien la migración.
 
 #### 4. Modificamos la migración del modelo Task
 

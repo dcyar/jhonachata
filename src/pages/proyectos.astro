@@ -5,7 +5,10 @@ import { formatDate } from '../helpers';
 
 const allPost = await Astro.glob('../posts/*.{md,mdx}');
 const posts = allPost
-    .filter(({ frontmatter }) => !frontmatter.draft)
+    .filter(
+        ({ frontmatter }) =>
+            !frontmatter.draft && frontmatter.type === 'proyecto'
+    )
     .sort((a, b) => {
         return (
             new Date(b.frontmatter.publishedAt).getTime() -
@@ -14,7 +17,10 @@ const posts = allPost
     });
 ---
 
-<Layout title="Jhon Achata — Inicio">
+<Layout
+    title="Jhon Achata — Proyectos"
+    description="Proyectos personales realizados con diferentes tecnologías"
+>
     <article class="flex-flex-col">
         {
             posts.map(({ frontmatter }) => (

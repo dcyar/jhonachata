@@ -1,5 +1,5 @@
 ---
-type: project
+type: proyecto
 title: Proyecto Laravel user roles scaffold
 slug: proyecto-laravel-user-roles-scaffold
 publishedAt: 2019-12-08

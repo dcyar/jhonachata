@@ -1,5 +1,5 @@
 ---
-type: proyect
+type: proyecto
 title: Proyecto Orec-ex
 slug: proyecto-orec-ex
 publishedAt: 2019-10-25

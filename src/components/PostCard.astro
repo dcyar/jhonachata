@@ -4,15 +4,21 @@ export interface Props {
     body: string;
     href: string;
     date: string;
+    type: string;
 }
 
-const { href, title, body, date } = Astro.props;
+const { href, title, body, date, type } = Astro.props;
 ---
 
 <div class="border-b border-gray-300 last:border-0 py-4">
     <a href={href} class="group">
-        <h2 class="group-hover:underline font-bold text-sm">{title}</h2>
+        <h2 class="group-hover:underline font-bold text-md">
+            {title}
+        </h2>
         <p class="text-gray-600 text-sm my-1">{body}</p>
     </a>
-    <small class="text-gray-500 mt-1">{date}</small>
+    <small class="text-gray-500 mt-1">
+        <span class="uppercase">{type}</span>
+        — {date}
+    </small>
 </div>

@@ -18,7 +18,8 @@ const { title, description, publishedAt, path } = Astro.props;
         >
             <a href="/" class="min-w-max">« Atrás</a>
             <p class="text-gray-600 text-end">
-                Escrito por Jhon Achata el {formatDate(publishedAt)}
+                Escrito por Jhon Achata el
+                {formatDate(publishedAt)}
             </p>
         </div>
         <h1 class="md:text-4xl text-3xl font-extrabold mb-6">{title}</h1>
