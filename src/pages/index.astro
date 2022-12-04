@@ -20,10 +20,15 @@ const posts = allPost
             posts.map(({ frontmatter }) => (
                 <PostCard
                     title={frontmatter.title}
-                    href={frontmatter.type !== 'link' ? frontmatter.slug : frontmatter.link}
+                    href={
+                        frontmatter.type !== 'link'
+                            ? frontmatter.slug
+                            : frontmatter.link
+                    }
                     body={frontmatter.excerpt}
                     date={formatDate(frontmatter.publishedAt)}
                     type={frontmatter.type}
+                    tags={frontmatter.tags || ''}
                 />
             ))
         }

@@ -37,12 +37,15 @@ const { Content, frontmatter } = Astro.props.post;
 
     document.querySelectorAll('p > code').forEach((c) => {
         c.classList.add(
-            'bg-lime-100',
+            'bg-[#efefef]',
             'p-1',
+            'mx-1',
+            'text-sm',
             'rounded-sm',
-            'text-blue-600',
+            'text-indigo-600',
             'font-semibold',
-            'shadow-md'
+            'shadow',
+            'shadow-[#cdcdcd]'
         );
     });
 </script>
