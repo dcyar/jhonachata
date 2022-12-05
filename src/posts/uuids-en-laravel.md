@@ -9,7 +9,7 @@ draft: false
 
 En lugar de usar números enteros auto incrementados como claves principales de nuestros modelos de Eloquent, ahora podemos optar por usar UUID en su lugar.
 
-> Los UUID son identificadores alfanuméricos únicos universales que tienen 36 carácteres de largo.
+> Los UUID son identificadores alfanuméricos únicos universales que tienen 36 caracteres de largo.
 
 En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.1" target="_blank">9.30.1</a> de laravel, se agregó la opción de poder usar **UUID** como identificadores de los modelos de eloquent (<a href="https://github.com/laravel/framework/pull/44074" target="_blank">PR #44074</a>).
 
@@ -27,7 +27,7 @@ composer create-project laravel/laravel uuid
 laravel new uuid
 
 # Laravel con docker (sail)
-# agregamos tambien "?with=mysql" para que nos incluya
+# agregamos también "?with=mysql" para que nos incluya
 # el contenedor de mysql
 curl -s "https://laravel.build/uuid?with=mysql" | bash
 ```
@@ -48,7 +48,7 @@ cd ~/your-path/uuid
 
 ![Crear modelo Task](/images/uuids-en-laravel/make-model.png)
 
-Usamos la opción `-m`, para generar tambien la migración.
+Usamos la opción `-m`, para generar también la migración.
 
 #### 4. Modificamos la migración del modelo Task
 
@@ -69,7 +69,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-// Importar tambien este trait HasUuids
+// Importar también este trait HasUuids
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class Task extends Model

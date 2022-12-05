@@ -9,7 +9,7 @@ draft: false
 
 > En mi máquina funcionaba, ¿lo haz escuchado alguna vez?
 
-Los entornos de desarrollo son un punto muy importante al momento de iniciar un nuevo proyecto, y más de una vez se ha oido: **En mi máquina funcionaba!**.
+Los entornos de desarrollo son un punto muy importante al momento de iniciar un nuevo proyecto, y más de una vez se ha oído: **En mi máquina funcionaba!**.
 
 En el ecosistema de **PHP** hay varias opciones para trabajar de forma local, hay opciones como:
 
@@ -17,13 +17,13 @@ En el ecosistema de **PHP** hay varias opciones para trabajar de forma local, ha
 -   <a href="http://www.wampserver.com/en/" target="_blank" rel="nofollow">WAMPP</a>
 -   <a href="https://laragon.org/" target="_blank" rel="nofollow">LARAGON</a>
 
-Que funcionan muy bien cuando estamos desarrollando un proyecto nosotros solos, pero ¿que sucede si hay un equipo de más de una persona trabajando en ese proyecto?. Si todos trabajan en entornos diferentes, al momento de subir los cambios pueden ocurrir errores de funcionamiento para los demas miembros del equipo cuando vayan a probar los nuevos cambios.
+Que funcionan muy bien cuando estamos desarrollando un proyecto nosotros solos, pero ¿que sucede si hay un equipo de más de una persona trabajando en ese proyecto?. Si todos trabajan en entornos diferentes, al momento de subir los cambios pueden ocurrir errores de funcionamiento para los demás miembros del equipo cuando vayan a probar los nuevos cambios.
 
-Y si estas desarrollando el proyecto en **Windows**, podria ocurrir problemas cuando este se sube a producción, ya que los servidores ejecutan **Linux**, y este necesita una configuración adicional.
+Y si estas desarrollando el proyecto en **Windows**, podría ocurrir problemas cuando este se sube a producción, ya que los servidores ejecutan **Linux**, y este necesita una configuración adicional.
 
 ### ¿Qué es <a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a>?
 
-<a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estan se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
+<a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estas se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
 
 > Docker está transformando la forma en que se desarrolla, distribuye y ejecuta el software. **La ventaja: podemos encapsular todo el entorno para pasarlo a producción con las mismas características**.
 

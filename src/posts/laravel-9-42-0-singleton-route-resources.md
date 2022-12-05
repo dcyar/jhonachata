@@ -28,6 +28,6 @@ PUT/PATCH /profile
 */
 ```
 
-Ahora podemos tener la ruta para el cliente `example.com/profile`, donde mostrar los datos del perfil del usuario, si quieremos actualizar los datos, dirigimos al usuario a `example.com/profile/edit` y para guardar los datos, agregamos al action del formulario la ruta `example.com/profile` con los métodos `PUT o PATCH`
+Ahora podemos tener la ruta para el cliente `example.com/profile`, donde mostrar los datos del perfil del usuario, si queremos actualizar los datos, dirigimos al usuario a `example.com/profile/edit` y para guardar los datos, agregamos al action del formulario la ruta `example.com/profile` con los métodos `PUT o PATCH`
 
 > Puedes ver más en la documentación a cerca de los <a href="https://laravel.com/docs/9.x/controllers#singleton-resource-controllers" target="_blank">Single Route Resource</a>

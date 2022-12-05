@@ -14,7 +14,7 @@ url: https://github.com/dcyar/laravel-user-role-scaffold
 
 > Puedes ver más en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User-Role Scaffold</a>
 
-## Caracteristicas del Sistema:
+## Características del Sistema:
 
 -   Roles de usuarios.
 -   Middleware en rutas.

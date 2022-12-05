@@ -10,11 +10,11 @@ draft: false
 
 Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil, algún documento requerido por nuestra aplicación, un video de presentación, etc.
 
-En esta ocación veremos un ejemplo de como lograr esto con `ExpressJS` y `NodeJS`, además de integrarlo con `cloudinary`
+En esta ocasión veremos un ejemplo de como lograr esto con `ExpressJS` y `NodeJS`, además de integrarlo con `cloudinary`
 
 > <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> es una plataforma en la nube que permite a los usuarios subir, almacenar, gestionar y distribuir sus archivos de imagen, audio y video de manera fácil y segura. Con la integración de Cloudinary en una aplicación Express, puedes brindar a tus usuarios la capacidad de subir archivos directamente a tu aplicación web y manipularlos en tiempo real.
 
-Primero vamos a configurar nuestra aplicacón con <a href="https://expressjs.com/" target="_blank">ExpressJS</a>.
+Primero vamos a configurar nuestra aplicación con <a href="https://expressjs.com/" target="_blank">ExpressJS</a>.
 
 ```bash
 # Nos situamos en la carpeta donde crearemos la aplicación
@@ -28,15 +28,15 @@ cd express-cloudinary
 ```
 
 Inicializamos npm, incluimos la opción `-y`, para aceptar la configuración por defecto
-![Terminal ejecuntando el comando npm i -y](/images/express-cloudinary/npm-init.png)
+![Terminal ejecutando el comando npm i -y](/images/express-cloudinary/npm-init.png)
 
-Ahora instalamos las dependencias necesarias para nuestra aplicacón
+Ahora instalamos las dependencias necesarias para nuestra aplicación
 
 ```terminal
 npm install express express-fileupload cloudinary
 ```
 
-En el archivo `package.json`, en la sección de `scripts`, incluimos el siguiente comando, esto nos sevirá para iniciar nuestra aplicación.
+En el archivo `package.json`, en la sección de `scripts`, incluimos el siguiente comando, esto nos servirá para iniciar nuestra aplicación.
 
 ```json
 "scripts": {
@@ -101,11 +101,11 @@ En el navegador al visitar `http://localhost:3000`, podremos ver un formulario c
 
 ![Formulario para adjuntar archivos](/images/express-cloudinary/localhost.png)
 
-A continuación vamos a crearnos una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank">Cloudinary</a>.
+A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank">Cloudinary</a>.
 
 ![Página de registro de cloudinary](/images/express-cloudinary/cloudinary-register.png)
 
-Una vez creada nuestra cuenta, nos dirigimos al `dashboard` en cloudinary, ahí podremos ubicar las credenciales necesarias para integrarlo a nuestro sistema.
+Una vez creada la cuenta, nos dirigimos al `dashboard` en cloudinary, ahí podremos ubicar las credenciales necesarias para integrarlo a nuestro sistema.
 
 ![Página de inicio de cloudinary](/images/express-cloudinary/cloudinary-dashboard.png)
 
@@ -119,28 +119,28 @@ Por último agregamos el código necesario para procesar el formulario.
 
 ```js
 app.post('/', async (req, res) => {
-    // Validamos que nos envien el archivo
+    // Validamos que nos envíen algún archivo
     if (!req.files || Object.keys(req.files).length === 0) {
         return res.status(400).send('No files were uploaded.');
     }
 
     // Extraemos el archivo de la request
-    // el nombre "photo" debe coincidir
+    // el nombre "file" debe coincidir
     // con el valor del atributo name del input
-    const photo = req.files.photo;
+    const file = req.files.file;
 
     // Extraemos la extensión del archivo
-    const extension = photo.mimetype.split('/')[1];
+    const extension = file.mimetype.split('/')[1];
 
     // Aquí validamos alguna extensión en particular
-    // cualquier otra, devolvera un error
+    // cualquier otra, devolverá un error
     const validExtensions = ['png', 'pdf'];
     if (!validExtensions.includes(extension)) {
         return res.status(400).send('Not valid file extension');
     }
 
-    // Hacemos uso de cloudinary para usbir el archivo
-    const uploaded = await cloudinary.uploader.upload(photo.tempFilePath, {
+    // Hacemos uso de cloudinary para subir el archivo
+    const uploaded = await cloudinary.uploader.upload(file.tempFilePath, {
         folder: 'images', // Asignamos la carpeta de destino
     });
 
@@ -155,9 +155,11 @@ app.post('/', async (req, res) => {
 });
 ```
 
-Ahora si volvemos a la url de nuestra aplicación, adjuntamos un archivo y pulsamos en el boton, podremos ver la siguiente pantalla.
+Ahora, si volvemos a la url de nuestra aplicación, adjuntamos un archivo y pulsamos en el botón _Upload_, podremos ver la siguiente pantalla.
 
 ![Página de respuesta de formulario para subir archivos a cloudinary](/images/express-cloudinary/form-response.png)
+
+Al pulsar en el enlace `File here`, se abrirá una pestaña con la imagen de subimos.
 
 Si visitamos la pestaña de `Media Library` en cloudinary podremos ver la carpeta `images` y dentro de ella el archivo que adjuntamos en el formulario.
 
@@ -165,8 +167,8 @@ Si visitamos la pestaña de `Media Library` en cloudinary podremos ver la carpet
 
 Eso es todo, ahora ya podemos agregar la funcionalidad de subir archivos a nuestros proyectos.
 
-> Nota: en este ejemplo pusimos la url de cloudinary, dentro del archivo `app.js`, generalmente y por seguridad deberiamos agregar dicha url en un archivo de variables (`.env`), podemos lograrlo con el <a href="https://www.npmjs.com/package/dotenv" target="_blank">paquete dotenv</a>.
+> Nota: en este ejemplo pusimos la url de cloudinary, dentro del archivo `app.js`, generalmente y por seguridad deberíamos agregar dicha url en un archivo de variables (`.env`), podemos lograrlo con el <a href="https://www.npmjs.com/package/dotenv" target="_blank">paquete dotenv</a>.
 
-Tambien te dejo un repositorio con el código que vimos, tambien incluye la opción para subir archivos a una carpeta del mismo proyecto.
+También te dejo un repositorio con el código que vimos, también incluye la opción para subir archivos a una carpeta del mismo proyecto.
 
 <a href="https://github.com/dcyar-learning/node-file-upload">Proyecto para subir archivos a una carpeta del mismo proyecto y a cloudinary</a>
