@@ -1,6 +1,6 @@
 ---
 type: proyecto
-title: Proyecto Orec-ex
+title: Orec-ex
 slug: proyecto-orec-ex
 publishedAt: 2019-10-25
 excerpt: Orec-ex es un proyecto para mejorar el control y la atencion en Oficinas de Registros del Estado Civil que hay a nivel nacional.

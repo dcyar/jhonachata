@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 ---
 
 <Layout
@@ -8,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
     path="/about"
 >
     <div class="flex flex-col space-y-5 max-w-none">
-        <h3 class="text-2xl font-semibold">Hi, I'm Jhon Achata</h3>
+        <!-- <h3 class="text-2xl font-semibold">Hi, I'm Jhon Achata</h3> -->
         <p class="leading-7">
             Fullstack Developer con más de 3 años de experiencia, orientado a
             las buenas prácticas y al código limpio. En mi experiencia me ha
@@ -25,12 +26,7 @@ import Layout from '../layouts/Layout.astro';
             aportar y recibir conocimiento y así crecer tanto profesional como a
             nivel personal.
         </p>
-        <p class="leading-7">
-            Estemos en contacto, escríbeme por linkedin <a
-                href="https://www.linkedin.com/in/jhonachata/"
-                class="text-blue-600 font-bold"
-                target="_blank">@jhonachata</a
-            >
-        </p>
+        <p class="leading-7">Estemos en contacto.</p>
+        <SocialLinks />
     </div>
 </Layout>

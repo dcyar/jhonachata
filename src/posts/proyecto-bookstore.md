@@ -1,6 +1,6 @@
 ---
 type: proyecto
-title: Proyecto Bookstore
+title: Bookstore
 slug: proyecto-bookstore
 publishedAt: 2019-12-07
 excerpt: Laravel Bookstore es un ecommerce pequeño, donde se muestra lo basico para una tienda online.
