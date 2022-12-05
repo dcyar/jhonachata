@@ -13,17 +13,17 @@ Los entornos de desarrollo son un punto muy importante al momento de iniciar un 
 
 En el ecosistema de **PHP** hay varias opciones para trabajar de forma local, hay opciones como:
 
--   <a href="https://www.apachefriends.org/es/index.html"  class="text-red-700 font-semibold" target="_blank" rel="nofollow">XAMPP</a>
--   <a href="http://www.wampserver.com/en/"  class="text-red-700 font-semibold" target="_blank" rel="nofollow">WAMPP</a>
--   <a href="https://laragon.org/"  class="text-red-700 font-semibold" target="_blank" rel="nofollow">LARAGON</a>
+-   <a href="https://www.apachefriends.org/es/index.html" target="_blank" rel="nofollow">XAMPP</a>
+-   <a href="http://www.wampserver.com/en/" target="_blank" rel="nofollow">WAMPP</a>
+-   <a href="https://laragon.org/" target="_blank" rel="nofollow">LARAGON</a>
 
 Que funcionan muy bien cuando estamos desarrollando un proyecto nosotros solos, pero ¿que sucede si hay un equipo de más de una persona trabajando en ese proyecto?. Si todos trabajan en entornos diferentes, al momento de subir los cambios pueden ocurrir errores de funcionamiento para los demas miembros del equipo cuando vayan a probar los nuevos cambios.
 
 Y si estas desarrollando el proyecto en **Windows**, podria ocurrir problemas cuando este se sube a producción, ya que los servidores ejecutan **Linux**, y este necesita una configuración adicional.
 
-### ¿Qué es <a href="https://www.docker.com/" class="text-red-700 font-semibold" target="_blank" rel="nofollow">Docker</a>?
+### ¿Qué es <a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a>?
 
-<a href="https://www.docker.com/" class="text-red-700 font-semibold" target="_blank" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estan se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
+<a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estan se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
 
 > Docker está transformando la forma en que se desarrolla, distribuye y ejecuta el software. **La ventaja: podemos encapsular todo el entorno para pasarlo a producción con las mismas características**.
 
@@ -33,9 +33,9 @@ Y es exactamente lo que, como desarrolladores necesitamos, un entorno de trabajo
 
 ## Laravel y Docker
 
-Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" class="text-red-700 font-semibold" target="_blank" rel="nofollow">Laravel</a> en Windows.
+Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" target="_blank" rel="nofollow">Laravel</a> en Windows.
 
-1. Primero es necesario tener <a href="https://www.docker.com/" class="text-red-700 font-semibold" target="_blank" rel="nofollow">Docker</a> instalado.
+1. Primero es necesario tener <a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> instalado.
 
 2. En la carpeta donde queremos tener el proyecto ejecutamos los siguientes comandos.
 
@@ -77,6 +77,6 @@ Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 
 > Y eso es todo, ya tenemos todo listo para construir nuestros proyectos con laravel y docker.
 
-El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" class="text-red-700 font-semibold" target="_blank" rel="nofollow">github</a>.
+El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" rel="nofollow">github</a>.
 
-Si tienes dudas puedes escribirme en twitter <a href="https://twitter.com/dcyar_" class="text-red-700 font-semibold" target="_blank" rel="nofollow">@dcyar\_</a>.
+Si tienes dudas puedes escribirme en twitter <a href="https://twitter.com/dcyar_" target="_blank" rel="nofollow">@dcyar\_</a>.

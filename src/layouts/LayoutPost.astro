@@ -27,6 +27,8 @@ const { title, description, publishedAt, path } = Astro.props;
         <article class="mb-8 max-w-none prose">
             <slot />
         </article>
+
+        <a href="/" class="min-w-max font-semibold mt-14 block">« Atrás</a>
     </div>
     <Footer />
 </MainLayout>

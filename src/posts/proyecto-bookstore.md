@@ -7,7 +7,7 @@ excerpt: Laravel Bookstore es un ecommerce pequeño, donde se muestra lo basico 
 draft: false
 ---
 
-**<a href="https://github.com/dcyar/bookstore" class="text-red-700 font-semibold" target="_blank">Laravel Bookstore</a>** es un proyecto Open Source de ecommerce con lo basico de la funcionalidad que podria tener una tienda en linea.
+**<a href="https://github.com/dcyar/bookstore" target="_blank">Laravel Bookstore</a>** es un proyecto Open Source de ecommerce con lo basico de la funcionalidad que podria tener una tienda en linea.
 
 ![OREC-EX Dashboard](/images/bookstore/backend.png)
 
@@ -25,6 +25,6 @@ _Les dejo algunas capturas del sistema._
 
 ![OREC-EX Login](/images/bookstore/wallet.png)
 
-Si deseas usar el sistema y necesitas ayuda con la instalacion o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" class="text-blue-600 font-bold" target="_blank">@jhonachata</a>
+Si deseas usar el sistema y necesitas ayuda con la instalacion o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" target="_blank">@jhonachata</a>
 
-> Puedes acceder a una copia del sistema desde aqui <a href="https://github.com/dcyar/bookstore" class="text-red-700 font-semibold" target="_blank">Laravel Bookstore</a>
+> Puedes acceder a una copia del sistema desde aqui <a href="https://github.com/dcyar/bookstore" target="_blank">Laravel Bookstore</a>

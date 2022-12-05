@@ -11,7 +11,7 @@ En lugar de usar números enteros auto incrementados como claves principales de 
 
 > Los UUID son identificadores alfanuméricos únicos universales que tienen 36 carácteres de largo.
 
-En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.1" class="font-semibold text-red-700" target="_blank">9.30.1</a> de laravel, se agregó la opción de poder usar **UUID** como identificadores de los modelos de eloquent (<a href="https://github.com/laravel/framework/pull/44074" target="_blank" class="font-semibold text-red-700">PR #44074</a>).
+En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.1" target="_blank">9.30.1</a> de laravel, se agregó la opción de poder usar **UUID** como identificadores de los modelos de eloquent (<a href="https://github.com/laravel/framework/pull/44074" target="_blank">PR #44074</a>).
 
 ¿Cómo podemos lograr esto?, te muestro a continuación:
 
@@ -32,7 +32,7 @@ laravel new uuid
 curl -s "https://laravel.build/uuid?with=mysql" | bash
 ```
 
-En mi caso, usaré <a href="https://laravel.com/docs/9.x/sail" target="_blank" class="font-semibold text-red-700">laravel sail</a>, que esta disponible para Mac y Linux, en Windows se debe configurar previamente <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="font-semibold text-red-700" target="_blank">WSL (Windows Subsystem for Linux)</a>
+En mi caso, usaré <a href="https://laravel.com/docs/9.x/sail" target="_blank">laravel sail</a>, que esta disponible para Mac y Linux, en Windows se debe configurar previamente <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank">WSL (Windows Subsystem for Linux)</a>
 
 #### 2. Levantamos el proyecto
 

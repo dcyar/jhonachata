@@ -48,4 +48,8 @@ const { Content, frontmatter } = Astro.props.post;
             'shadow-[#cdcdcd]'
         );
     });
+
+    document.querySelectorAll('article a').forEach((c) => {
+        c.classList.add('font-semibold', 'text-red-700');
+    });
 </script>
