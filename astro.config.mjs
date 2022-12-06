@@ -7,11 +7,9 @@ import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
-    site: import.meta.env.PUBLIC_APP_URL,
-    integrations: [
-        tailwind(),
-        sitemap(),
-        compress(),
-        robotsTxt({ sitemap: false }),
-    ],
+    site: import.meta.env.VITE_APP_URL,
+    integrations: [tailwind(), sitemap(), compress(), robotsTxt()],
+    markdown: {
+        drafts: false,
+    },
 });
