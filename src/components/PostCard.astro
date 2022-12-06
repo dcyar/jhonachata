@@ -13,12 +13,12 @@ const { href, title, body, date, type, tags } = Astro.props;
 
 <div class="border-b border-gray-300 last:border-0 py-4">
     <a href={href} class="group">
-        <h2 class="group-hover:underline font-bold text-md">
+        <h2 class="group-hover:underline font-bold text-lg dark:text-slate-200">
             {title}
         </h2>
         {
             tags.length > 0 && (
-                <ul class="flex text-sm text-gray-500 space-x-2">
+                <ul class="flex text-sm text-gray-500 dark:text-slate-400 space-x-2">
                     {tags.split(',').map((tag) => (
                         <li>#{tag}</li>
                     ))}
@@ -26,9 +26,9 @@ const { href, title, body, date, type, tags } = Astro.props;
             )
         }
 
-        <p class="text-gray-600 text-sm my-1">{body}</p>
+        <p class="text-gray-600 text-sm my-1 dark:text-gray-200">{body}</p>
     </a>
-    <small class="text-gray-500 mt-1">
+    <small class="text-gray-500 dark:text-slate-400 mt-1">
         <span class="uppercase">{type}</span>
         — {date}
     </small>

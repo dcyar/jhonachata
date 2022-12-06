@@ -16,19 +16,25 @@ const { title, description, publishedAt, path } = Astro.props;
         <div
             class="text-sm font-semibold flex justify-between items-center space-x-4 mb-12 md:mb-24"
         >
-            <a href="/" class="min-w-max">« Atrás</a>
-            <p class="text-gray-600 text-end">
+            <a href="/" class="dark:text-white min-w-max">« Atrás</a>
+            <p class="text-gray-600 dark:text-white text-end">
                 Escrito por Jhon Achata el
                 {formatDate(publishedAt)}
             </p>
         </div>
-        <h1 class="md:text-4xl text-3xl font-extrabold mb-6">{title}</h1>
+        <h1 class="md:text-4xl text-3xl font-extrabold mb-6 dark:text-white">
+            {title}
+        </h1>
 
-        <article class="mb-8 max-w-none prose">
+        <article
+            class="mb-8 max-w-none prose dark:prose-invert prose-img:w-full prose-a:text-red-700 dark:prose-a:text-red-400"
+        >
             <slot />
         </article>
 
-        <a href="/" class="min-w-max font-semibold mt-14 block">« Atrás</a>
+        <a href="/" class="min-w-max font-semibold mt-14 dark:text-white block"
+            >« Atrás</a
+        >
     </div>
     <Footer />
 </MainLayout>

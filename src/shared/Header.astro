@@ -2,7 +2,7 @@
 const { path } = Astro.props;
 ---
 
-<header class="flex justify-between py-4 mt-6">
+<header class="flex justify-between py-4 mt-6 dark:text-white">
     <a href="/">
         <h1 class="text-xl font-bold">Jhon Achata</h1>
     </a>
@@ -17,7 +17,7 @@ const { path } = Astro.props;
                     class:list={[
                         'text-sm',
                         {
-                            'border-b-2 border-slate-800':
+                            'border-b-2 border-slate-800 dark:border-slate-100':
                                 path.includes('proyectos'),
                         },
                     ]}>Proyectos</a
@@ -29,7 +29,7 @@ const { path } = Astro.props;
                     class:list={[
                         'text-sm',
                         {
-                            'border-b-2 border-slate-800':
+                            'border-b-2 border-slate-800 dark:border-slate-100':
                                 path.includes('acerca'),
                         },
                     ]}>Acerca</a

@@ -32,7 +32,7 @@ Inicializamos npm, incluimos la opción `-y`, para aceptar la configuración por
 
 Ahora instalamos las dependencias necesarias para nuestra aplicación
 
-```terminal
+```bash
 npm install express express-fileupload cloudinary
 ```
 

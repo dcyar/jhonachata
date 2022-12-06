@@ -1,11 +1,14 @@
 ---
 import { SEO } from 'astro-seo';
 
+import DarkModeToggle from '../components/DarkModeToggle.astro';
+
 const {
     title,
     description = 'Fullstack Developer con más de 3 años de experiencia, orientado a las buenas prácticas y al código limpio.',
     path = '',
 } = Astro.props;
+
 const url = import.meta.env.PUBLIC_APP_URL;
 ---
 
@@ -135,11 +138,14 @@ const url = import.meta.env.PUBLIC_APP_URL;
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
     </head>
-    <body class="text-gray-900 font-sans antialiased">
+    <body
+        class="text-gray-900 font-sans antialiased dark:bg-slate-800 transition-colors ease-in-out duration-300"
+    >
         <div
             class="container w-11/12 md:w-8/12 lg:w-6/12 xl:w-4/12 h-screen m-auto flex flex-col"
         >
             <slot />
         </div>
+        <DarkModeToggle />
     </body>
 </html>

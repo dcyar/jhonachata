@@ -4,12 +4,14 @@ import LayoutPost from '../layouts/LayoutPost.astro';
 export async function getStaticPaths() {
     const posts = await Astro.glob('../posts/*.md');
 
-    return posts.map((post) => ({
-        params: {
-            slug: post.frontmatter.slug,
-        },
-        props: { post },
-    }));
+    return posts
+        .filter(({ frontmatter }) => !frontmatter.draft)
+        .map((post) => ({
+            params: {
+                slug: post.frontmatter.slug,
+            },
+            props: { post },
+        }));
 }
 
 const { Content, frontmatter } = Astro.props.post;
@@ -27,6 +29,7 @@ const { Content, frontmatter } = Astro.props.post;
 <script>
     document.querySelectorAll('.astro-code').forEach((p) => {
         p.classList.add(
+            'font-bold',
             'bg-slate-900',
             'overflow-x-auto',
             'p-4',
@@ -47,9 +50,5 @@ const { Content, frontmatter } = Astro.props.post;
             'shadow',
             'shadow-[#cdcdcd]'
         );
-    });
-
-    document.querySelectorAll('article a').forEach((c) => {
-        c.classList.add('font-semibold', 'text-red-700');
     });
 </script>
