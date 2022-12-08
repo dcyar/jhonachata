@@ -7,6 +7,8 @@ const {
     title,
     description = 'Fullstack Developer con más de 3 años de experiencia, orientado a las buenas prácticas y al código limpio.',
     path = '',
+    nofollow = false,
+    noindex = false,
 } = Astro.props;
 
 const url = import.meta.env.PUBLIC_APP_URL;
@@ -23,6 +25,8 @@ const url = import.meta.env.PUBLIC_APP_URL;
             title={title}
             description={description}
             canonical={`${url}${path}`}
+            nofollow={nofollow}
+            noindex={noindex}
             extend={{
                 meta: [
                     {

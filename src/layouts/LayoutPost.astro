@@ -4,13 +4,16 @@ import Footer from '../shared/Footer.astro';
 
 import { formatDate } from '../helpers';
 
-const { title, description, publishedAt, path } = Astro.props;
+const { title, description, publishedAt, path, nofollow, noindex } =
+    Astro.props;
 ---
 
 <MainLayout
     title={`${title} — Jhon Achata`}
     description={description}
     path={path}
+    nofollow={nofollow}
+    noindex={noindex}
 >
     <div class="grow my-10">
         <div

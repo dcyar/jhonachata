@@ -22,6 +22,8 @@ const { Content, frontmatter } = Astro.props.post;
     description={frontmatter.excerpt}
     publishedAt={frontmatter.publishedAt}
     path={`/${frontmatter.slug}`}
+    nofollow={frontmatter.nofollow}
+    noindex={frontmatter.noindex}
 >
     <Content />
 </LayoutPost>
