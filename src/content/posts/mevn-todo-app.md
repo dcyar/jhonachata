@@ -60,7 +60,7 @@ npm run dev
 
 ### Página de inicio
 
-![Página de inicio](https/images/mevn-todo/png)
+![Página de inicio](/images/mevn-todo/home.png)
 
 ### Página de inicio de sesión
 
