@@ -60,23 +60,23 @@ npm run dev
 
 ### Página de inicio
 
-![Página de inicio](https://raw.githubusercontent.com/dcyar/mevn-todo/main/docs/home.png)
+![Página de inicio](https/images/mevn-todo/png)
 
 ### Página de inicio de sesión
 
-![Página de inicio de sesión](https://raw.githubusercontent.com/dcyar/mevn-todo/main/docs/login.png)
+![Página de inicio de sesión](/images/mevn-todo/login.png)
 
 ### Página de registro
 
-![Página de registro](https://raw.githubusercontent.com/dcyar/mevn-todo/main/docs/registro.png)
+![Página de registro](/images/mevn-todo/registro.png)
 
 ### Página de proyectos
 
-![Página de proyectos](https://raw.githubusercontent.com/dcyar/mevn-todo/main/docs/proyectos.png)
+![Página de proyectos](/images/mevn-todo/proyectos.png)
 
 ### Página de tareas
 
-![Página de tareas](https://raw.githubusercontent.com/dcyar/mevn-todo/main/docs/todos.png)
+![Página de tareas](/images/mevn-todo/todos.png)
 
 Si deseas usar la aplicación y necesitas ayuda con la instalación o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" target="_blank">@jhonachata</a>
 
