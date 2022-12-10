@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PostCard from '../components/PostCard.astro';
 import { formatDate } from '../helpers';
 
-const allPost = await Astro.glob('../posts/*.{md,mdx}');
+const allPost = await Astro.glob('../content/posts/*.{md,mdx}');
 const posts = allPost
     .filter(({ frontmatter }) => !frontmatter.draft)
     .sort((a, b) => {
@@ -15,7 +15,7 @@ const posts = allPost
 ---
 
 <Layout title="Jhon Achata — Inicio">
-    <article class="flex-flex-col">
+    <section class="flex-flex-col">
         {
             posts.map(({ frontmatter }) => (
                 <PostCard
@@ -32,5 +32,5 @@ const posts = allPost
                 />
             ))
         }
-    </article>
+    </section>
 </Layout>

@@ -11,14 +11,14 @@ export interface Props {
 const { href, title, body, date, type, tags } = Astro.props;
 ---
 
-<div class="border-b border-gray-300 last:border-0 py-4">
+<article class="border-b border-gray-300 last:border-0 py-4">
     <a href={href} class="group">
         <h2 class="group-hover:underline font-bold text-lg dark:text-slate-200">
             {title}
         </h2>
         {
             tags.length > 0 && (
-                <ul class="flex text-sm text-gray-500 dark:text-slate-400 space-x-2">
+                <ul class="flex text-xs text-gray-500 dark:text-slate-400 space-x-2">
                     {tags.split(',').map((tag) => (
                         <li>#{tag}</li>
                     ))}
@@ -32,4 +32,4 @@ const { href, title, body, date, type, tags } = Astro.props;
         <span class="uppercase">{type}</span>
         — {date}
     </small>
-</div>
+</article>
