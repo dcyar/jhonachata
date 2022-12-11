@@ -79,4 +79,4 @@ Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 
 El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" rel="nofollow">github</a>.
 
-Si tienes dudas puedes escribirme en twitter <a href="https://twitter.com/dcyar_" target="_blank" rel="nofollow">@dcyar\_</a>.
+Si tienes dudas puedes escribirme en twitter <a href="https://twitter.com/jhonachata" target="_blank" rel="nofollow">@jhonachata</a>.
