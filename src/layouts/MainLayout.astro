@@ -144,8 +144,8 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${ga}`;
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         <!-- Google tag (gtag.js) -->
-        <script async src={gaUrl}></script>
-        <script define:vars={{ ga }}>
+        <script type="text/partytown" async src={gaUrl}></script>
+        <script type="text/partytown" define:vars={{ ga }}>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);
