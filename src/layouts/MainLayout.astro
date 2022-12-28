@@ -12,6 +12,8 @@ const {
 } = Astro.props;
 
 const url = import.meta.env.PUBLIC_APP_URL;
+const ga = import.meta.env.PUBLIC_GA;
+const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${ga}`;
 ---
 
 <!DOCTYPE html>
@@ -141,6 +143,16 @@ const url = import.meta.env.PUBLIC_APP_URL;
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
+        <!-- Google tag (gtag.js) -->
+        <script async src={gaUrl}></script>
+        <script define:vars={{ ga }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', ga);
+        </script>
     </head>
     <body
         class="text-gray-900 font-sans antialiased dark:bg-slate-800 transition-colors ease-in-out duration-300"
