@@ -1,20 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
+import { formatDate, orderByDate } from '../helpers';
 import Layout from '../layouts/Layout.astro';
 import PostCard from '../components/PostCard.astro';
-import { formatDate } from '../helpers';
 
-const allPost = await Astro.glob('../content/posts/*.{md,mdx}');
-const posts = allPost
-    .filter(
-        ({ frontmatter }) =>
-            !frontmatter.draft && frontmatter.type === 'proyecto'
-    )
-    .sort((a, b) => {
-        return (
-            new Date(b.frontmatter.publishedAt).getTime() -
-            new Date(a.frontmatter.publishedAt).getTime()
-        );
-    });
+const posts = orderByDate(await getCollection('projects', ({data}) => !data.draft));
 ---
 
 <Layout
@@ -24,14 +14,14 @@ const posts = allPost
 >
     <article class="flex-flex-col">
         {
-            posts.map(({ frontmatter }) => (
+            posts.map(post => (
                 <PostCard
-                    title={frontmatter.title}
-                    href={`/${frontmatter.slug}`}
-                    body={frontmatter.excerpt}
-                    date={formatDate(frontmatter.publishedAt)}
-                    type={frontmatter.type}
-                    tags={frontmatter.tags || ''}
+                    title={post.data.title}
+                    href={`/${post.slug}`}
+                    body={post.data.excerpt}
+                    date={formatDate(post.data.publishedAt)}
+                    type={post.data.type}
+                    tags={post.data.tags || ''}
                 />
             ))
         }

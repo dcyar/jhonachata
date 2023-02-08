@@ -1,34 +1,31 @@
 ---
+import { getCollection } from 'astro:content';
+import { formatDate, orderByDate } from '../helpers';
 import Layout from '../layouts/Layout.astro';
 import PostCard from '../components/PostCard.astro';
-import { formatDate } from '../helpers';
 
-const allPost = await Astro.glob('../content/posts/*.{md,mdx}');
-const posts = allPost
-    .filter(({ frontmatter }) => !frontmatter.draft)
-    .sort((a, b) => {
-        return (
-            new Date(b.frontmatter.publishedAt).getTime() -
-            new Date(a.frontmatter.publishedAt).getTime()
-        );
-    });
+const blogPosts = await getCollection('posts', ({data}) => !data.draft)
+const projects = await getCollection('projects', ({data}) => !data.draft)
+const links = await getCollection('links', ({data}) => !data.draft)
+
+const posts = orderByDate([...blogPosts, ...projects, ...links]);
 ---
 
 <Layout title="Jhon Achata — Inicio">
     <section class="flex-flex-col">
         {
-            posts.map(({ frontmatter }) => (
+            posts.map(({slug, data: post}) => (
                 <PostCard
-                    title={frontmatter.title}
+                    title={post.title}
                     href={
-                        frontmatter.type !== 'link'
-                            ? frontmatter.slug
-                            : frontmatter.link
+                        post.type !== 'link'
+                            ? slug
+                            : post.link
                     }
-                    body={frontmatter.excerpt}
-                    date={formatDate(frontmatter.publishedAt)}
-                    type={frontmatter.type}
-                    tags={frontmatter.tags || ''}
+                    body={post.excerpt}
+                    date={formatDate(post.publishedAt)}
+                    type={post.type}
+                    tags={post.tags || ''}
                 />
             ))
         }

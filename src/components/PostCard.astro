@@ -5,7 +5,7 @@ export interface Props {
     href: string;
     date: string;
     type: string;
-    tags: string;
+    tags: Array<string>;
 }
 
 const { href, title, body, date, type, tags } = Astro.props;
@@ -19,7 +19,7 @@ const { href, title, body, date, type, tags } = Astro.props;
         {
             tags.length > 0 && (
                 <ul class="flex text-xs text-gray-500 dark:text-slate-400 space-x-2">
-                    {tags.split(',').map((tag) => (
+                    {tags.map((tag) => (
                         <li>#{tag}</li>
                     ))}
                 </ul>

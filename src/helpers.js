@@ -1,10 +1,18 @@
 export const formatDate = (date) => {
-    const dateFormated = new Date(date);
-    dateFormated.setHours(dateFormated.getHours() + 5);
+    date.setHours(date.getHours() + 5);
 
-    return dateFormated.toLocaleDateString('es-PE', {
+    return date.toLocaleDateString('es-PE', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
     });
 };
+
+export const orderByDate = (posts) => {
+    return posts.sort((a, b) => {
+        return (
+            new Date(b.data.publishedAt).getTime() -
+            new Date(a.data.publishedAt).getTime()
+        );
+    });
+}

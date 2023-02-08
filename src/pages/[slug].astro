@@ -1,29 +1,32 @@
 ---
+import { getCollection } from 'astro:content';
 import LayoutPost from '../layouts/LayoutPost.astro';
 
 export async function getStaticPaths() {
-    const posts = await Astro.glob('../content/posts/*.md');
+    const entries = [
+        ...await getCollection('posts', ({data}) => !data.draft),
+        ...await getCollection('projects', ({data}) => !data.draft),
+        ...await getCollection('links', ({data}) => !data.draft),
+    ]
 
-    return posts
-        .filter(({ frontmatter }) => !frontmatter.draft)
-        .map((post) => ({
-            params: {
-                slug: post.frontmatter.slug,
-            },
-            props: { post },
+    return entries
+        .map(entry => ({
+            params: { slug: entry.slug },
+            props: { entry },
         }));
 }
 
-const { Content, frontmatter } = Astro.props.post;
+const { entry } = Astro.props;
+const { Content } = await entry.render()
 ---
 
 <LayoutPost
-    title={frontmatter.title}
-    description={frontmatter.excerpt}
-    publishedAt={frontmatter.publishedAt}
-    path={`/${frontmatter.slug}`}
-    nofollow={frontmatter.nofollow}
-    noindex={frontmatter.noindex}
+    title={entry.data.title}
+    description={entry.data.excerpt}
+    publishedAt={entry.data.publishedAt}
+    path={`/${entry.slug}`}
+    nofollow={entry.data.nofollow}
+    noindex={entry.data.noindex}
 >
     <Content />
 </LayoutPost>
