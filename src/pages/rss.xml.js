@@ -1,28 +1,24 @@
 import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-const allPosts = import.meta.glob('../posts/**/*.{md,mdx}', { eager: true });
-let posts = Object.values(allPosts);
-
-posts = posts
-    .filter(({ frontmatter }) => !frontmatter.draft)
-    .sort((a, b) => {
-        return (
-            new Date(b.frontmatter.publishedAt).getTime() -
-            new Date(a.frontmatter.publishedAt).getTime()
-        );
-    })
-    .map(({ frontmatter }) => ({
-        link: frontmatter.slug,
-        title: frontmatter.title,
-        pubDate: frontmatter.publishedAt,
+export const get = async (context) => {
+    const posts = [
+        ...await getCollection('posts', ({data}) => !data.draft),
+        ...await getCollection('projects', ({data}) => !data.draft),
+        ...await getCollection('links', ({data}) => !data.draft),
+    ].map(entry => ({
+        title: entry.data.title,
+        pubDate: entry.data.publishedAt,
+        link: entry.slug,
+        description: entry.data.excerpt,
     }));
 
-export const get = () =>
-    rss({
-        title: 'Jhon Achata',
+    return rss({
+        title: 'Jhon Achata Blog',
         description:
             'Fullstack Developer con más de 3 años de experiencia, orientado a las buenas prácticas y al código limpio.',
-        site: import.meta.env.PUBLIC_APP_URL,
+        site: context.site,
         items: posts,
         customData: `<language>es-PE</language>`,
     });
+}
