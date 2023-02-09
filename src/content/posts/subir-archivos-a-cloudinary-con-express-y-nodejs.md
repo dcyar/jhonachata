@@ -5,7 +5,6 @@ slug: subir-archivos-a-cloudinary-con-express-y-nodejs
 publishedAt: 2022-12-04
 excerpt: Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil
 tags: ['nodejs', 'express', 'cloudinary']
-draft: false
 ---
 
 Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil, algún documento requerido por nuestra aplicación, un video de presentación, etc.

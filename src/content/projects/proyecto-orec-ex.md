@@ -4,7 +4,6 @@ title: Orec-ex
 slug: proyecto-orec-ex
 publishedAt: 2019-10-25
 excerpt: Orec-ex es un proyecto para mejorar el control y la atención en Oficinas de Registros del Estado Civil que hay a nivel nacional.
-draft: false
 ---
 
 **<a href="https://github.com/dcyar/orec-ex" target="_blank">OREC-EX</a>** es un proyecto Open Source para la digitalización, emisión y control de actas (nacimientos, matrimonios, defunciones) en las _Oficinas de Registros del Estado Civil_, que hay en distintos, distritos o provincias a nivel nacional.

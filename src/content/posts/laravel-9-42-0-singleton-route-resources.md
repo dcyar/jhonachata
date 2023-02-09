@@ -4,7 +4,6 @@ title: Laravel 9.40.0 Singleton Route Resource
 slug: laravel-9-42-0-singleton-route-resource
 publishedAt: 2022-11-30
 excerpt: Laravel 9.40.0 Singleton Route Resource, rutas para recursos de una sola instancia...
-draft: false
 ---
 
 El día de ayer se liberó la versión <a href="https://github.com/laravel/framework/releases/tag/v9.42.0" target="_blank">9.42.0</a> de laravel y una de las características nuevas son las <a href="https://laravel.com/docs/9.x/controllers#singleton-resource-controllers" target="_blank">Single Route Resource</a>, que son similares a las `Resource Controller`, con la diferencia que solo nos crea las rutas para `Ver (GET)`, `Editar (GET)` y `Actualizar (PUT|PATCH)`
