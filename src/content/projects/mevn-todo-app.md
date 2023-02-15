@@ -5,6 +5,8 @@ slug: todo-app-con-mevn
 publishedAt: 2022-12-09
 excerpt: Proyecto de lista de tareas con NodeJS, ExpressJS, VueJS y MongoDB, con soporte para múltiples usuarios e inicio de sesión con google
 tags: ['nodejs', 'express', 'mongodb', 'jwt', 'vue3', 'pinia']
+demo: https://mevn-todo.vercel.app
+repo: https://github.com/dcyar/mevn-todo
 ---
 
 **<a href="https://github.com/dcyar/mevn-todo" target="_blank">MEVN Todo</a>** es una aplicación de gestión de tareas por proyectos. Cada usuario puede gestionar su cuenta y sus proyectos

@@ -11,7 +11,7 @@ const links = await getCollection('links', ({data}) => !data.draft)
 const posts = orderByDate([...blogPosts, ...projects, ...links]);
 ---
 
-<Layout title="Jhon Achata — Inicio">
+<Layout title="Jhon Achata — Fullstack Developer">
     <section class="flex-flex-col">
         {
             posts.map(({slug, data: post}) => (
