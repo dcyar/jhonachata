@@ -42,4 +42,4 @@ Route::get('/users', function () {
 
 <br />
 
-> Puedes ver mas en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User Role Scaffold</a>
+> Puedes ver más en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User Role Scaffold</a>
