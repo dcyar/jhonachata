@@ -2,9 +2,18 @@
 import MainLayout from './MainLayout.astro';
 import Footer from '../shared/Footer.astro';
 
-import { formatDate } from '../helpers';
+import { formatDate, orderByDate } from '../helpers';
+import { getCollection } from 'astro:content';
 
 const { title, description, publishedAt, path, nofollow, noindex } = Astro.props;
+
+let previousPost = null;
+const entries = orderByDate(await getCollection('posts', ({data}) => !data.draft));
+const postIndex = entries.findIndex(entry => `/${entry.slug}` === path);
+
+if(entries.length >= 1 || (entries.length - 1) === 0) {
+    previousPost = entries[postIndex + 1];
+}
 ---
 
 <MainLayout
@@ -36,9 +45,14 @@ const { title, description, publishedAt, path, nofollow, noindex } = Astro.props
             <slot />
         </article>
 
-        <a href="/" class="min-w-max font-semibold mt-14 dark:text-white block"
-            >« Atrás</a
-        >
+        <div class="flex justify-between items-center mt-14">
+            <a href="/" class="font-semibold dark:text-white"
+                >« Atrás</a
+            >
+            {
+                previousPost && (<a href={previousPost.slug} class="font-semibold text-blue-500 dark:text-blue-400">{ previousPost.data.title }</a>)
+        }
+        </div>
     </div>
     <Footer />
 </MainLayout>
