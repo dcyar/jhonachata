@@ -50,8 +50,8 @@ if(entries.length >= 1 || (entries.length - 1) === 0) {
                 >« Atrás</a
             >
             {
-                previousPost && (<a href={previousPost.slug} class="font-semibold text-blue-500 dark:text-blue-400">{ previousPost.data.title }</a>)
-        }
+                previousPost && (<a href={`/${previousPost.slug}`} class="font-semibold text-blue-500 dark:text-blue-400">{ previousPost.data.title }</a>)
+            }
         </div>
     </div>
     <Footer />
