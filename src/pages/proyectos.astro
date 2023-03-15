@@ -12,6 +12,18 @@ const posts = orderByDate(await getCollection('projects', ({data}) => !data.draf
     description="Proyectos personales realizados con diferentes tecnologías"
     path="/proyectos"
 >
+    <section class="mb-8">
+        <p>Estos son algunos de los proyectos personales que he realizado en mi tiempo libre o cuando estoy aprendiendo algo nuevo.</p>
+        <p>Puedes ver mas proyectos en mi perfil de github:</p>
+        <ul class="my-2 space-y-2">
+            <li>
+                <a href="https://github.com/dcyar" target="_blank" class="text-blue-600">github.com/dcyar</a>
+            </li>
+            <li>
+                <a href="https://github.com/dcyar-learning" target="_blank" class="text-blue-600">github.com/dcyar-learning</a>
+            </li>
+        </ul>
+    </section>
     <section class="space-y-4">
         {
             posts.map(({slug, data}) => (
