@@ -3,6 +3,7 @@ type: artículo
 title: Test A/B con Laravel Pennant
 publishedAt: 2023-02-10
 excerpt: Junto con el lanzamiento de Laravel 10, el team de laravel nos incluye el paquete Pennant, una herramienta que nos facilitará la introducción de nuevos features, realizar pruebas A/B y mucho más...
+tags: ['test a/b', 'pennant', 'laravel']
 ---
 Junto con el lanzamiento de <a href="https://laravel.com/docs/10.x" target="_blank">Laravel 10</a>, el team de laravel nos incluye el paquete <a href="https://laravel.com/docs/10.x/pennant" target="_blank">Pennant</a>, una herramienta que nos facilitará la introducción de **nuevos features**, **realizar pruebas A/B** y mucho más.
 
@@ -123,13 +124,13 @@ php artisan tinker
 
 Ya en la consola de tinker, crearemos el primer usuario haciendo uso del `factory` del modelo `User`:
 
-```tinker
+```php
 User::factory()->create()
 ```
 
 Luego creamos el segundo usuario y le agregamos que la fecha de creación del registro sea 8 meses antes:
 
-```tinker
+```php
 User::factory()->create(['created_at' => now()->subMonths(8)])
 ```
 

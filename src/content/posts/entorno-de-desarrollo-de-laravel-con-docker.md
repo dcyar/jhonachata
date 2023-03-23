@@ -4,6 +4,7 @@ title: Entorno de desarrollo de laravel con docker
 slug: entorno-de-desarrollo-de-laravel-con-docker
 publishedAt: 2020-03-22
 excerpt: En mi máquina funcionaba, ¿lo haz escuchado alguna vez? En este post veremos como usar docker para crear un entorno de desarrollo para laravel y trabajar de forma mas profesional
+tags: ['docker', 'php', 'laravel']
 ---
 
 > En mi máquina funcionaba, ¿lo haz escuchado alguna vez?
