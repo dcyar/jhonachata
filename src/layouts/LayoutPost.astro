@@ -5,15 +5,15 @@ import Footer from '../shared/Footer.astro';
 import { formatDate, orderByDate } from '../helpers';
 import { getCollection } from 'astro:content';
 
-const { title, description, publishedAt, path, nofollow, noindex } = Astro.props;
+const { type, title, description, publishedAt, path, nofollow, noindex } = Astro.props;
 
-let previousPost = null;
-const entries = orderByDate(await getCollection('posts', ({data}) => !data.draft));
+const entries = orderByDate(
+    await getCollection(type === 'artículo' ? 'posts' : 'projects', ({data}) => !data.draft)
+);
+
 const postIndex = entries.findIndex(entry => `/${entry.slug}` === path);
 
-if(entries.length >= 1 || (entries.length - 1) === 0) {
-    previousPost = entries[postIndex + 1];
-}
+const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries[postIndex + 1] : null;
 ---
 
 <MainLayout
