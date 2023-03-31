@@ -11,7 +11,11 @@
     "type": "git",
     "url": "https://github.com/dcyar/jhonachata"
   },
-  "keywords": ["blog", "astro", "web personal"],
+  "keywords": [
+    "blog",
+    "astro",
+    "web personal"
+  ],
   "license": "ISC",
   "scripts": {
     "dev": "astro dev",
@@ -27,6 +31,7 @@
     "@astrojs/tailwind": "^3.0.1",
     "astro": "^2.0.8",
     "astro-seo": "^0.6.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {

@@ -153,6 +153,17 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${ga}`;
             gtag('js', new Date());
             gtag('config', ga);
         </script>
+        <style>
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            
+            /* For IE, Edge and Firefox */
+            .scrollbar-hide {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        </style>
     </head>
     <body
         class="text-gray-900 font-sans antialiased bg-fixed bg-gradient-to-tl from-slate-100 to-blue-50 dark:bg-gradient-to-br dark:from-slate-900 dark:to-blue-900 transition-all ease-in-out duration-300"

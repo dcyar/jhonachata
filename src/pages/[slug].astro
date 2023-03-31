@@ -58,4 +58,8 @@ const { Content } = await entry.render()
             'shadow-[#cdcdcd]'
         );
     });
+
+    document.querySelectorAll('.astro-code').forEach((c) => {
+        c.classList.add('scrollbar-hide');
+    })
 </script>
