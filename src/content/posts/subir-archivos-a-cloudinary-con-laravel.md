@@ -55,7 +55,7 @@ Una vez creada la cuenta, nos dirigimos al `dashboard` en cloudinary, ahí podre
 
 Copiamos la sección `API Environment variable` de cloudinary, abrimos el archivo de variables de entorno `.env` y agregamos lo siguiente:
 
-```env
+```
 CLOUDINARY_URL=cloudinary://************@dcyar
 ```
 
