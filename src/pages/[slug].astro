@@ -29,6 +29,7 @@ const { Content } = await entry.render()
     path={`/${entry.slug}`}
     nofollow={entry.data.nofollow}
     noindex={entry.data.noindex}
+    tags={entry.data.tags}
 >
     <Content />
 </LayoutPost>

@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Simplifica tu código con pipelines en Laravel
 slug: simplifica-tu-codigo-con-pipelines-en-laravel
 publishedAt: 2023-03-14

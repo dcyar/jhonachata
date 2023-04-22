@@ -24,6 +24,10 @@ module.exports = {
                 '2xl': { css: disabledCss },
             },
         },
+        fontFamily: {
+            'body': ['Karla', 'system-ui', 'sans-serif'],
+            'mono': ['Berkeley Mono', 'monospace'],
+          }
     },
     plugins: [
         require('@tailwindcss/typography'),

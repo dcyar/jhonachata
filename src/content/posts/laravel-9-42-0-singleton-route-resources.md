@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Laravel 9.40.0 Singleton Route Resource
 slug: laravel-9-42-0-singleton-route-resource
 publishedAt: 2022-11-30

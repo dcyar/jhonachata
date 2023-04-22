@@ -1,15 +1,10 @@
 ---
 import MainLayout from './MainLayout.astro';
-import Header from '../shared/Header.astro';
 import Footer from '../shared/Footer.astro';
 
 const { title, description, path } = Astro.props;
 ---
 
 <MainLayout title={title} description={description} path={path}>
-    <Header path={Astro.url.pathname} />
-    <div class="grow my-10">
-        <slot />
-    </div>
-    <Footer />
+    <slot />
 </MainLayout>

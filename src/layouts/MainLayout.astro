@@ -2,6 +2,8 @@
 import { SEO } from 'astro-seo';
 
 import DarkModeToggle from '../components/DarkModeToggle.astro';
+import Header from '../shared/Header.astro';
+import Footer from '../shared/Footer.astro';
 
 const {
     title,
@@ -163,16 +165,36 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${ga}`;
                 -ms-overflow-style: none;  /* IE and Edge */
                 scrollbar-width: none;  /* Firefox */
             }
+
+            @font-face {
+                font-family: 'Berkeley Mono';
+                src: url('/fonts/BerkeleyMono-Regular.woff2');
+            }
+
+            @font-face {
+                font-family: 'Berkeley Mono';
+                src: url('/fonts/BerkeleyMono-Bold.woff2');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: 'Karla';
+                src: url('/fonts/Karla-Regular.woff2');
+            }
         </style>
     </head>
     <body
-        class="text-gray-900 font-sans antialiased bg-fixed bg-gradient-to-tl from-slate-100 to-blue-50 dark:bg-gradient-to-br dark:from-slate-900 dark:to-blue-900 transition-all ease-in-out duration-300"
+        class="antialiased"
     >
         <div
-            class="container w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 h-screen m-auto flex flex-col"
+            class="relative container py-5 w-11/12 md:w-10/12 lg:w-7/12 grid grid-cols-1 md:grid-cols-4 mx-auto"
         >
-            <slot />
+            <Header path={Astro.url.pathname} />
+            <main class="md:col-start-2 md:col-end-5 md:pl-2 mt-4 md:mt-0 space-y-4">
+                <slot />
+                <Footer />
+            </main>
         </div>
-        <DarkModeToggle />
+        <!-- <DarkModeToggle /> -->
     </body>
 </html>

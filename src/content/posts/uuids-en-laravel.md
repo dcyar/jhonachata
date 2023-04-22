@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: UUID's en laravel
 slug: uuid-en-laravel
 publishedAt: 2022-11-29

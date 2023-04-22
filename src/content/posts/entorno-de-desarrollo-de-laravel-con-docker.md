@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Entorno de desarrollo de laravel con docker
 slug: entorno-de-desarrollo-de-laravel-con-docker
 publishedAt: 2020-03-22

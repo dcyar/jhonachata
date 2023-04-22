@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Incrementar multiples columnas a la vez en laravel
 slug: incremenar-multiples-columnas-a-la-vez-en-laravel
 publishedAt: 2023-02-25

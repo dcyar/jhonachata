@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Subir archivos a cloudinary con Laravel
 slug: subir-archivos-a-cloudinary-con-laravel
 publishedAt: 2023-03-30

@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Como usar Git stash
 slug: como-usar-git-stash
 publishedAt: 2023-01-03

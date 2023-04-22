@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Laravel v9.51 nuevo comando sail:add
 slug: laravel-9-51-nuevo-comando-sail-add
 publishedAt: 2023-02-09

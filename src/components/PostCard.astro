@@ -11,25 +11,22 @@ export interface Props {
 const { href, title, body, date, type, tags } = Astro.props;
 ---
 
-<article class="border-b border-gray-300 last:border-0 py-4">
+<article class="font-body border-b border-gray-300 last:border-0 pb-4">
+    {
+        tags.length > 0 && (
+            <ul class="flex text-sm text-purple-600 space-x-2">
+                {tags.map((tag) => (
+                    <li>#{tag}</li>
+                ))}
+            </ul>
+        )
+    }
     <a href={href} class="group">
-        <h2 class="group-hover:underline font-bold text-lg dark:text-slate-200">
-            {title}
-        </h2>
-        {
-            tags.length > 0 && (
-                <ul class="flex text-xs text-gray-500 dark:text-slate-400 space-x-2">
-                    {tags.map((tag) => (
-                        <li>#{tag}</li>
-                    ))}
-                </ul>
-            )
-        }
-
-        <p class="text-gray-600 text-sm my-1 dark:text-gray-200">{body}</p>
+        <h2 class="group-hover:underline font-bold font-mono text-xl text-slate-800 mt-1">{title}</h2>
+        <p class="text-slate-700 text-md my-2">{body}</p>
     </a>
-    <small class="text-gray-500 dark:text-slate-400 mt-1">
-        <span class="uppercase font-semibold">{type}</span>
-        — {date}
+    <small class="text-sm mt-1">
+        <span class="uppercase text-purple-500 font-semibold">{type}</span>
+        <span class="text-gray-600">— {date}</span>
     </small>
 </article>

@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Sintaxis invocable de primera clase PHP 8.1
 slug: sintaxis-invocable-de-primera-clases-php-8-1
 publishedAt: 2023-04-07

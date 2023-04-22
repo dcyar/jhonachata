@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Generar contraseñas seguras con Laravel 10
 slug: generar-contrasenas-seguras-con-laravel-10
 publishedAt: 2023-02-22

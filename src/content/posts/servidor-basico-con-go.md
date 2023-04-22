@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Servidor web básico con Go (Golang)
 slug: servidor-web-basico-con-go
 publishedAt: 2022-12-17

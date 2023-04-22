@@ -1,5 +1,5 @@
 ---
-type: artículo
+type: original
 title: Subir archivos a cloudinary con Express y Nodejs
 slug: subir-archivos-a-cloudinary-con-express-y-nodejs
 publishedAt: 2022-12-04

@@ -12,22 +12,20 @@ const posts = orderByDate([...blogPosts, ...projects, ...links]);
 ---
 
 <Layout title="Jhon Achata — Fullstack Developer">
-    <section class="flex-flex-col">
-        {
-            posts.map(({slug, data: post}) => (
-                <PostCard
-                    title={post.title}
-                    href={
-                        post.type !== 'link'
-                            ? slug
-                            : post.link
-                    }
-                    body={post.excerpt}
-                    date={formatDate(post.publishedAt)}
-                    type={post.type}
-                    tags={post.tags || ''}
-                />
-            ))
-        }
-    </section>
+    {
+        posts.map(({slug, data: post}) => (
+            <PostCard
+                title={post.title}
+                href={
+                    post.type !== 'link'
+                        ? slug
+                        : post.link
+                }
+                body={post.excerpt}
+                date={formatDate(post.publishedAt)}
+                type={post.type}
+                tags={post.tags || ''}
+            />
+        ))
+    }
 </Layout>
