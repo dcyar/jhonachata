@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 const { type, title, description, publishedAt, path, nofollow, noindex, tags } = Astro.props;
 
 const entries = orderByDate(
-    await getCollection(type === 'artículo' ? 'posts' : 'projects', ({data}) => !data.draft)
+    await getCollection(type === 'original' ? 'posts' : 'projects', ({data}) => !data.draft)
 );
 
 const postIndex = entries.findIndex(entry => `/${entry.slug}` === path);

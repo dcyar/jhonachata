@@ -3,7 +3,7 @@ type: original
 title: Subir archivos a cloudinary con Laravel
 slug: subir-archivos-a-cloudinary-con-laravel
 publishedAt: 2023-03-30
-excerpt: En este artículo aprenderás cómo subir archivos a Cloudinary con Laravel de una manera sencilla y eficiente. Cloudinary es una plataforma de gestión de imágenes y videos en la nube que ofrece una amplia gama de funcionalidades...
+excerpt: En este artículo aprenderás cómo subir archivos a Cloudinary con Laravel de una manera sencilla y eficiente. Cloudinary es una plataforma de gestión de imágenes y videos en la nube que ofrece una amplia gama de funcionalidades
 tags: ['laravel', 'cloudinary']
 ---
 

@@ -3,7 +3,7 @@ type: original
 title: UUID's en laravel
 slug: uuid-en-laravel
 publishedAt: 2022-11-29
-excerpt: En lugar de usar números enteros auto incrementados como claves principales de nuestros modelos de Eloquent, ahora podemos optar por usar UUID en su lugar...
+excerpt: En lugar de usar números enteros auto incrementados como claves principales de nuestros modelos de Eloquent, ahora podemos optar por usar UUID en su lugar
 tags: ['uuid', 'laravel']
 ---
 

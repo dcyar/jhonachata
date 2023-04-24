@@ -3,7 +3,7 @@ type: original
 title: Sintaxis invocable de primera clase PHP 8.1
 slug: sintaxis-invocable-de-primera-clases-php-8-1
 publishedAt: 2023-04-07
-excerpt: La sintaxis invocable de primera clase (First class callable syntax), es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante...
+excerpt: La sintaxis invocable de primera clase (First class callable syntax), es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante
 tags: ['php']
 ---
 

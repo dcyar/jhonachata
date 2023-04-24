@@ -3,7 +3,7 @@ type: original
 title: Simplifica tu código con pipelines en Laravel
 slug: simplifica-tu-codigo-con-pipelines-en-laravel
 publishedAt: 2023-03-14
-excerpt: Los pipelines son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada...
+excerpt: Los pipelines son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada
 tags: ['laravel', 'pipelines', 'optimizacion']
 ---
 

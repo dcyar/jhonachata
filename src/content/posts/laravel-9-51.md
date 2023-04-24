@@ -3,7 +3,7 @@ type: original
 title: Laravel v9.51 nuevo comando sail:add
 slug: laravel-9-51-nuevo-comando-sail-add
 publishedAt: 2023-02-09
-excerpt: Laravel sail es una de las herramientas del ecosistema de laravel que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente...
+excerpt: Laravel sail es una de las herramientas del ecosistema de laravel que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente
 tags: ['laravel', 'docker', 'sail']
 ---
 
