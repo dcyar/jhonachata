@@ -4,7 +4,7 @@ title: Laravel user roles scaffold
 slug: proyecto-laravel-user-roles-scaffold
 publishedAt: 2019-12-08
 excerpt: Laravel User-Role Scaffold es un proyecto base con la funcionalidad de roles de usuarios, middleware's, blade directives y más
-tags: ['laravel', 'roles', 'middleware', 'blade-directive']
+tags: ['laravel', 'roles', 'middleware', 'blade', 'directivas']
 repo: https://github.com/dcyar/laravel-user-role-scaffold
 ---
 

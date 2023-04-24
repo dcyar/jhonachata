@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate, orderByDate } from '../../helpers';
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+    const entries = [
+        ...await getCollection('posts', ({data}) => !data.draft),
+        ...await getCollection('projects', ({data}) => !data.draft),
+        ...await getCollection('links', ({data}) => !data.draft),
+    ]
+
+    let tags = [];
+    
+    entries.forEach(entry => {
+        tags = [...tags, ...entry.data.tags];
+    });
+
+    return tags.map(tag => ({
+        params: { tag: tag },
+        props: { tag },
+    }));
+}
+
+const { tag } = Astro.params;
+
+const blogPosts = await getCollection('posts', ({data}) => !data.draft && data.tags.includes(tag))
+const projects = await getCollection('projects', ({data}) => !data.draft && data.tags.includes(tag))
+const links = await getCollection('links', ({data}) => !data.draft && data.tags.includes(tag))
+
+const posts = orderByDate([...blogPosts, ...projects, ...links]);
+---
+
+<Layout title={`Jhon Achata — ${tag}`}>
+    <header class="pb-2 flex text-3xl text-purple-700 font-bold font-mono border-b-2 border-b-purple-700 gap-x-1">
+        # <h2>{tag}</h2>
+    </header>
+    {
+        posts.map(({slug, data: post}) => (
+            <PostCard
+                title={post.title}
+                href={
+                    post.type !== 'link'
+                        ? slug
+                        : post.link
+                }
+                body={post.excerpt}
+                date={formatDate(post.publishedAt)}
+                type={post.type}
+                tags={post.tags || ''}
+            />
+        ))
+    }
+</Layout>

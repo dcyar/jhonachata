@@ -4,7 +4,7 @@ title: Bookstore
 slug: proyecto-bookstore
 publishedAt: 2019-12-07
 excerpt: Laravel Bookstore es un e-commerce pequeño, donde se muestra lo básico para una tienda online.
-tags: ['laravel', 'ecommerce', 'spatie/medialibrary', 'auth', 'roles']
+tags: ['laravel', 'ecommerce', 'spatie-medialibrary', 'auth', 'roles']
 repo: https://github.com/dcyar/bookstore
 ---
 

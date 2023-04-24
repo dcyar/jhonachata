@@ -16,17 +16,17 @@ const { path } = Astro.props;
     </div>
     <nav class="space-y-3 hidden md:block font-mono text-slate-800 tracking-wide">
         <ul class="text-sm font-bold">
-            <!-- <li class="py-2">
-                <a
-                    href="/original"
-                    class:list={[{'underline':path.includes('original')}]}
-                >Original</a>
-            </li> -->
             <li class="py-2">
                 <a
                     href="/proyectos"
                     class:list={[{'underline':path.includes('proyectos')}]}
                 >Proyectos</a>
+            </li>
+            <li class="py-2">
+                <a
+                    href="/tags"
+                    class:list={[{'underline':path.includes('tags')}]}
+                >Tags</a>
             </li>
             <li class="py-2">
                 <a

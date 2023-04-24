@@ -187,10 +187,10 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${ga}`;
         class="antialiased"
     >
         <div
-            class="relative container py-5 w-11/12 md:w-10/12 lg:w-7/12 grid grid-cols-1 md:grid-cols-4 mx-auto"
+            class="relative container py-5 w-11/12 md:w-10/12 lg:w-7/12 grid grid-cols-1 md:grid-cols-5 xl:grid-cols-4 mx-auto"
         >
             <Header path={Astro.url.pathname} />
-            <main class="md:col-start-2 md:col-end-5 md:pl-2 mt-4 md:mt-0 space-y-4">
+            <main class="md:col-start-3 md:col-end-6 xl:col-start-2 xl:col-end-5 md:pl-2 mt-4 md:mt-0 space-y-4">
                 <slot />
                 <Footer />
             </main>

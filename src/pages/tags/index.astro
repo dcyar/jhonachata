@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const blogPosts = await getCollection('posts', ({data}) => !data.draft)
+const projects = await getCollection('projects', ({data}) => !data.draft)
+const links = await getCollection('links', ({data}) => !data.draft)
+
+const entries = [...blogPosts, ...projects, ...links];
+let tags = [];
+
+entries.forEach(entry => {
+    tags = [...tags, ...entry.data.tags];
+});
+
+tags = [...new Set(tags)];
+---
+
+<MainLayout title="Jhon Achata — Tags">
+    <section class="flex flex-wrap gap-4">
+        {
+            tags.map((tag) => <a href={`/tags/${tag}`} class="p-2 border border-purple-400 text-purple-800 shadow-md shadow-purple-300 font-bold font-mono">{tag}</a>)
+        }
+    </section>
+</MainLayout>
