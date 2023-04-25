@@ -23,7 +23,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
     </div>
     {
         tags.length > 0 && (
-            <ul class="flex flex-wrap text-xs font-body text-purple-600 px-2 mb-2">
+            <ul class="flex flex-wrap text-sm font-body text-purple-600 px-2 mb-2">
                 {tags.map((tag) => (
                     <li class="mr-2"><a href={`/tags/${tag}`}>#{tag}</a></li>
                 ))}
