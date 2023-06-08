@@ -42,7 +42,7 @@ const posts = orderByDate([...blogPosts, ...projects, ...links]);
                 title={post.title}
                 href={
                     post.type !== 'link'
-                        ? slug
+                        ? `/${slug}`
                         : post.link
                 }
                 body={post.excerpt}
