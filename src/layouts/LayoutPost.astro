@@ -25,9 +25,9 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
     <header class="space-y-2 border-b border-purple-400 pb-2">
         {
             tags.length > 0 && (
-                <ul class="flex text-sm text-purple-600 space-x-2">
+                <ul class="flex flex-wrap text-sm text-purple-600 gap-x-2 gap-y-1">
                     {tags.map((tag) => (
-                        <li>#{tag}</li>
+                        <li class="tracking-wide">#{tag}</li>
                     ))}
                 </ul>
             )

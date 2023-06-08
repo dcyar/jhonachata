@@ -4,7 +4,7 @@ title: Websocket's en Go
 slug: websockets-en-go
 publishedAt: 2023-02-15
 excerpt: Ejemplo de implementación de websocket's en Go y guardado de datos en mongodb
-tags: ['golang', 'mux-server', 'mongodb', 'websocket']
+tags: ['go', 'golang', 'mux-server', 'mongodb', 'websocket']
 repo: https://github.com/dcyar/goweb
 ---
 Ejemplo de implementación de websocket's en Go y guardado de datos en mongodb
