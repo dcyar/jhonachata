@@ -14,7 +14,7 @@ const { href, title, body, date, type, tags } = Astro.props;
 <article class="font-body border-b border-gray-300 last:border-0 pb-4">
     {
         tags.length > 0 && (
-            <ul class="flex text-sm text-purple-600 space-x-2">
+            <ul class="flex text-md text-purple-600 space-x-2">
                 {tags.map((tag) => (
                     <li><a href={`/tags/${tag}`}>#{tag}</a></li>
                 ))}

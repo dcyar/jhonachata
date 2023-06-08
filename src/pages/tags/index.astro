@@ -16,7 +16,7 @@ entries.forEach(entry => {
 tags = [...new Set(tags)];
 ---
 
-<MainLayout title="Jhon Achata — Tags">
+<MainLayout title="Jhon Achata — Tags" path="/tags">
     <section class="flex flex-wrap gap-4">
         {
             tags.map((tag) => <a href={`/tags/${tag}`} class="p-2 border border-purple-400 text-purple-800 shadow-md shadow-purple-300 font-bold font-mono">{tag}</a>)

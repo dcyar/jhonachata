@@ -1,0 +1,28 @@
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('/fonts/BerkeleyMono-Regular.woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('/fonts/BerkeleyMono-Bold.woff2');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('/fonts/Karla-Regular.woff2');
+    font-display: swap;
+}
