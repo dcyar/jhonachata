@@ -4,7 +4,7 @@ title: Incrementar multiples columnas a la vez en laravel
 slug: incremenar-multiples-columnas-a-la-vez-en-laravel
 publishedAt: 2023-02-25
 excerpt: Laravel trae consigo multiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos
-tags: ['laravel', 'query builder', 'orm']
+tags: ['laravel', 'query-builder', 'orm']
 ---
 
 Laravel trae consigo multiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos.
