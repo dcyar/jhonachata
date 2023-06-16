@@ -32,7 +32,7 @@ const links = await getCollection('links', ({data}) => !data.draft && data.tags.
 const posts = orderByDate([...blogPosts, ...projects, ...links]);
 ---
 
-<Layout title={`Jhon Achata — ${tag}`}>
+<Layout title={`Jhon Achata — ${tag}`} path={`/tags/${tag}`}>
     <header class="pb-2 flex text-3xl text-purple-700 font-bold font-mono border-b-2 border-b-purple-700 gap-x-1">
         # <h2>{tag}</h2>
     </header>
