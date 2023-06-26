@@ -13,7 +13,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
 
 <article class="w-full border border-slate-500">
     <div class="p-2">
-        <a href={href} class="group">
+        <a href={href + '/'} class="group">
             <h2 class="group-hover:underline font-mono font-bold text-lg">
                 { title }
             </h2>
@@ -25,7 +25,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
         tags.length > 0 && (
             <ul class="flex flex-wrap text-sm font-body text-purple-600 px-2 mb-2 gap-x-2 gap-y-1">
                 {tags.map((tag) => (
-                    <li><a href={`/tags/${tag}`} class="tracking-wide">#{tag}</a></li>
+                    <li><a href={`/tags/${tag}/`} class="tracking-wide">#{tag}</a></li>
                 ))}
             </ul>
         )
