@@ -11,19 +11,19 @@ export interface Props {
 const { href, title, body, tags, demo, repo } = Astro.props;
 ---
 
-<article class="w-full border border-slate-500">
+<article class="w-full border border-slate-500 dark:border-slate-300">
     <div class="p-2">
         <a href={href + '/'} class="group">
-            <h2 class="group-hover:underline font-mono font-bold text-lg">
+            <h2 class="group-hover:underline font-mono font-bold text-lg dark:text-slate-50">
                 { title }
             </h2>
     
-            <p class="font-body text-gray-600 text-sm my-2">{ body }</p>
+            <p class="font-body text-slate-600 dark:text-slate-200 text-sm my-2">{ body }</p>
         </a>
     </div>
     {
         tags.length > 0 && (
-            <ul class="flex flex-wrap text-sm font-body text-purple-600 px-2 mb-2 gap-x-2 gap-y-1">
+            <ul class="flex flex-wrap text-sm font-body text-purple-600 dark:text-purple-300 px-2 mb-2 gap-x-2 gap-y-1">
                 {tags.map((tag) => (
                     <li><a href={`/tags/${tag}/`} class="tracking-wide">#{tag}</a></li>
                 ))}
@@ -42,7 +42,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
                         <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z" />
                         <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z" />
                     </svg>
-                    <span class="">Demo</span>
+                    <span class="dark:text-slate-200">Demo</span>
                 </a>
             )
         }
@@ -60,7 +60,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
                             d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"
                         ></path>
                     </svg>
-                    <span>Github</span>
+                    <span class="dark:text-slate-200">Github</span>
                 </a>
             )
         }
