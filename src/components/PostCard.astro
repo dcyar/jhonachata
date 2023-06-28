@@ -14,7 +14,7 @@ const { href, title, body, date, type, tags } = Astro.props;
 <article class="font-body border-b border-gray-300 last:border-0 pb-4">
     {
         tags.length > 0 && (
-            <ul class="flex flex-wrap text-sm text-purple-600 gap-x-2 gap-y-1">
+            <ul class="flex flex-wrap text-sm text-purple-600 dark:text-purple-400 gap-x-2 gap-y-1">
                 {tags.map((tag) => (
                     <li><a href={`/tags/${tag}`} class="tracking-wide">#{tag}</a></li>
                 ))}
@@ -22,11 +22,11 @@ const { href, title, body, date, type, tags } = Astro.props;
         )
     }
     <a href={href} class="group">
-        <h2 class="group-hover:underline font-bold font-mono text-xl text-slate-800 mt-1">{title}</h2>
-        <p class="text-slate-700 text-md my-2">{body}</p>
+        <h2 class="group-hover:underline font-bold font-mono text-xl text-slate-800 dark:text-slate-50 mt-1">{title}</h2>
+        <p class="text-slate-700 dark:text-slate-300 text-md my-2">{body}</p>
     </a>
     <small class="text-sm mt-1">
-        <span class="uppercase text-purple-600 font-semibold">{type}</span>
-        <span class="text-gray-600">— {date}</span>
+        <span class="uppercase text-purple-600 dark:text-purple-300 font-semibold">{type}</span>
+        <span class="text-slate-600 dark:text-slate-100">— {date}</span>
     </small>
 </article>

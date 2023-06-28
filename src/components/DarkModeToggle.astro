@@ -1,6 +1,5 @@
 <button
-    class="fixed right-5 bottom-24 md:bottom-10 w-10 h-10 rounded-full bg-slate-700 dark:bg-slate-800 flex justify-center items-center text-white dark:text-yellow-400"
-    id="theme-toggle"
+    class="theme-toggle md:hidden w-8 h-8 flex justify-center items-center rounded-lg text-sky-500 font-bold dark:text-yellow-400"
     aria-label="DarkToggle Button"
 >
     <svg
@@ -34,32 +33,3 @@
             fill="currentColor"></path>
     </svg>
 </button>
-<script>
-    const html = document.documentElement;
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const sunSvg = document.getElementById('sun');
-    const moonSvg = document.getElementById('moon');
-
-    let theme = localStorage.getItem('T_SITE_THEME') || 'light';
-    theme === 'light' ? setLightTheme() : setDarkTheme();
-
-    function setDarkTheme() {
-        html.classList.add('dark');
-        moonSvg.classList.add('hidden');
-        sunSvg.classList.remove('hidden');
-        localStorage.setItem('T_SITE_THEME', 'dark');
-        theme = 'dark';
-    }
-
-    function setLightTheme() {
-        html.classList.remove('dark');
-        moonSvg.classList.remove('hidden');
-        sunSvg.classList.add('hidden');
-        localStorage.setItem('T_SITE_THEME', 'light');
-        theme = 'light';
-    }
-
-    themeToggleButton.addEventListener('click', () => {
-        theme === 'light' ? setDarkTheme() : setLightTheme();
-    });
-</script>

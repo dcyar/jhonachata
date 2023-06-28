@@ -1,4 +1,6 @@
 ---
+import DarkModeToggle from "../components/DarkModeToggle.astro";
+import DarkModeToggleTwo from "../components/DarkModeToggleTwo.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 
 const { path } = Astro.props;
@@ -6,15 +8,18 @@ const { path } = Astro.props;
 <aside class="space-y-2 mb-4 md:mb-0 md:fixed">
     <div class="flex justify-between items-center">
         <a href="/">
-            <h1 class="text-2xl font-extrabold font-mono text-slate-800 underline">Jhon Achata</h1>
+            <h1 class="text-2xl font-extrabold font-mono text-slate-800 underline dark:text-slate-200">Jhon Achata</h1>
         </a>
-        <button class="toggle md:hidden flex flex-col space-y-1" aria-label="Menu">
-            <div class="bg-black h-1 w-6 rounded-sm transition-all origin-left"></div>
-            <div class="bg-black h-1 w-6 rounded-sm transition-all origin-left"></div>
-            <div class="bg-black h-1 w-6 rounded-sm transition-all origin-left"></div>
-        </button>
+        <div class="flex justify-end items-center gap-x-4">
+            <DarkModeToggle />
+            <button class="toggle md:hidden flex flex-col space-y-1" aria-label="Menu">
+                <div class="bg-black dark:bg-slate-300 h-1 w-6 rounded-sm transition-all origin-left"></div>
+                <div class="bg-black dark:bg-slate-300 h-1 w-6 rounded-sm transition-all origin-left"></div>
+                <div class="bg-black dark:bg-slate-300 h-1 w-6 rounded-sm transition-all origin-left"></div>
+            </button>
+        </div>
     </div>
-    <nav class="space-y-3 hidden md:block font-mono text-slate-800 tracking-wide">
+    <nav class="space-y-3 hidden md:block font-mono text-slate-800 tracking-wide dark:text-slate-200">
         <ul class="text-sm font-bold">
             <li class="py-2">
                 <a
@@ -36,6 +41,8 @@ const { path } = Astro.props;
             </li>
         </ul>
         <SocialLinks />
+
+        <DarkModeToggleTwo />
         <!-- <ul class="text-sm text-purple-400 font-body font-semibold">
             <li class="py-1">
                 <a href="https://github.com/dcyar" class="flex items-center space-x-1">
@@ -70,5 +77,41 @@ const { path } = Astro.props;
         menus[2].classList.toggle('-rotate-45');
 
         document.querySelector('nav').classList.toggle('hidden');
+    });
+
+    const html = document.documentElement;
+    const themeToggleButton = document.getElementsByClassName('theme-toggle');
+    const sunSvg = document.getElementById('sun');
+    const moonSvg = document.getElementById('moon');
+    const sunSvg2 = document.getElementById('sun-2');
+    const moonSvg2 = document.getElementById('moon-2');
+
+    let theme = localStorage.getItem('T_SITE_THEME') || 'light';
+    theme === 'light' ? setLightTheme() : setDarkTheme();
+
+    function setDarkTheme() {
+        html.classList.add('dark');
+        moonSvg.classList.add('hidden');
+        sunSvg.classList.remove('hidden');
+        moonSvg2.classList.add('hidden');
+        sunSvg2.classList.remove('hidden');
+        localStorage.setItem('T_SITE_THEME', 'dark');
+        theme = 'dark';
+    }
+
+    function setLightTheme() {
+        html.classList.remove('dark');
+        moonSvg.classList.remove('hidden');
+        sunSvg.classList.add('hidden');
+        moonSvg2.classList.remove('hidden');
+        sunSvg2.classList.add('hidden');
+        localStorage.setItem('T_SITE_THEME', 'light');
+        theme = 'light';
+    }
+
+    Array.from(themeToggleButton).forEach(element => {
+        element.addEventListener('click', () => {
+            theme === 'light' ? setDarkTheme() : setLightTheme();
+        }); 
     });
 </script>

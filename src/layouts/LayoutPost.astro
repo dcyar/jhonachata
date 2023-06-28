@@ -25,23 +25,23 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
     <header class="space-y-2 border-b border-purple-400 pb-2">
         {
             tags.length > 0 && (
-                <ul class="flex flex-wrap text-sm text-purple-600 gap-x-2 gap-y-1">
+                <ul class="flex flex-wrap text-sm text-purple-600 dark:text-purple-400 gap-x-2 gap-y-1">
                     {tags.map((tag) => (
                         <li class="tracking-wide">#{tag}</li>
                     ))}
                 </ul>
             )
         }
-        <h2 class="font-mono text-2xl md:text-3xl font-bold">{title}</h2>
-        <p class="text-xs text-slate-600 pt-2">Escrito por Jhon Achata el {formatDate(publishedAt)}</p>
+        <h2 class="font-mono text-2xl md:text-3xl font-bold dark:text-slate-50">{title}</h2>
+        <p class="text-xs text-slate-600 dark:text-slate-200 pt-2">Escrito por Jhon Achata el {formatDate(publishedAt)}</p>
     </header>
-    <article class="font-body border-b border-gray-300 pb-4 prose prose-img:w-full prose-a:text-red-700 prose-a:font-bold">
+    <article class="font-body border-b border-gray-300 pb-4 prose prose-img:w-full prose-a:text-red-700 dark:prose-a:text-red-400 prose-a:font-bold dark:text-slate-100 dark:prose-h2:text-slate-100 dark:prose-h3:text-slate-100 dark:prose-h4:text-slate-100 dark:prose-blockquote:text-slate-100 dark:prose-strong:text-purple-400">
         <slot />
     </article>
-    <section class="flex justify-between text-sm font-semibold">
+    <section class="flex justify-between text-sm font-semibold dark:text-slate-100">
         <!-- <a href="#" class="">Atrás</a> -->
         {
-            previousPost && (<span>Te puede interesar: <a href={`/${previousPost.slug}`} class="w-full p-2 text-purple-600">{ previousPost.data.title }</a></span>)
+            previousPost && (<span>Te puede interesar: <a href={`/${previousPost.slug}`} class="w-full p-2 text-purple-600 dark:text-purple-400">{ previousPost.data.title }</a></span>)
         }
         <!-- <a href="#" class="text-purple-500">Ultimo post que te puede interesar</a> -->
     </section>

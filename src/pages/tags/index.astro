@@ -19,7 +19,7 @@ tags = [...new Set(tags)];
 <MainLayout title="Jhon Achata — Tags" path="/tags">
     <section class="flex flex-wrap gap-4">
         {
-            tags.map((tag) => <a href={`/tags/${tag}`} class="p-2 border border-purple-400 text-purple-800 shadow-md shadow-purple-300 font-bold font-mono">{tag}</a>)
+            tags.map((tag) => <a href={`/tags/${tag}`} class="p-2 border border-purple-400 dark:border-purple-600 text-purple-800 dark:text-purple-200 shadow-md shadow-purple-300 dark:shadow-purple-600 font-bold font-mono">{tag}</a>)
         }
     </section>
 </MainLayout>
