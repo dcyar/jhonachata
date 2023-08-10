@@ -1,6 +1,6 @@
 ---
 type: original
-title: Generar slugs con una sola linea de codigo en Javascript
+title: Generar slugs con una sola linea de código en Javascript
 slug: generar-slugs-con-una-sola-linea-de-codigo-en-javascript
 publishedAt: 2023-08-08
 excerpt: Los slugs son una cadena de texto separada por guiones que muy a menudo usamos para identificar una página web en particular.

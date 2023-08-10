@@ -5,10 +5,10 @@ import Layout from '../layouts/Layout.astro';
 import PostCard from '../components/PostCard.astro';
 
 const blogPosts = await getCollection('posts', ({data}) => !data.draft)
-const projects = await getCollection('projects', ({data}) => !data.draft)
+// const projects = await getCollection('projects', ({data}) => !data.draft)
 const links = await getCollection('links', ({data}) => !data.draft)
 
-const posts = orderByDate([...blogPosts, ...projects, ...links]);
+const posts = orderByDate([...blogPosts, ...links]);
 ---
 
 <Layout title="Jhon Achata — Fullstack Developer">
