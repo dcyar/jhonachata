@@ -16,11 +16,7 @@ const posts = orderByDate([...blogPosts, ...links]);
         posts.map(({slug, data: post}) => (
             <PostCard
                 title={post.title}
-                href={
-                    post.type !== 'link'
-                        ? slug
-                        : post.link
-                }
+                href={slug}
                 body={post.excerpt}
                 date={formatDate(post.publishedAt)}
                 type={post.type}
