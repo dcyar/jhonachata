@@ -3,26 +3,25 @@ type: original
 title: Subir archivos a cloudinary con Express y Nodejs
 slug: subir-archivos-a-cloudinary-con-express-y-nodejs
 publishedAt: 2022-12-04
-excerpt: Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil
+excerpt: Las aplicaciones web a menudo requieren la funcionalidad de permitir a los usuarios cargar archivos, como imágenes de perfil, documentos necesarios para la aplicación o videos de presentación, etc.
 tags: ['nodejs', 'express', 'cloudinary']
 ---
 
-Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil, algún documento requerido por nuestra aplicación, un video de presentación, etc.
+Las aplicaciones web a menudo requieren la funcionalidad de permitir a los usuarios cargar archivos, como imágenes de perfil, documentos necesarios para la aplicación o videos de presentación, etc.
 
-En esta ocasión veremos un ejemplo de como lograr esto con `ExpressJS` y `NodeJS`, además de integrarlo con `cloudinary`
+En este tutorial, aprenderás cómo implementar esta característica utilizando `ExpressJS` y `NodeJS`, además de integrarla con `Cloudinary`.
 
 > <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> es una plataforma en la nube que permite a los usuarios subir, almacenar, gestionar y distribuir sus archivos de imagen, audio y video de manera fácil y segura. Con la integración de Cloudinary en una aplicación Express, puedes brindar a tus usuarios la capacidad de subir archivos directamente a tu aplicación web y manipularlos en tiempo real.
 
+### Configuración inicial de la aplicación
+
 Primero vamos a configurar nuestra aplicación con <a href="https://expressjs.com/" target="_blank">ExpressJS</a>.
 
+Dirígete a la ubicación donde deseas crear tu aplicación:
+
 ```bash
-# Nos situamos en la carpeta donde crearemos la aplicación
 cd /home/jhon/Desktop/
-
-# Creamos la carpeta donde estará de la aplicación
 mkdir express-cloudinary
-
-# Ingresamos a la carpeta
 cd express-cloudinary
 ```
 
@@ -47,7 +46,7 @@ A continuación creamos el archivo `app.js`, donde usaremos `express` para crear
 
 ![Listado de archivos incluido app.js](/images/express-cloudinary/app-js.png)
 
-Dentro del archivo `app.js` escribimos lo siguiente:
+En el archivo `app.js` escribimos lo siguiente:
 
 ```js
 const express = require('express');
