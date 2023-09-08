@@ -99,6 +99,8 @@ En el navegador al visitar `http://localhost:3000`, podremos ver un formulario c
 
 ![Formulario para adjuntar archivos](/images/express-cloudinary/localhost.png)
 
+### Configuración de cloudinary
+
 A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank">Cloudinary</a>.
 
 ![Página de registro de cloudinary](/images/express-cloudinary/cloudinary-register.png)
@@ -112,6 +114,8 @@ Copiamos la sección `API Environment variable` de cloudinary, y lo adjuntamos e
 ```js
 cloudinary.config('cloudinary://**************:**************@dcyar');
 ```
+
+### Integrar cloudinary en nuestra aplicación
 
 Por último agregamos el código necesario para procesar el formulario.
 

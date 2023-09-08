@@ -1,13 +1,13 @@
 ---
 type: original
-title: Como usar Git stash
+title: ¿Qué es git stash?
 slug: como-usar-git-stash
 publishedAt: 2023-01-03
 excerpt: El comando git stash es una función muy útil de git, nos permite guardar temporalmente para aplicarlos luego. Esto es muy útil cuando se trabaja con múltiples ramas
 tags: ['git', 'stash']
 ---
 
-El comando `git stash` es una función muy útil de git, nos permite guardar temporalmente para aplicarlos luego. Esto es muy útil cuando se trabaja con múltiples ramas y se quiere ir cambiando entre ellas sin tener la necesidad de hacer commit de los cambios.
+El comando `git stash` es una función muy útil de git, nos permite guardar temporalmente cambios para aplicarlos luego. Esto es muy útil cuando se trabaja con múltiples ramas y se quiere ir cambiando entre ellas sin tener la necesidad de hacer commit de los cambios.
 
 Pongámonos en el siguiente escenario:
 
@@ -16,6 +16,8 @@ Pongámonos en el siguiente escenario:
 > Antes de poder cambiarnos de rama para poder realizar el cambio, necesitamos guardar los cambios que ya teníamos hechos en la rama **develop**, pero no queremos hacer commit por que aún no terminamos nuestro trabajo.
 
 Es en estas situaciones donde podemos hacer uso de `git stash`.
+
+### ¿Cómo usar git stash?
 
 Bien, entonces ¿cómo lo uso?, pues es bastante fácil, pongamos como ejemplo el repositorio de este blog (que de hecho puedes encontrar el código en <a href="https://github.com/dcyar/jhonachata" target="_blank">github</a>), en el cual he realizado cambios en algunos archivos:
 
@@ -38,6 +40,8 @@ Como vemos en la imagen anterior al hacer uso del comando `git stash`, donde tam
 ![Salida del comando git stash list](/images/git-stash/git-stash-list.png)
 
 Ahora ya podemos movernos con libertar entre las ramas, sin perder nuestros cambios previos o agregarlos en un commit.
+
+### Recuperar los cambios del stash
 
 Pero y ahora ¿Cómo recupero mis cambios?, es muy fácil, lo único que debemos hacer es, ejecutar el comando `git stash pop` o si tenemos más de un stash, podemos obtenerlos según su índice con `git stash pop stash@{0}`
 
