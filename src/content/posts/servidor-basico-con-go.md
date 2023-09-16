@@ -4,7 +4,7 @@ title: Servidor web básico con Go (Golang)
 slug: servidor-web-basico-con-go
 publishedAt: 2022-12-17
 excerpt: En esta ocasión realizaremos un servidor web básico con Go (Golang), para este ejemplo usaremos los módulos que vienen por defecto con Go
-tags: ['go', 'golang', 'http', 'web server']
+tags: ['go', 'golang', 'http', 'web-server']
 ---
 
 En esta ocasión realizaremos un servidor web básico con <a href="https://go.dev/" target="_blank">Go (Golang)</a>, para este ejemplo usaremos los módulos que vienen por defecto con `Go`
