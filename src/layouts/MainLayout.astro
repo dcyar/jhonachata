@@ -6,14 +6,15 @@ import Footer from '../shared/Footer.astro';
 import Head from '../shared/Head.astro';
 
 import '../global.css';
-import DarkModeToggle from '../components/DarkModeToggle.astro';
 
 const {
     title,
-    description = 'Fullstack Developer con más de 3 años de experiencia, orientado a las buenas prácticas y al código limpio.',
+    description = 'Fullstack Developer con más de 4 años de experiencia, orientado a las buenas prácticas y al código limpio.',
     path = '',
     nofollow = false,
     noindex = false,
+    post = false,
+    publishedAt = new Date().toISOString(),
 } = Astro.props;
 
 const url = import.meta.env.PUBLIC_APP_URL;
@@ -26,18 +27,29 @@ const url = import.meta.env.PUBLIC_APP_URL;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
+        
         <SEO
             title={title}
             description={description}
+            openGraph={{
+                basic: {
+                    title: title,
+                    type: post ? 'article' : 'website',
+                    image: `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
+                },
+                article: {
+                    publishedTime: publishedAt,
+                    modifiedTime: publishedAt,
+                    authors: [
+                        'Jhon Achata Limachi',
+                    ],
+                }
+            }}
             canonical={`${url}${path}/`}
             nofollow={nofollow}
             noindex={noindex}
             extend={{
                 meta: [
-                    {
-                        name: 'og:title',
-                        content: title,
-                    },
                     {
                         name: 'og:description',
                         content: description,
@@ -47,14 +59,8 @@ const url = import.meta.env.PUBLIC_APP_URL;
                         content: `${url}${path}/`,
                     },
                     {
-                        name: 'og:image',
-                        content: `${
-                            import.meta.env.PUBLIC_APP_URL
-                        }/images/preview.jpg`,
-                    },
-                    {
                         name: 'twitter:creator',
-                        content: 'Jhon Achata Limachi',
+                        content: '@jhonachata',
                     },
                     {
                         name: 'twitter:card',
@@ -65,11 +71,23 @@ const url = import.meta.env.PUBLIC_APP_URL;
                         content: '@jhonachata',
                     },
                     {
+                        name: 'twitter:title',
+                        content: title,
+                    },
+                    {
+                        name: 'twitter:description',
+                        content: description,
+                    },
+                    {
                         name: 'twitter:image',
                         content: `${
                             import.meta.env.PUBLIC_APP_URL
                         }/images/preview.jpg`,
                     },
+                    {
+                        name: 'author',
+                        content: 'Jhon Achata Limachi',
+                    }
                 ],
             }}
         />
