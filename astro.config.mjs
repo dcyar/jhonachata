@@ -11,5 +11,8 @@ export default defineConfig({
     integrations: [tailwind(), sitemap(), Compress(), robotsTxt(), partytown()],
     markdown: {
         drafts: false,
+        shikiConfig: {
+            theme: 'one-dark-pro',
+        }
     },
 });
