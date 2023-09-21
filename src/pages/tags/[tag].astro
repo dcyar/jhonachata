@@ -34,7 +34,7 @@ const posts = orderByDate([...blogPosts, ...projects, ...links]);
 
 <Layout title={`Jhon Achata — ${tag}`} path={`/tags/${tag}`}>
     <header class="pb-2 flex text-3xl text-purple-700 dark:text-purple-50 font-bold font-mono border-b-2 border-b-purple-700 gap-x-1">
-        # <h2>{tag}</h2>
+        # <h1>{tag}</h1>
     </header>
     {
         posts.map(({slug, data: post}) => (

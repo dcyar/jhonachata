@@ -17,7 +17,7 @@ module.exports = {
                     },
                     "h1, h2, h3, h4, h5": {
                       "color": "#1e293b",
-                      "margin-top": "0px",
+                      "margin": "1.2rem 0",
                     },
                     "iframe": {
                       "border-radius": "0.5rem",
@@ -78,6 +78,9 @@ module.exports = {
                     },
                     "hr": {
                       "margin": "1.5rem 0",
+                    },
+                    "img": {
+                      "box-shadow": "0 2px 4px rgba(3,3,3,0.2)"
                     },
                   },
                 },

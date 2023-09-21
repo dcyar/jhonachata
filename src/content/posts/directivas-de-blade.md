@@ -9,7 +9,7 @@ tags: ['laravel', 'blade', 'directivas']
 
 En algunas circunstancias necesitamos extender blade para cumplir cierta funcionalidad sin duplicar un código verboso, es por ello que el framework nos permite crear `directivas if de blade` para usarlo de formas mucho más simple
 
-En esta ocasión veremos como tener <a href="https://laravel.com/docs/10.x/blade#custom-if-statements" target="_blank">directivas if de blade personalizadas</a>
+En esta ocasión veremos como tener <a href="https://laravel.com/docs/10.x/blade#custom-if-statements" target="_blank" title="Documentación de laravel" rel="nofollow noopener">directivas if de blade personalizadas</a>
 
 Para ello lo único que tenemos que hacer, es registrar la nueva directiva en el archivo `app/Providers/AppServiceProvider.php`, tal cual nos indica la documentación oficial.
 
@@ -29,7 +29,7 @@ public function boot(): void
 
 En el ejemplo anterior, creamos una `directiva if de blade`, para validar el disco que estamos usando en nuestra aplicación, unicamente con ello, podemos usar la directiva `@disk()` en blade.
 
-```php
+```blade
 @disk('local')
     <!-- La aplicación esta usando el disco local -->
 @elsedisk('s3')

@@ -12,7 +12,7 @@ export default defineConfig({
     markdown: {
         drafts: false,
         shikiConfig: {
-            theme: 'one-dark-pro',
+            theme: 'slack-dark',
         }
     },
 });

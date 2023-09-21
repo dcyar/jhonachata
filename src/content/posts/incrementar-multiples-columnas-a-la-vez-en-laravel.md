@@ -1,13 +1,21 @@
 ---
 type: original
-title: Incrementar multiples columnas a la vez en laravel
+title: Incrementar múltiples columnas a la vez en laravel
 slug: incremenar-multiples-columnas-a-la-vez-en-laravel
 publishedAt: 2023-02-25
-excerpt: Laravel trae consigo multiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos
+excerpt: Laravel trae consigo múltiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos
 tags: ['laravel', 'query-builder', 'orm']
 ---
 
-Laravel trae consigo multiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos.
+Indice de contenido:
+- [Incrementar o decrementar una columna](#incrementar-o-decrementar-una-columna "Incrementar o decrementar una columna")
+- [Incrementar o decrementar múltiples columnas](#incrementar-o-decrementar-múltiples-columna "Incrementar o decrementar múltiples columnas")
+
+---
+
+Laravel trae consigo múltiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos.
+
+## Incrementar o decrementar una columna
 
 Para usar dichas utilidades, en el caso del incremento o decremento de una columna, sería escribir lo siguiente:
 
@@ -27,6 +35,8 @@ $user->increment('points', 5);
 $user->decrement('points', 5);
 ```
 
+## Incrementar o decrementar múltiples columna
+
 También podemos actualizar otras columnas a la vez que se hace el incremento o decremento
 
 ```php
@@ -37,7 +47,7 @@ $user->increment('points', 1, [
 
 Por último, también es posible hacer el incremento o decremento de multiples columnas con `incrementEach` o `decrementEach`
 
-> Esto es posible desde la versión 9.x en adelante
+Esto es posible desde la versión 9.x en adelante
 
 ```php
 $user->incrementEach([
@@ -51,4 +61,4 @@ $user->decrementEach([
 ]);
 ```
 
-> Ver más detalles en la <a href="https://laravel.com/docs/10.x/queries#increment-and-decrement" target="_blank">documentación de laravel</a>.
+Ver más detalles en la <a href="https://laravel.com/docs/10.x/queries#increment-and-decrement" target="_blank" title="Documentación de laravel" rel="nofollow noopener">documentación de laravel</a>.

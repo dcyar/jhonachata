@@ -13,7 +13,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
 
 <article class="w-full border border-slate-500 dark:border-slate-300">
     <div class="p-2">
-        <a href={href + '/'} class="group">
+        <a href={href + '/'} title={title} class="group">
             <h2 class="group-hover:underline font-mono font-bold text-xl dark:text-slate-50">
                 { title }
             </h2>
@@ -25,7 +25,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
         tags.length > 0 && (
             <ul class="flex flex-wrap text-md font-body text-purple-600 dark:text-purple-300 px-2 mb-2 gap-x-2 gap-y-1">
                 {tags.map((tag) => (
-                    <li><a href={`/tags/${tag}/`} class="tracking-wide">#{tag}</a></li>
+                    <li><a href={`/tags/${tag}/`} title={tag} class="tracking-wide">#{tag}</a></li>
                 ))}
             </ul>
         )
@@ -33,7 +33,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
     <div class="columns-2 flex justify-evenly border-t border-slate-500 text-center text-xs uppercase divide-x divide-slate-500 tracking-widest">
         {
             demo && (
-                <a href={demo} target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex justify-center items-center space-x-1">
+                <a href={demo} title={`Demo del proyecto ${title}`} rel="nofollow noopener" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex justify-center items-center space-x-1">
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -48,7 +48,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
         }
         {
             repo && (
-                <a href={repo} target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex items-center justify-center space-x-1">
+                <a href={repo} title={`Repositorio del proyecto ${title}`} rel="nofollow noopener" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex items-center justify-center space-x-1">
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"

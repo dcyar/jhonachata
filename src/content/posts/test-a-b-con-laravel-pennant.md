@@ -5,18 +5,29 @@ publishedAt: 2023-02-10
 excerpt: Junto con el lanzamiento de Laravel 10, el team de laravel nos incluye el paquete Pennant, una herramienta que nos facilitará la introducción de nuevos features, realizar pruebas A/B y mucho más
 tags: ['test-a-b', 'pennant', 'laravel']
 ---
-Junto con el lanzamiento de <a href="https://laravel.com/docs/10.x" target="_blank">Laravel 10</a>, el team de laravel nos incluye el paquete <a href="https://laravel.com/docs/10.x/pennant" target="_blank">Pennant</a>, una herramienta que nos facilitará la introducción de **nuevos features**, **realizar pruebas A/B** y mucho más.
+Indice de contenido:
+- [Introducción](#introducción "Introducción")
+- [Instalación de Laravel Pennant](#instalación-de-laravel-pennant "Instalación de Laravel Pennant")
+- [Agregar una nueva Feature](#agregar-una-nueva-feature "Agregar una nueva Feature")
+- [Reglas y configuración de la Feature](#reglas-y-configuración-de-la-feature "Reglas y configuración de la Feature")
+- [Implementar la Feature](#implementar-la-feature "Implementar la Feature")
+
+---
+
+## Introducción
+
+Junto con el lanzamiento de <a href="https://laravel.com/docs/10.x" target="_blank" title="Documentación de laravel" rel="nofollow noopener">Laravel 10</a>, el team de laravel nos incluye el paquete <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">Pennant</a>, una herramienta que nos facilitará la introducción de **nuevos features**, **realizar pruebas A/B** y mucho más.
 
 En esta ocasión veremos un ejemplo de como usar esta herramienta para realizar pruebas A/B sobre la implementación de una nueva **página de Dashboard**.
 
 Para este ejemplo ya tengo creado una aplicación de laravel que incluye únicamente `Laravel Breeze`.
 
-![Pantalla de inicio de laravel v10](/images/laravel-pennant/welcome-laravel-10.png)
+![Pantalla de inicio de laravel v10](/images/laravel-pennant/welcome-laravel-10.png "Pantalla de inicio de laravel v10")
 
 > Cabe señalar que a fecha de hoy, aún no es oficial el lanzamiento de la versión 10 del framework, entonces la instalación se debe hacer con el siguiente comando `laravel new my-site --dev`, con esto, se instalará el proyecto con la versión 10 de laravel.
 
-### Instalación de Laravel Pennant
-Para agregar el paquete a nuestro proyecto, ejecutaremos estos comando en nuestra terminal (ver la <a href="https://laravel.com/docs/10.x/pennant" target="_blank">documentación de Laravel Pennant</a> para mas detalles)
+## Instalación de Laravel Pennant
+Para agregar el paquete a nuestro proyecto, ejecutaremos estos comando en nuestra terminal (ver la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">documentación de Laravel Pennant</a> para mas detalles)
 
 1. Instalar Laravel Pennant:
 ```php
@@ -27,12 +38,14 @@ composer require laravel/pennant
 php artisan vendor:publish --provider="Laravel\Pennant\PennantServiceProvider"
 ```
 
-![Publicación de assets de laravel pennant](/images/laravel-pennant/pennant-assets.png)
+![Publicación de assets de laravel pennant](/images/laravel-pennant/pennant-assets.png "Publicación de assets de laravel pennant")
 
 3. Ejecutamos las migraciones:
 ```
 php artisan migrate
 ```
+
+## Agregar una nueva Feature
 
 A continuación crearemos nuestra primera `Feature`, tenemos 2 formas de hacerlo:
 
@@ -92,7 +105,9 @@ class NewDashboardPage
 }
 ```
 
-> En nuestro proyecto tomaremos el tiempo que llevan nuestros usuarios en la aplicación para que decidir a quienes mostrar el nuevo diseño de dashboard. En este caso mostraremos a los usuarios con más de 6 meses de antigüedad el nuevo diseño del dashboard.
+## Reglas y configuración de la Feature
+
+*En nuestro proyecto tomaremos el tiempo que llevan nuestros usuarios en la aplicación para que decidir a quienes mostrar el nuevo diseño de dashboard. En este caso mostraremos a los usuarios con más de 6 meses de antigüedad el nuevo diseño del dashboard.*
 
 A continuación haremos una copia del archivo _**dashboard.blade.php**_ y lo nombraremos _**new-dashboard.blade.php**_, con el siguiente contenido.
 
@@ -118,7 +133,7 @@ A continuación haremos una copia del archivo _**dashboard.blade.php**_ y lo nom
 
 Ahora crearemos 2 usuarios con tinker, para esto nos dirigimos a la terminal y ejecutamos el comando para entrar en la shell de tinker:
 
-```
+```bash
 php artisan tinker
 ```
 
@@ -136,7 +151,7 @@ User::factory()->create(['created_at' => now()->subMonths(8)])
 
 El resultado será el siguiente:
 
-![Creación de usuarios con tinker](/images/laravel-pennant/create-users-tinker.png)
+![Creación de usuarios con tinker](/images/laravel-pennant/create-users-tinker.png "Creación de usuarios con tinker")
 
 Ahora continuemos con la configuración del **Feature**, para validar que el nuevo diseño del dashboard se muestre a los usuarios con más de 6 meses de antigüedad, debemos agregar lo siguiente:
 
@@ -161,7 +176,10 @@ class NewDashboardPage
 }
 ```
 
+## Implementar la Feature
+
 Ahora en el archivo de rutas web, modificamos la ruta _**/dashboard**_, con lo siguiente:
+
 ```php
 use App\Features\NewDashboardPage;
 use use Laravel\Pennant\Feature;
@@ -175,14 +193,14 @@ Route::get('/dashboard', function () {
 
 Listo, eso es todo, ahora si iniciamos sesión con cada usuario, podremos ver el nuevo diseño de dashboard únicamente en el usuario con más de 6 meses de antigüedad.
 
-#### Vista de dashboard para usuario nuevo
+### Vista de dashboard para usuario nuevo
 
-![Vista dashboard para usuario nuevo](/images/laravel-pennant/new-user.png)
+![Vista dashboard para usuario nuevo](/images/laravel-pennant/new-user.png "Vista dashboard para usuario nuevo")
 
-#### Vista de dashboard para usuario con +6 meses de antigüedad
+### Vista de dashboard para usuario con +6 meses de antigüedad
 
-![Agregar servicios a laravel sail con sail:install](/images/laravel-pennant/old-user.png)
+![Agregar servicios a laravel sail con sail:install](/images/laravel-pennant/old-user.png "Agregar servicios a laravel sail con sail:install")
 
 <hr />
 
-Si quieres saber mas a cerca de `Laravel Pennant`, puedes visitar la <a href="https://laravel.com/docs/10.x/pennant" target="_blank">documentación oficial</a>.
+Si quieres saber mas a cerca de `Laravel Pennant`, puedes visitar la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">documentación oficial</a>.

@@ -16,7 +16,7 @@ Para poder lograr esta funcionalidad, podemos usar el middleware `password.confi
 
 En este caso, tenemos como ejemplo una página (**Página Secreta**) que contiene información sensible.
 
-![Página de ejemplo con un enlace en el menú que tiene información protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/pagina-ejemplo.png)
+![Página de ejemplo con un enlace en el menú que tiene información protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/pagina-ejemplo.png "Página de ejemplo con un enlace en el menú que tiene información protegida")
 
 Ahora, unicamente necesitamos agregar el middleware a cualquier ruta que necesite la confirmación con contraseña del usuario para continuar.
 
@@ -27,11 +27,11 @@ Route::view('/secret', 'secret')->middleware('password.confirm')->name('secret')
 
 Listo, ya tenemos una ruta protegida que para visualizarla requerimos que el usuario introduzca su contraseña. Si intentamos acceder, vamos a ver un formulario para ingresar la contraseña.
 
-![Formulario de confirmación de contraseña](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/formulario-confirmacion-contrasena.png)
+![Formulario de confirmación de contraseña](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/formulario-confirmacion-contrasena.png "Formulario de confirmación de contraseña")
 
 Si ingresamos la contraseña correcta, podremos acceder al contenido.
 
-![Contenido de la página protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/contenido-secreto.png)
+![Contenido de la página protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/contenido-secreto.png "Contenido de la página protegida")
 
 Después de ingresar la contraseña, no se nos volverá a pedir hasta dentro de 3 horas, si queremos que este tiempo sea menor o mayor, podemos cambiarlo desde el archivo `config/auth.php`
 
@@ -47,4 +47,4 @@ En esta ocasión vimos como proteger el contenido de una ruta, pero también pod
 - Borrar recursos
 - Etc.
 
-Puedes encontrar mas información en la <a href="https://laravel.com/docs/10.x/authentication#password-confirmation" target="_blank">documentación.</a>
+Puedes encontrar mas información en la <a href="https://laravel.com/docs/10.x/authentication#password-confirmation" target="_blank" title="Documentación de laravel" rel="nofollow noopener">documentación.</a>

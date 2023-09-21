@@ -7,35 +7,41 @@ excerpt: En mi máquina funcionaba, ¿lo haz escuchado alguna vez? En este post 
 tags: ['docker', 'php', 'laravel']
 ---
 
+Indice de contenido:
+
+- [¿Qué es Docker?](#qué-es-docker "docker")
+- [Implementar un entorno de desarrollo de Laravel con Docker](#implementar-un-entorno-de-desarrollo-de-laravel-con-docker "Implementar un entorno de desarrollo de Laravel con Docker")
+---
+
 > En mi máquina funcionaba, ¿lo haz escuchado alguna vez?
 
 Los entornos de desarrollo son un punto muy importante al momento de iniciar un nuevo proyecto, y más de una vez se ha oído: **En mi máquina funcionaba!**.
 
 En el ecosistema de **PHP** hay varias opciones para trabajar de forma local, hay opciones como:
 
--   <a href="https://www.apachefriends.org/es/index.html" target="_blank" rel="nofollow">XAMPP</a>
--   <a href="http://www.wampserver.com/en/" target="_blank" rel="nofollow">WAMPP</a>
--   <a href="https://laragon.org/" target="_blank" rel="nofollow">LARAGON</a>
+-   <a href="https://www.apachefriends.org/es/index.html" target="_blank" title="xampp" rel="nofollow noopener">XAMPP</a>
+-   <a href="http://www.wampserver.com/en/" target="_blank" title="wamp" rel="nofollow noopener">WAMPP</a>
+-   <a href="https://laragon.org/" target="_blank" title="laragon" rel="nofollow noopener">LARAGON</a>
 
 Que funcionan muy bien cuando estamos desarrollando un proyecto nosotros solos, pero ¿que sucede si hay un equipo de más de una persona trabajando en ese proyecto?. Si todos trabajan en entornos diferentes, al momento de subir los cambios pueden ocurrir errores de funcionamiento para los demás miembros del equipo cuando vayan a probar los nuevos cambios.
 
 Y si estas desarrollando el proyecto en **Windows**, podría ocurrir problemas cuando este se sube a producción, ya que los servidores ejecutan **Linux**, y este necesita una configuración adicional.
 
-### ¿Qué es <a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a>?
+## ¿Qué es <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a>?
 
-<a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estas se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
+<a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estas se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
 
 > Docker está transformando la forma en que se desarrolla, distribuye y ejecuta el software. **La ventaja: podemos encapsular todo el entorno para pasarlo a producción con las mismas características**.
 
 Y es exactamente lo que, como desarrolladores necesitamos, un entorno de trabajo único, tanto para local como para producción.
 
-> Docker nos ayuda a no malgastar nuestro tiempo configurando el entorno, y las dependencias del sistema, porque lo vamos a poder desplegar fácilmente. Algo muy útil tanto para grandes empresas, como para las pequeñas startups que empiezan a desarrollar su aplicación.
+Docker nos ayuda a no malgastar nuestro tiempo configurando el entorno, y las dependencias del sistema, porque lo vamos a poder desplegar fácilmente. Algo muy útil tanto para grandes empresas, como para las pequeñas startups que empiezan a desarrollar su aplicación.
 
-## Laravel y Docker
+## Implementar un entorno de desarrollo de Laravel con Docker
 
-Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" target="_blank" rel="nofollow">Laravel</a> en Windows.
+Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" target="_blank" title="Página de laravel" rel="nofollow noopener">Laravel</a> en Windows.
 
-1. Primero es necesario tener <a href="https://www.docker.com/" target="_blank" rel="nofollow">Docker</a> instalado.
+1. Primero es necesario tener <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a> instalado.
 
 2. En la carpeta donde queremos tener el proyecto ejecutamos los siguientes comandos.
 
@@ -45,7 +51,7 @@ git clone https://github.com/dcyar/laravel-docker-starter.git
 docker-compose build
 ```
 
-![docker-compose build](/images/laravel-docker/docker-compose-build.png)
+![docker-compose build](/images/laravel-docker/docker-compose-build.png "Docker compose build")
 
 3. Luego ejecutamos el archivo _install.sh_ desde la terminal.
 
@@ -53,11 +59,11 @@ docker-compose build
 ./install.sh
 ```
 
-![install.sh](/images/laravel-docker/install-sh.png)
+![install.sh](/images/laravel-docker/install-sh.png "script de instalación")
 
 El archivo contiene las siguientes instrucciones:
 
-![install steps](/images/laravel-docker/steps.png)
+![install steps](/images/laravel-docker/steps.png "proceso de instalación")
 
 Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 
@@ -69,14 +75,12 @@ Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 -   yarn
 -   git inicializado con las ramas _master_ y _develop_
 
-> El proyecto de laravel estará listo para usarlo en **localhost**, **phpmyadmin** lo tendremos en **localhost:8081**
+El proyecto de laravel estará listo para usarlo en `localhost`, `phpmyadmin` lo tendremos en `localhost:8081`
 
-![localhost](/images/laravel-docker/localhost.png)
+![localhost](/images/laravel-docker/localhost.png "entorno local")
 
-![phpmyadmin](/images/laravel-docker/phpmyadmin.png)
+![phpmyadmin](/images/laravel-docker/phpmyadmin.png "phpmyadmin")
 
-> Y eso es todo, ya tenemos todo listo para construir nuestros proyectos con laravel y docker.
+Y eso es todo, ya tenemos todo listo para construir nuestros proyectos con laravel y docker.
 
-El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" rel="nofollow">github</a>.
-
-Si tienes dudas puedes escribirme en twitter <a href="https://twitter.com/jhonachata" target="_blank" rel="nofollow">@jhonachata</a>.
+El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" title="repositorio github" rel="nofollow noopener">github</a>.

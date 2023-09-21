@@ -6,16 +6,25 @@ publishedAt: 2022-12-04
 excerpt: Las aplicaciones web a menudo requieren la funcionalidad de permitir a los usuarios cargar archivos, como imágenes de perfil, documentos necesarios para la aplicación o videos de presentación, etc.
 tags: ['nodejs', 'express', 'cloudinary']
 ---
+Indice de contenido:
+- [Introducción](#introducción "Introducción")
+- [Configuración inicial de la aplicación](#configuración-inicial-de-la-aplicación "Configuración inicial de la aplicación")
+- [Configuración de Cloudinary](#configuración-de-cloudinary "Configuración de Cloudinary")
+- [Integrar cloudinary en nuestra aplicación](#integrar-cloudinary-en-nuestra-aplicación "Integrar cloudinary en nuestra aplicación")
+
+--- 
+
+## Introducción
 
 Las aplicaciones web a menudo requieren la funcionalidad de permitir a los usuarios cargar archivos, como imágenes de perfil, documentos necesarios para la aplicación o videos de presentación, etc.
 
 En este tutorial, aprenderás cómo implementar esta característica utilizando `ExpressJS` y `NodeJS`, además de integrarla con `Cloudinary`.
 
-> <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> es una plataforma en la nube que permite a los usuarios subir, almacenar, gestionar y distribuir sus archivos de imagen, audio y video de manera fácil y segura. Con la integración de Cloudinary en una aplicación Express, puedes brindar a tus usuarios la capacidad de subir archivos directamente a tu aplicación web y manipularlos en tiempo real.
+> <a href="https://cloudinary.com/" target="_blank" title="Cloudinary" rel="nofollow noopener">Cloudinary</a> es una plataforma en la nube que permite a los usuarios subir, almacenar, gestionar y distribuir sus archivos de imagen, audio y video de manera fácil y segura. Con la integración de Cloudinary en una aplicación Express, puedes brindar a tus usuarios la capacidad de subir archivos directamente a tu aplicación web y manipularlos en tiempo real.
 
-### Configuración inicial de la aplicación
+## Configuración inicial de la aplicación
 
-Primero vamos a configurar nuestra aplicación con <a href="https://expressjs.com/" target="_blank">ExpressJS</a>.
+Primero vamos a configurar nuestra aplicación con <a href="https://expressjs.com/" target="_blank" title="Express js" rel="nofollow noopener">ExpressJS</a>.
 
 Dirígete a la ubicación donde deseas crear tu aplicación:
 
@@ -26,7 +35,7 @@ cd express-cloudinary
 ```
 
 Inicializamos npm, incluimos la opción `-y`, para aceptar la configuración por defecto
-![Terminal ejecutando el comando npm i -y](/images/express-cloudinary/npm-init.png)
+![Terminal ejecutando el comando npm i -y](/images/express-cloudinary/npm-init.png "Terminal ejecutando el comando npm i -y")
 
 Ahora instalamos las dependencias necesarias para nuestra aplicación
 
@@ -44,7 +53,7 @@ En el archivo `package.json`, en la sección de `scripts`, incluimos el siguient
 
 A continuación creamos el archivo `app.js`, donde usaremos `express` para crear nuestra aplicación.
 
-![Listado de archivos incluido app.js](/images/express-cloudinary/app-js.png)
+![Listado de archivos incluido app.js](/images/express-cloudinary/app-js.png "Listado de archivos incluido app.js")
 
 En el archivo `app.js` escribimos lo siguiente:
 
@@ -93,29 +102,29 @@ app.listen(PORT, () => {
 
 Ahora en la consola al ejecutar el comando `npm start`, se iniciará nuestra aplicación y veremos lo siguiente:
 
-![Terminal ejecutando el comando npm start](/images/express-cloudinary/npm-start.png)
+![Terminal ejecutando el comando npm start](/images/express-cloudinary/npm-start.png "Terminal ejecutando el comando npm start")
 
 En el navegador al visitar `http://localhost:3000`, podremos ver un formulario con un campo para adjuntar archivos
 
-![Formulario para adjuntar archivos](/images/express-cloudinary/localhost.png)
+![Formulario para adjuntar archivos](/images/express-cloudinary/localhost.png "Formulario para adjuntar archivos")
 
-### Configuración de cloudinary
+## Configuración de cloudinary
 
-A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank">Cloudinary</a>.
+A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank" title="Cloudinary" rel="nofollow noopener">Cloudinary</a>.
 
-![Página de registro de cloudinary](/images/express-cloudinary/cloudinary-register.png)
+![Página de registro de cloudinary](/images/express-cloudinary/cloudinary-register.png "Página de registro de cloudinary")
 
 Una vez creada la cuenta, nos dirigimos al `dashboard` en cloudinary, ahí podremos ubicar las credenciales necesarias para integrarlo a nuestro sistema.
 
-![Página de inicio de cloudinary](/images/express-cloudinary/cloudinary-dashboard.png)
+![Página de inicio de cloudinary](/images/express-cloudinary/cloudinary-dashboard.png "Página de inicio de cloudinary")
+
+## Integrar cloudinary en nuestra aplicación
 
 Copiamos la sección `API Environment variable` de cloudinary, y lo adjuntamos en la parte de la configuración de cloudinary en nuestra aplicación.
 
 ```js
 cloudinary.config('cloudinary://**************:**************@dcyar');
 ```
-
-### Integrar cloudinary en nuestra aplicación
 
 Por último agregamos el código necesario para procesar el formulario.
 
@@ -159,18 +168,18 @@ app.post('/', async (req, res) => {
 
 Ahora, si volvemos a la url de nuestra aplicación, adjuntamos un archivo y pulsamos en el botón _Upload_, podremos ver la siguiente pantalla.
 
-![Página de respuesta de formulario para subir archivos a cloudinary](/images/express-cloudinary/form-response.png)
+![Página de respuesta de formulario para subir archivos a cloudinary](/images/express-cloudinary/form-response.png "Página de respuesta de formulario para subir archivos a cloudinary")
 
 Al pulsar en el enlace `File here`, se abrirá una pestaña con la imagen de subimos.
 
 Si visitamos la pestaña de `Media Library` en cloudinary podremos ver la carpeta `images` y dentro de ella el archivo que adjuntamos en el formulario.
 
-![Página de media library de cloudinary](/images/express-cloudinary/cloudinary-ml.png)
+![Página de media library de cloudinary](/images/express-cloudinary/cloudinary-ml.png "Página de media library de cloudinary")
 
 Eso es todo, ahora ya podemos agregar la funcionalidad de subir archivos a nuestros proyectos.
 
-> Nota: en este ejemplo pusimos la url de cloudinary, dentro del archivo `app.js`, generalmente y por seguridad deberíamos agregar dicha url en un archivo de variables (`.env`), podemos lograrlo con el <a href="https://www.npmjs.com/package/dotenv" target="_blank">paquete dotenv</a>.
+> Nota: en este ejemplo pusimos la url de cloudinary, dentro del archivo `app.js`, generalmente y por seguridad deberíamos agregar dicha url en un archivo de variables (`.env`), podemos lograrlo con el <a href="https://www.npmjs.com/package/dotenv" target="_blank" title="Paquete dotenv npm" rel="nofollow noopener">paquete dotenv</a>.
 
 También te dejo un repositorio con el código que vimos, también incluye la opción para subir archivos a una carpeta del mismo proyecto.
 
-<a href="https://github.com/dcyar-learning/node-file-upload">Proyecto para subir archivos a una carpeta del mismo proyecto y a cloudinary</a>
+<a href="https://github.com/dcyar-learning/node-file-upload" target="_blank" title="Repositorio del proyecto" rel="nofollow noopener">Proyecto para subir archivos a una carpeta del mismo proyecto y a cloudinary</a>

@@ -6,10 +6,17 @@ publishedAt: 2023-03-14
 excerpt: Los pipelines son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada
 tags: ['laravel', 'pipelines', 'optimizacion']
 ---
+Indice de contenido:
+- [Estructura de un pipeline de laravel](#estructura-de-un-pipeline-de-laravel "Estructura de un pipeline de laravel")
+- [Caso de uso](#caso-de-uso "Caso de uso")
+- [Aplicamos la solución con Pipelines](#aplicamos-la-solución-con-pipelines "Aplicamos la solución con Pipelines")
+- [Conclusión](#conclusión "Conclusión")
+
+---
 
 Los `pipelines` son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada. En lugar de tener que definir todos los pasos necesarios en un solo lugar podemos crear sub procesos que se apliquen al elemento que le pasamos a un pipeline.
 
-### Estructura de un pipeline de laravel
+## Estructura de un pipeline de laravel
 Pensemos en los `Pipelines` como una fabrica, al inicio enviamos la materia prima y sobre esta vamos aplicando diferentes procesos para obtener un resultado final. A cada proceso lo conocemos como `Pipe`, son muy parecidos a los `middlewares` en cuanto a estructura, veamos a continuación:
 
 ```php
@@ -47,10 +54,9 @@ $user = Pipeline::send($user)
             ->then(fn (User $user) => $user);
 ```
 
+## Caso de uso
 
-## Ahora pongamos un ejemplo:
-
-> En una tienda online, estamos creando el proceso en el que un usuario agrega un producto a su carrito de compras.
+- En una tienda online, estamos creando el proceso en el que un usuario agrega un producto a su carrito de compras.
 
 Para completar este proceso, debemos tomar en cuenta algunos sub procesos para completar el proceso principal:
 
@@ -58,7 +64,7 @@ Para completar este proceso, debemos tomar en cuenta algunos sub procesos para c
 2. Agregar el producto al carrito
 3. Calcular el monto total
 
-### Aplicamos la solución con Pipelines
+## Aplicamos la solución con Pipelines
 
 ```php
 $carrito = Pipeline::send($carrito)
@@ -83,8 +89,10 @@ class ValidateStock {
 }
 ```
 
-> Al final de cada pipe debemos devolver el elemento que le pasamos al pipeline al inicio.
+Al final de cada pipe debemos devolver el elemento que le pasamos al pipeline al inicio.
+
+## Conclusión
 
 Como vimos, los `Pipelines en laravel`, son una funcionalidad muy util que nos permite simplicar nuestro código y hacerlo mas eficiente.
 
-> Como dato adicional, solo podremos encontrar documentación sobre los Pipelines en la version 10.x del framework, pero podemos usarlo en <a href="https://packagist.org/packages/illuminate/pipeline" target="_blank">cualquier versión</a>, ya que este viene por defecto en el core.
+Como dato adicional, solo podremos encontrar documentación sobre los Pipelines en la version 10.x del framework, pero podemos usarlo en <a href="https://packagist.org/packages/illuminate/pipeline" target="_blank" title="Paquete pipeline" rel="nofollow noopener">cualquier versión</a>, ya que este viene por defecto en el core.

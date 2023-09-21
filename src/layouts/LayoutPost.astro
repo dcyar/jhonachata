@@ -36,12 +36,13 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
                 )
             }
             <h1 itemprop="headline" class="font-mono text-2xl md:text-3xl font-bold dark:text-slate-50">{title}</h1>
-            <p itemprop="author" itemscope itemtype="https://schema.org/Person" class="text-md text-slate-600 dark:text-slate-200 pt-2">
+            <p itemprop="author" itemscope itemtype="https://schema.org/Person" class="text-sm text-slate-600 dark:text-slate-200 pt-2">
                 Escrito por
-                <a itemprop="url" href="https://linkedin.com/in/jhonachata" target="_blank" title="Author" class="font-semibold text-indigo-600 dark:text-indigo-400">
+                <a itemprop="url" href="https://linkedin.com/in/jhonachata" target="_blank" title="Author" class="font-semibold text-indigo-600 dark:text-indigo-400" rel="nofollow noopener">
                     <span itemprop="name">Jhon Achata</span>
                 </a>
-                <span itemprop="datePublished" content={publishedAt}>el {formatDate(publishedAt)}</span>
+                el 
+                <span itemprop="datePublished" content={publishedAt}>{formatDate(publishedAt)}</span>
             </p>
         </header>
         <!-- <article class="font-body w-full border-b border-gray-300 pb-4 prose-lg prose-headings:font-semibold prose-p:text-lg prose-img:w-full prose-a:text-red-700 dark:prose-a:text-red-400 prose-a:font-bold dark:text-slate-100 dark:prose-h2:text-slate-100 dark:prose-h3:text-slate-100 dark:prose-h4:text-slate-100 dark:prose-blockquote:text-slate-100 dark:prose-strong:text-purple-400 prose-img:shadow-md prose-li:list-disc prose-li:my-0 prose-blockquote:border-l-4 prose-blockquote:text-slate-600"> -->
@@ -51,7 +52,7 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
         <section class="flex justify-between text-sm font-mono dark:text-slate-100 mt-2">
             <!-- <a href="#" class="">Atrás</a> -->
             {
-                previousPost && (<span>Te puede interesar: <a href={`/${previousPost.slug}`} title={previousPost.data.title} class="w-full p-2 font-semibold text-purple-600 dark:text-purple-400">{ previousPost.data.title }</a></span>)
+                previousPost && (<h3><span>Te puede interesar: <a href={`/${previousPost.slug}/`} title={previousPost.data.title} class="w-full p-2 font-semibold text-purple-600 dark:text-purple-400">{ previousPost.data.title }</a></span></h3>)
             }
             <!-- <a href="#" class="text-purple-500">Ultimo post que te puede interesar</a> -->
         </section>

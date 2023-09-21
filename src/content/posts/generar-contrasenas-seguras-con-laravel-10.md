@@ -6,9 +6,22 @@ publishedAt: 2023-02-22
 excerpt: La mayoría de sistemas necesitan un sistema de autenticación con usuario y contraseña, y en ocasiones la generación de la contraseña es nuestra responsabilidad, por lo tanto debemos idear una solución o usar un paquete para que estas contraseñas sean lo más seguras posibles
 tags: ['laravel', 'helpers', 'seguridad']
 ---
+
+Indice de contenido:
+
+- [Introducción](#introducción "Introducción")
+- [Contraseñas seguras con Str::password()](#contraseñas-seguras-con-strpassword "Contraseñas seguras con Str::password()")
+- [Parámetros adicionales del helper Str::password()](#parámetros-adicionales-del-helper-strpassword "Parámetros adicionales del helper Str::password()")
+
+---
+
+## Introducción
+
 La mayoría de sistemas necesitan un sistema de autenticación con usuario y contraseña, y en ocasiones la generación de la contraseña es nuestra responsabilidad, por lo tanto debemos idear una solución o usar un paquete para que estas contraseñas sean lo más seguras posibles.
 
 > Anteriormente para generar estas contraseñas se hacia uso del helper `Str::random()`, que generaba un cadena de texto aleatoria, pero en algunas ocasiones la cadena no era suficientemente segura.
+
+## Contraseñas seguras con Str::password()
 
 A partir de `Laravel 10` se introdujo un nuevo método `Str::password()` para generar contraseñas seguras, que genera una cadena de texto que incluye letras (mayúsculas y minúsculas), símbolos y números, que es bastante fácil de usar.
 
@@ -19,6 +32,8 @@ $password = Str::password();
 
 // EbJo2vE-AS:U,$%_gkrV4n,q~1xy/-_4
 ```
+
+## Parámetros adicionales del helper Str::password()
 
 La función `password()` recibe varios parámetros que nos pueden ayudar a personalizar aún más el texto generado
 

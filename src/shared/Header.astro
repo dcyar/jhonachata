@@ -7,8 +7,12 @@ const { path } = Astro.props;
 ---
 <aside class="space-y-2 mb-4 md:mb-0 md:fixed">
     <div class="flex justify-between items-center">
-        <a href="/">
-            <h1 class="text-2xl font-extrabold font-mono text-slate-800 underline dark:text-slate-200">Jhon Achata</h1>
+        <a href="/" title="Home">
+            {
+                ['/', '/proyectos/', '/tags/', '/acerca/'].includes(path)
+                    ? <h1 class="text-2xl font-extrabold font-mono text-slate-800 underline dark:text-slate-200">Jhon Achata</h1>
+                    : <p class="text-2xl font-extrabold font-mono text-slate-800 underline dark:text-slate-200">Jhon Achata</p>
+            }
         </a>
         <div class="flex justify-end items-center gap-x-4">
             <DarkModeToggle />
@@ -25,18 +29,21 @@ const { path } = Astro.props;
                 <a
                     href="/proyectos/"
                     class:list={[{'underline':path.includes('proyectos')}]}
+                    title="Proyectos"
                 >Proyectos</a>
             </li>
             <li class="py-2">
                 <a
                     href="/tags/"
                     class:list={[{'underline':path.includes('tags')}]}
+                    title="Tags"
                 >Tags</a>
             </li>
             <li class="py-2">
                 <a
                     href="/acerca/"
                     class:list={[{'underline':path.includes('acerca')}]}
+                    title="Acerca"
                 >Acerca</a>
             </li>
         </ul>
