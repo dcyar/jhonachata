@@ -11,10 +11,10 @@ export interface Props {
 const { href, title, body, date, type, tags } = Astro.props;
 ---
 
-<article class="font-body border-b border-gray-300 last:border-0 pb-4">
+<article class="font-body py-4">
     {
         tags.length > 0 && (
-            <ul class="flex flex-wrap text-sm text-purple-600 dark:text-purple-400 gap-x-2 gap-y-1">
+            <ul class="flex flex-wrap text-md text-purple-700 dark:text-purple-400 gap-x-2 gap-y-1">
                 {tags.map((tag) => (
                     <li><a href={`/tags/${tag}/`} title={tag} class="tracking-wide">#{tag}</a></li>
                 ))}

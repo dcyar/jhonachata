@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from '@layouts/MainLayout.astro';
 
 const blogPosts = await getCollection('posts', ({data}) => !data.draft)
 const projects = await getCollection('projects', ({data}) => !data.draft)
@@ -17,6 +17,9 @@ tags = [...new Set(tags)];
 ---
 
 <MainLayout title="Jhon Achata — Tags" path="/tags">
+    <section class="pb-2 flex text-3xl text-indigo-700 dark:text-purple-50 font-bold font-mono gap-x-1">
+        # <h2 class="underline">Tags</h2>
+    </section>
     <section class="flex flex-wrap gap-4">
         {
             tags.map((tag) => <h2><a href={`/tags/${tag}/`} title={tag} class="p-2 border border-purple-400 dark:border-purple-600 text-purple-800 dark:text-purple-200 shadow-md shadow-purple-300 dark:shadow-purple-600 font-bold font-mono">{tag}</a></h2>)

@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import { formatDate, orderByDate } from '../../helpers';
-import Layout from '../../layouts/Layout.astro';
-import PostCard from '../../components/PostCard.astro';
+import { formatDate, orderByDate } from '@helpers';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/PostCard.astro';
 
 export async function getStaticPaths() {
     const entries = [
@@ -33,9 +33,9 @@ const posts = orderByDate([...blogPosts, ...projects, ...links]);
 ---
 
 <Layout title={`Jhon Achata — ${tag}`} path={`/tags/${tag}`}>
-    <header class="pb-2 flex text-3xl text-purple-700 dark:text-purple-50 font-bold font-mono border-b-2 border-b-purple-700 gap-x-1">
+    <section class="pb-2 flex text-3xl text-purple-700 dark:text-purple-50 font-bold font-mono border-b-2 border-b-purple-700 gap-x-1">
         # <h1>{tag}</h1>
-    </header>
+    </section>
     {
         posts.map(({slug, data: post}) => (
             <PostCard

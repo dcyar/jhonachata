@@ -1,17 +1,20 @@
 ---
 import { getCollection } from 'astro:content';
-import { orderByDate } from '../helpers';
-import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import { orderByDate } from '@helpers';
+import Layout from '@layouts/Layout.astro';
+import ProjectCard from '@components/ProjectCard.astro';
 
 const posts = orderByDate(await getCollection('projects', ({data}) => !data.draft));
 ---
 
 <Layout
-    title="Jhon Achata — Proyectos"
-    description="Proyectos personales realizados con diferentes tecnologías"
+    title="Jhon Achata — Proyectos personales"
+    description="Estos son algunos de los proyectos personales que he realizado en mi tiempo libre o cuando estoy aprendiendo algo nuevo."
     path="/proyectos"
 >
+    <section class="pb-2 flex text-3xl text-indigo-700 dark:text-purple-50 font-bold font-mono gap-x-1">
+        # <h2 class="underline">Proyectos</h2>
+    </section>
     <section class="mb-8 font-body">
         <p class="dark:text-slate-200 text-lg">Estos son algunos de los proyectos personales que he realizado en mi tiempo libre o cuando estoy aprendiendo algo nuevo.</p>
         <p class="dark:text-slate-200 text-lg">Puedes ver mas proyectos en mi perfil de github:</p>

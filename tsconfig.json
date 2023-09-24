@@ -2,5 +2,16 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "paths": {
+      "@layouts/*": ["./src/layouts/*"],
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
+      "@content/*": ["./src/content/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@icons/*": ["./src/components/icons/*"],
+      "@helpers": ["./src/helpers.js"],
+    }
   },
 }

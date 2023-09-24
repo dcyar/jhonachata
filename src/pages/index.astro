@@ -1,27 +1,65 @@
 ---
 import { getCollection } from 'astro:content';
-import { formatDate, orderByDate } from '../helpers';
-import Layout from '../layouts/Layout.astro';
-import PostCard from '../components/PostCard.astro';
+import { formatDate, orderByDate } from '@helpers';
+import Layout from '@layouts/Layout.astro';
+import PostCard from '@components/PostCard.astro';
+import ProjectCard from '@components/ProjectCard.astro';
+import RightArrowIcon from '@components/icons/RightArrowIcon.astro';
 
 const blogPosts = await getCollection('posts', ({data}) => !data.draft)
-// const projects = await getCollection('projects', ({data}) => !data.draft)
+const projectsCollection = await getCollection('projects', ({data}) => !data.draft)
 const links = await getCollection('links', ({data}) => !data.draft)
 
-const posts = orderByDate([...blogPosts, ...links]);
+const posts = orderByDate([...blogPosts, ...links]).slice(0, 5);
+const projects = orderByDate(projectsCollection).slice(0, 5);
 ---
 
 <Layout title="Jhon Achata — Fullstack Developer">
+    <!-- <section class="pb-2 flex text-3xl text-indigo-700 dark:text-purple-50 font-bold font-mono gap-x-1">
+        # <h2 class="underline">Posts recientes</h2>
+    </section> -->
+    <div class="divide-y-2">
+        {
+            posts.map(({slug, data: post}) => (
+                <PostCard
+                    title={post.title}
+                    href={slug}
+                    body={post.excerpt}
+                    date={formatDate(post.publishedAt)}
+                    type={post.type}
+                    tags={post.tags || ''}
+                />
+            ))
+        }
+    </div>
+    <div class="flex md:justify-end">
+        <a href="/blog/" class="flex items-center gap-x-2 text-indigo-600">
+            Ver más posts
+            <RightArrowIcon />
+        </a>
+    </div>
+
+    <section class="pt-5 pb-2 flex text-3xl text-indigo-700 dark:text-purple-50 font-bold font-mono gap-x-1">
+        # <h2 class="underline">Proyectos recientes</h2>
+    </section>
+
     {
-        posts.map(({slug, data: post}) => (
-            <PostCard
+        projects.map(({slug, data: post}) => (
+            <ProjectCard
                 title={post.title}
                 href={slug}
                 body={post.excerpt}
-                date={formatDate(post.publishedAt)}
-                type={post.type}
                 tags={post.tags || ''}
+                demo={post.demo}
+                repo={post.repo}
             />
         ))
     }
+
+<div class="flex md:justify-end">
+    <a href="/proyectos/" class="flex items-center gap-x-2 text-indigo-600">
+        Ver más proyectos
+        <RightArrowIcon />
+    </a>
+</div>
 </Layout>
