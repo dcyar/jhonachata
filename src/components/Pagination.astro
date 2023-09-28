@@ -24,7 +24,7 @@ const paginationList = Array.from({ length }, (_, i) => i + 1);
     {
       paginationList?.map((num) => (
         <a
-          href={`${firstUrl}${num == 1 ? "" : "" + num}`}
+          href={`${firstUrl}${num == 1 ? "" : "" + num}/`}
           class={`block h-8 w-8 rounded border text-center leading-8 text-gray-900 ${
             currentPage == num
               ? "border-purple-600 bg-purple-500 text-slate-100"

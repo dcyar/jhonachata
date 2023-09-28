@@ -20,7 +20,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<Layout title="Jhon Achata — Blog">
+<Layout title="Jhon Achata — Blog" path={page.url.current}>
     <div class="divide-y-2">
         {
             page.data.map(({slug, data: post}) => (
