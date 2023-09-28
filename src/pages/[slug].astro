@@ -30,6 +30,7 @@ const { Content } = await entry.render()
     nofollow={entry.data.nofollow}
     noindex={entry.data.noindex}
     tags={entry.data.tags}
+    og={entry.data.type === 'proyecto' ? false : true}
 >
     <Content />
 </LayoutPost>

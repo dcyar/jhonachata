@@ -22,7 +22,9 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "og:generate": "node src/scripts/og.cjs && yarn webp",
+    "webp": "cd public/images && find . -type f -name \"*.png\" -exec sh -c 'cwebp -q 80 \"$0\" -o \"${0%.png}.webp\" && rm \"$0\"' {} \\;"
   },
   "dependencies": {
     "@astrojs/partytown": "^1.0.3",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.8",
     "astro-compress": "^2.0.15",
-    "astro-robots-txt": "^1.0.0"
+    "astro-robots-txt": "^1.0.0",
+    "puppeteer": "^21.3.6"
   }
 }

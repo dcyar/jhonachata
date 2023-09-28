@@ -15,6 +15,7 @@ const {
     noindex = false,
     post = false,
     publishedAt = new Date().toISOString(),
+    og = false,
 } = Astro.props;
 
 const url = import.meta.env.PUBLIC_APP_URL;
@@ -35,7 +36,7 @@ const url = import.meta.env.PUBLIC_APP_URL;
                 basic: {
                     title: title,
                     type: post ? 'article' : 'website',
-                    image: `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
+                    image: og ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp` : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`
                 },
                 article: {
                     publishedTime: publishedAt,
@@ -46,7 +47,6 @@ const url = import.meta.env.PUBLIC_APP_URL;
                 }
             }}
             canonical={`${url}${path}/`}
-            nofollow={nofollow}
             noindex={noindex}
             extend={{
                 meta: [
@@ -80,9 +80,9 @@ const url = import.meta.env.PUBLIC_APP_URL;
                     },
                     {
                         name: 'twitter:image',
-                        content: `${
-                            import.meta.env.PUBLIC_APP_URL
-                        }/images/preview.jpg`,
+                        content: og 
+                            ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp`
+                            : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
                     },
                     {
                         name: 'author',

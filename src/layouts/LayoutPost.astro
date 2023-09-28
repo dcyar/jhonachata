@@ -3,7 +3,7 @@ import MainLayout from '@layouts/MainLayout.astro';
 import { formatDate, orderByDate } from '@helpers';
 import { getCollection } from 'astro:content';
 
-const { type, title, description, publishedAt, path, nofollow, noindex, tags } = Astro.props;
+const { type, title, description, publishedAt, path, nofollow, noindex, tags, og = false } = Astro.props;
 
 const entries = orderByDate(
     await getCollection(type === 'original' ? 'posts' : 'projects', ({data}) => !data.draft)
@@ -22,6 +22,7 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
     noindex={noindex}
     publishedAt={publishedAt}
     post={true}
+    og={og}
 >
     <article itemscope itemtype="https://schema.org/NewsArticle">
         <header class="space-y-2 border-b border-purple-400 pb-2">

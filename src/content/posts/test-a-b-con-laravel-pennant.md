@@ -1,6 +1,7 @@
 ---
 type: original
 title: Test A/B con Laravel Pennant
+slug: test-a-b-con-laravel-pennant
 publishedAt: 2023-02-10
 excerpt: Junto con el lanzamiento de Laravel 10, el team de laravel nos incluye el paquete Pennant, una herramienta que nos facilitará la introducción de nuevos features, realizar pruebas A/B y mucho más
 tags: ['test-a-b', 'pennant', 'laravel']
