@@ -6,11 +6,10 @@ publishedAt: 2020-03-22
 excerpt: En mi máquina funcionaba, ¿lo haz escuchado alguna vez? En este post veremos como usar docker para crear un entorno de desarrollo para laravel y trabajar de forma mas profesional
 tags: ['docker', 'php', 'laravel']
 ---
-
 Indice de contenido:
-
 - [¿Qué es Docker?](#qué-es-docker "docker")
 - [Implementar un entorno de desarrollo de Laravel con Docker](#implementar-un-entorno-de-desarrollo-de-laravel-con-docker "Implementar un entorno de desarrollo de Laravel con Docker")
+
 ---
 
 > En mi máquina funcionaba, ¿lo haz escuchado alguna vez?
@@ -45,25 +44,25 @@ Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para t
 
 2. En la carpeta donde queremos tener el proyecto ejecutamos los siguientes comandos.
 
-```bash
+```bash title="Terminal"
 git clone https://github.com/dcyar/laravel-docker-starter.git
 
 docker-compose build
 ```
 
-![docker-compose build](/images/laravel-docker/docker-compose-build.png "Docker compose build")
+![docker-compose build](/images/laravel-docker/docker-compose-build.webp "Docker compose build")
 
 3. Luego ejecutamos el archivo _install.sh_ desde la terminal.
 
-```bash
+```bash title="Terminal"
 ./install.sh
 ```
 
-![install.sh](/images/laravel-docker/install-sh.png "script de instalación")
+![install.sh](/images/laravel-docker/install-sh.webp "script de instalación")
 
 El archivo contiene las siguientes instrucciones:
 
-![install steps](/images/laravel-docker/steps.png "proceso de instalación")
+![install steps](/images/laravel-docker/steps.webp "proceso de instalación")
 
 Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 
@@ -77,9 +76,9 @@ Al finalizar tendremos el siguiente entorno para trabajar nuestro proyecto:
 
 El proyecto de laravel estará listo para usarlo en `localhost`, `phpmyadmin` lo tendremos en `localhost:8081`
 
-![localhost](/images/laravel-docker/localhost.png "entorno local")
+![localhost](/images/laravel-docker/localhost.webp "entorno local")
 
-![phpmyadmin](/images/laravel-docker/phpmyadmin.png "phpmyadmin")
+![phpmyadmin](/images/laravel-docker/phpmyadmin.webp "phpmyadmin")
 
 Y eso es todo, ya tenemos todo listo para construir nuestros proyectos con laravel y docker.
 

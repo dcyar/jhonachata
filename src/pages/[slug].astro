@@ -35,17 +35,6 @@ const { Content } = await entry.render()
 </LayoutPost>
 
 <script>
-    document.querySelectorAll('.astro-code').forEach((p) => {
-        p.classList.add(
-            'font-bold',
-            'bg-slate-900',
-            'overflow-x-auto',
-            'p-4',
-            'my-4',
-            'rounded-xl'
-        );
-    });
-
     document.querySelectorAll('p > code').forEach((c) => {
         c.classList.add(
             'bg-[#efefef]',
@@ -59,8 +48,4 @@ const { Content } = await entry.render()
             'shadow-[#cdcdcd]'
         );
     });
-
-    document.querySelectorAll('.astro-code').forEach((c) => {
-        c.classList.add('scrollbar-hide', 'text-sm');
-    })
 </script>

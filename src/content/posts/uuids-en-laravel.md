@@ -28,7 +28,7 @@ En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.
 
 Tenemos varias opciones para crear un nuevo proyecto de laravel
 
-```bash
+```bash title="Terminal"
 # Con composer
 composer create-project laravel/laravel uuid
 
@@ -45,7 +45,7 @@ En mi caso, usaré <a href="https://laravel.com/docs/9.x/sail" target="_blank" t
 
 Levantamos el proyecto:
 
-```bash
+```bash title="Terminal"
 # Navegamos a la carpeta del proyecto
 cd ~/your-path/uuid
 
@@ -57,7 +57,7 @@ cd ~/your-path/uuid
 
 Creamos un nuevo modelo ***Task***, usamos la opción `-m`, para generar también la migración.
 
-![Crear modelo Task](/images/uuids-en-laravel/make-model.png "Crear modelo Task")
+![Crear modelo Task](/images/uuids-en-laravel/make-model.webp "Crear modelo Task")
 
 Editamos la migración y agregamos el campo `title`
 
@@ -71,7 +71,7 @@ Schema::create('tasks', function (Blueprint $table) {
 
 Ahora agregamos el campo `title` para la asignación masiva en la propiedad `$fillable` del modelo
 
-```php
+```php title="Task.php"
 <?php
 
 namespace App\Models;
@@ -94,15 +94,17 @@ class Task extends Model
 
 Ejecutamos las migraciones
 
-![Ejecutar migraciones](/images/uuids-en-laravel/run-migrations.png "Ejecutar migraciones")
+![Ejecutar migraciones](/images/uuids-en-laravel/run-migrations.webp "Ejecutar migraciones")
 
 ## Resultado
 
 Creamos una nueva tarea, desde tinker
 
-```bash
+```bash title="Terminal"
 ./vendor/bin/sail tinker
 ```
+
+<br />
 
 ```php
 $task = Task::create([

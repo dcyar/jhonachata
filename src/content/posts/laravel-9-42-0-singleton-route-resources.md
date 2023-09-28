@@ -26,7 +26,7 @@ Teniendo esto en cuenta, no necesitaremos las rutas de listar perfiles, tampoco 
 
 ¿Y cómo podemos usarlo?
 
-```php
+```php title="web.php"
 Route::singleton('profile', ProfileController::class);
 
 /*

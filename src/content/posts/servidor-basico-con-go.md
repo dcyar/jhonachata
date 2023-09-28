@@ -23,11 +23,11 @@ Para iniciar con nuestra aplicación nos dirigimos a la carpeta donde guardaremo
 
 Abrimos una terminal, nos ubicamos en la carpeta y ejecutamos el comando para inicializar nuestra aplicación
 
-![Iniciando proyecto con go desde la terminal](/images/go-crud-mongodb/go-mod-init.png "Iniciando proyecto con go desde la terminal")
+![Iniciando proyecto con go desde la terminal](/images/go-crud-mongodb/go-mod-init.webp "Iniciando proyecto con go desde la terminal")
 
 Este comando creará el archivo `go.mod` en la carpeta del proyecto, el archivo contiene el nombre del módulo y la versión de Go con la que generamos el módulo (para este ejemplo estaré usando la versión `1.19` de Go)
 
-```go
+```go title="go.mod"
 module github.com/dcyar/goserver
 
 go 1.19
@@ -37,7 +37,7 @@ go 1.19
 
 Bien, ahora vamos a escribir las primeras líneas de la aplicación con un clásico **Hola Mundo**, para esto necesitamos crear un archivo, este se llamará `main.go`, dentro del archivo escribimos lo siguiente:
 
-```go
+```go title="main.go"
 package main
 
 import "fmt"
@@ -49,7 +49,7 @@ func main() {
 
 Guardamos y nos dirigimos a la terminal, donde ejecutaremos el siguiente comando `go run main.go`, esto nos devolverá el **Hola Mundo** en la terminal.
 
-![Hola mundo con Go](/images/go-crud-mongodb/hola-mundo.png "Hola mundo con Go")
+![Hola mundo con Go](/images/go-crud-mongodb/hola-mundo.webp "Hola mundo con Go")
 
 Listo, ya logramos imprimir el **Hola Mundo** en la terminal, pero esto no es lo que queremos lograr, aún nos queda algo de trabajo, así que manos a la obra.
 
@@ -57,9 +57,10 @@ Listo, ya logramos imprimir el **Hola Mundo** en la terminal, pero esto no es lo
 
 Primero hagamos unos cambios en el archivo `main.go`, haremos uso del módulo <a href="https://pkg.go.dev/net/http" target="_blank" title="Módulo http" rel="nofollow noopener">http</a> de Go para inicializar nuestro servidor
 
-```go
+```go title="main.go" del={3, 15} ins={4-9, 12, 16-27}
 package main
 
+import "fmt"
 // Fíjate que para importar más de un módulo se deben usar los paréntesis
 import (
 	"fmt"
@@ -71,29 +72,29 @@ import (
 const PORT string = ":5000"
 
 func main() {
+    fmt.Println("Hola Mundo")
     // Hacemos una nueva instancia de ServeMux
     // En la documentación se define a ServeMux
     // como un multiplexor de peticiones HTTP
-	mux := http.NewServeMux()
+    mux := http.NewServeMux()
 
+    fmt.Printf("Servidor ejecutándose en el puerto %s\n", PORT)
 
-	fmt.Printf("Servidor ejecutándose en el puerto %s\n", PORT)
-
-	// Con http.ListenAndServe() escuchamos las peticiones
-	// y manejamos las solicitudes del cliente
-	// Encerramos ese llamado con log.Fatal()
-	// para ver por consola cualquier error
-	log.Fatal(http.ListenAndServe(PORT, mux))
+    // Con http.ListenAndServe() escuchamos las peticiones
+    // y manejamos las solicitudes del cliente
+    // Encerramos ese llamado con log.Fatal()
+    // para ver por consola cualquier error
+    log.Fatal(http.ListenAndServe(PORT, mux))
 }
 ```
 
 Si vamos a la terminal, cancelamos la ejecución anterior (`ctrl + c`) y volvemos a ejecutar el comando `go run main.go`, veremos lo siguiente:
 
-![Servidor básico con go mostrado en consola](/images/go-crud-mongodb/basic-http.png "Servidor básico con go mostrado en consola")
+![Servidor básico con go mostrado en consola](/images/go-crud-mongodb/basic-http.webp "Servidor básico con go mostrado en consola")
 
 Si vamos al navegador y escribimos `http://localhost:5000`, podremos apreciar que nos devuelve un error 404, esto es por que aún no hemos definido ninguna ruta
 
-![Servidor web en el navegador con error 404](/images/go-crud-mongodb/basic-http-web.png "Servidor web en el navegador con error 404")
+![Servidor web en el navegador con error 404](/images/go-crud-mongodb/basic-http-web.webp "Servidor web en el navegador con error 404")
 
 ## Primera ruta de nuestra aplicación
 
@@ -101,7 +102,7 @@ Ahora escribamos la primera ruta de nuestra aplicación:
 
 Justo debajo de la instancia de `ServeMux`, agregamos nuestra primera ruta:
 
-```go
+```go title="main.go"
 mux := http.NewServeMux()
 
 mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -111,17 +112,17 @@ mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
 Vamos a la terminal y reiniciemos el servidor, si nos dirigimos al navegador podremos ver el **Hola Mundo**:
 
-![Hola Mundo en el navegador](/images/go-crud-mongodb/hola-mundo-web.png "Hola Mundo en el navegador")
+![Hola Mundo en el navegador](/images/go-crud-mongodb/hola-mundo-web.webp "Hola Mundo en el navegador")
 
 Ahora podemos crear tantas rutas como queramos, por ejemplo:
 
-```go
+```go title="main.go"
 mux.HandleFunc("/contacto", func(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Desde contacto")
 })
 ```
 
-![Página de contacto en el navegador](/images/go-crud-mongodb/contacto-web.png "Página de contacto en el navegador")
+![Página de contacto en el navegador](/images/go-crud-mongodb/contacto-web.webp "Página de contacto en el navegador")
 
 Pero qué si deseamos usar algún archivo `html`?
 
@@ -129,15 +130,18 @@ Pero qué si deseamos usar algún archivo `html`?
 
 Para lograrlo, hacemos uso del módulo `html/template` que también viene con `Go`, veamos:
 
-```go
+```go title="main.go" ins={5}
 import (
-	...
+	"fmt"
+	"log"
+	"net/http"
 	"html/template" // Asegurémonos de importar el módulo
-	...
 )
 ```
 
-```go
+<br />
+
+```go title="main.go"
 // Escribamos la ruta
 mux.HandleFunc("/acerca", func(w http.ResponseWriter, r *http.Request) {
     // Para este ejemplo el archivo "acerca.html"
@@ -151,7 +155,7 @@ mux.HandleFunc("/acerca", func(w http.ResponseWriter, r *http.Request) {
 
 El contenido del archivo `acerca.html`, tiene una estructura básica
 
-```html
+```html title="acerca.html"
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -166,6 +170,6 @@ El contenido del archivo `acerca.html`, tiene una estructura básica
 
 Reiniciamos el servidor y vamos al navegador, allí podremos visualizar lo siguiente:
 
-![Página de acerca en el navegador](/images/go-crud-mongodb/acerca-web.png "Página de acerca en el navegador")
+![Página de acerca en el navegador](/images/go-crud-mongodb/acerca-web.webp "Página de acerca en el navegador")
 
 <!-- Listo, en siguientes artículos estaremos viendo como enviar información al template, procesar formularios y almacenar registros en bases de datos como `MongoDb` o `Mysql`. -->

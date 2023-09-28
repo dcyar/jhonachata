@@ -19,7 +19,7 @@ En este artículo, te presentaremos una valiosa funcionalidad de los modelos Elo
 ## Entendiendo la funcionalidad
 Primero, echemos un vistazo a cómo funciona esta característica. Supongamos que tenemos el siguiente modelo llamado `Product`:
 
-```php
+```php title="Product.php"
 class Product extends Model
 {
     use HasFactory;

@@ -10,7 +10,7 @@ repo: https://github.com/dcyar/bookstore
 
 **<a href="https://github.com/dcyar/bookstore" target="_blank">Laravel Bookstore</a>** es un proyecto Open Source de e-commerce con lo básico de la funcionalidad que podría tener una tienda en linea.
 
-![OREC-EX Dashboard](/images/bookstore/backend.png)
+![OREC-EX Dashboard](/images/bookstore/backend.webp)
 
 **Características del Sistema:**
 
@@ -20,11 +20,11 @@ repo: https://github.com/dcyar/bookstore
 
 _Les dejo algunas capturas del sistema._
 
-![OREC-EX Login](/images/bookstore/frontend.png)
+![OREC-EX Login](/images/bookstore/frontend.webp)
 
-![OREC-EX Login](/images/bookstore/new-book.png)
+![OREC-EX Login](/images/bookstore/new-book.webp)
 
-![OREC-EX Login](/images/bookstore/wallet.png)
+![OREC-EX Login](/images/bookstore/wallet.webp)
 
 Si deseas usar el sistema y necesitas ayuda con la instalación o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" target="_blank">@jhonachata</a>
 

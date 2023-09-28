@@ -10,7 +10,7 @@ repo: https://github.com/dcyar/orec-ex
 
 **<a href="https://github.com/dcyar/orec-ex" target="_blank">OREC-EX</a>** es un proyecto Open Source para la digitalización, emisión y control de actas (nacimientos, matrimonios, defunciones) en las _Oficinas de Registros del Estado Civil_, que hay en distintos, distritos o provincias a nivel nacional.
 
-![OREC-EX Dashboard](/images/orec-ex/dashboard.png)
+![OREC-EX Dashboard](/images/orec-ex/dashboard.webp)
 
 **Características del Sistema:**
 
@@ -26,11 +26,11 @@ repo: https://github.com/dcyar/orec-ex
 
 _Les dejo algunas capturas del sistema._
 
-![OREC-EX Login](/images/orec-ex/login.png)
+![OREC-EX Login](/images/orec-ex/login.webp)
 
-![OREC-EX CRUD](/images/orec-ex/new-act.png)
+![OREC-EX CRUD](/images/orec-ex/new-act.webp)
 
-![OREC-EX Details](/images/orec-ex/act.png)
+![OREC-EX Details](/images/orec-ex/act.webp)
 
 Si deseas usar el sistema y necesitas ayuda con la instalación o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" target="_blank">@jhonachata</a>
 

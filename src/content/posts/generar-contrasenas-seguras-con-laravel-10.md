@@ -6,9 +6,7 @@ publishedAt: 2023-02-22
 excerpt: La mayoría de sistemas necesitan un sistema de autenticación con usuario y contraseña, y en ocasiones la generación de la contraseña es nuestra responsabilidad, por lo tanto debemos idear una solución o usar un paquete para que estas contraseñas sean lo más seguras posibles
 tags: ['laravel', 'helpers', 'seguridad']
 ---
-
 Indice de contenido:
-
 - [Introducción](#introducción "Introducción")
 - [Contraseñas seguras con Str::password()](#contraseñas-seguras-con-strpassword "Contraseñas seguras con Str::password()")
 - [Parámetros adicionales del helper Str::password()](#parámetros-adicionales-del-helper-strpassword "Parámetros adicionales del helper Str::password()")

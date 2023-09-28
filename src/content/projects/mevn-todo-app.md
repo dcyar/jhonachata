@@ -62,23 +62,23 @@ npm run dev
 
 ### Página de inicio
 
-![Página de inicio](/images/mevn-todo/home.png)
+![Página de inicio](/images/mevn-todo/home.webp)
 
 ### Página de inicio de sesión
 
-![Página de inicio de sesión](/images/mevn-todo/login.png)
+![Página de inicio de sesión](/images/mevn-todo/login.webp)
 
 ### Página de registro
 
-![Página de registro](/images/mevn-todo/registro.png)
+![Página de registro](/images/mevn-todo/registro.webp)
 
 ### Página de proyectos
 
-![Página de proyectos](/images/mevn-todo/proyectos.png)
+![Página de proyectos](/images/mevn-todo/proyectos.webp)
 
 ### Página de tareas
 
-![Página de tareas](/images/mevn-todo/todos.png)
+![Página de tareas](/images/mevn-todo/todos.webp)
 
 Si deseas usar la aplicación y necesitas ayuda con la instalación o el uso, puedes contactarme por linkedin: <a href="https://www.linkedin.com/in/jhonachata/" target="_blank">@jhonachata</a>
 

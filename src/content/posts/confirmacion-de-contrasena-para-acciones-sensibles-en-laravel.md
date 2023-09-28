@@ -10,32 +10,31 @@ En ocasiones necesitamos proteger ciertas acciones o rutas de nuestra aplicació
 
 Para poder lograr esta funcionalidad, podemos usar el middleware `password.confirm`, que esta disponible desde la versión `6.x` del framework. Puedes encontrar la referencia al middleware en el archivo `app/Http/Kernel.php`
 
-```php
+```php title="Kernel.php"
 'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
 ```
 
 En este caso, tenemos como ejemplo una página (**Página Secreta**) que contiene información sensible.
 
-![Página de ejemplo con un enlace en el menú que tiene información protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/pagina-ejemplo.png "Página de ejemplo con un enlace en el menú que tiene información protegida")
+![Página de ejemplo con un enlace en el menú que tiene información protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/pagina-ejemplo.webp "Página de ejemplo con un enlace en el menú que tiene información protegida")
 
 Ahora, unicamente necesitamos agregar el middleware a cualquier ruta que necesite la confirmación con contraseña del usuario para continuar.
 
-```php
-// routes/web.php
+```php title="web.php"
 Route::view('/secret', 'secret')->middleware('password.confirm')->name('secret');
 ```
 
 Listo, ya tenemos una ruta protegida que para visualizarla requerimos que el usuario introduzca su contraseña. Si intentamos acceder, vamos a ver un formulario para ingresar la contraseña.
 
-![Formulario de confirmación de contraseña](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/formulario-confirmacion-contrasena.png "Formulario de confirmación de contraseña")
+![Formulario de confirmación de contraseña](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/formulario-confirmacion-contrasena.webp "Formulario de confirmación de contraseña")
 
 Si ingresamos la contraseña correcta, podremos acceder al contenido.
 
-![Contenido de la página protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/contenido-secreto.png "Contenido de la página protegida")
+![Contenido de la página protegida](/images/confirmacion-de-contrasena-para-acciones-sensibles-en-laravel/contenido-secreto.webp "Contenido de la página protegida")
 
 Después de ingresar la contraseña, no se nos volverá a pedir hasta dentro de 3 horas, si queremos que este tiempo sea menor o mayor, podemos cambiarlo desde el archivo `config/auth.php`
 
-```php
+```php title="auth.php"
 'password_timeout' => 10800, // Tiempo en segundos
 ```
 

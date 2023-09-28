@@ -22,7 +22,7 @@ Cuando queremos crear un nuevo proyecto de `laravel` y usarlo con `sail`, podemo
 
 ### Usando "laravel installer"
 
-```bash
+```bash title="Terminal"
 laravel new my-project
 
 cd my-project
@@ -32,11 +32,11 @@ php artisan sail:install
 
 Justo después de ejecutar `sail:install`, en la consola se nos mostrará un menú para elegir que servicio deseamos agregar.
 
-![Agregar servicios a laravel sail con sail:install](/images/laravel-sail-add/laravel-installer-sail-install.png "Agregar servicios a laravel sail con sail:install")
+![Agregar servicios a laravel sail con sail:install](/images/laravel-sail-add/laravel-installer-sail-install.webp "Agregar servicios a laravel sail con sail:install")
 
 ### Usando curl
 
-```bash
+```bash title="Terminal"
 curl -s "https://laravel.build/my-project?with=mysql,redis" | bash
 ```
 
@@ -50,6 +50,6 @@ Aquí es donde hacemos uso del nuevo comando para sail que se agregó en la  ver
 
 Lo único que debemos hacer, es ejecutar el comando `php artisan sail:add` en la consola y se mostrará el mismo menú cuando usamos `sail:install`
 
-![Agregar servicios a laravel sail con sail:add](/images/laravel-sail-add/sail-add.png "Agregar servicios a laravel sail con sail:add")
+![Agregar servicios a laravel sail con sail:add](/images/laravel-sail-add/sail-add.webp "Agregar servicios a laravel sail con sail:add")
 
 Aquí ya podemos agregar los servicios que deseamos integrar en nuestro proyecto.

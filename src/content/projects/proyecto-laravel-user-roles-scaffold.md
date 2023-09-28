@@ -10,7 +10,7 @@ repo: https://github.com/dcyar/laravel-user-role-scaffold
 
 **<a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User-Role Scaffold</a>** es un proyecto base para cualquier proyecto que requiera el uso de roles de usuario.
 
-![OREC-EX Dashboard](/images/laravel-role-scaffold/dashboard.png)
+![OREC-EX Dashboard](/images/laravel-role-scaffold/dashboard.webp)
 
 > Puedes ver más en el repositorio del proyecto: <a href="https://github.com/dcyar/laravel-user-role-scaffold" target="_blank">Laravel User-Role Scaffold</a>
 

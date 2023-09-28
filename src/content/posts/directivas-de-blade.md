@@ -13,7 +13,7 @@ En esta ocasión veremos como tener <a href="https://laravel.com/docs/10.x/blade
 
 Para ello lo único que tenemos que hacer, es registrar la nueva directiva en el archivo `app/Providers/AppServiceProvider.php`, tal cual nos indica la documentación oficial.
 
-```php
+```php title="AppServiceProvider.php"
 use Illuminate\Support\Facades\Blade;
  
 /**

@@ -28,7 +28,7 @@ Es en estas situaciones donde podemos hacer uso de `git stash`.
 
 Bien, entonces ¿cómo lo uso?, pues es bastante fácil, pongamos como ejemplo el repositorio de este blog (que de hecho puedes encontrar el código en <a href="https://github.com/dcyar/jhonachata" target="_blank" title="Repositorio del proyecto" rel="nofollow noopener">github</a>), en el cual he realizado cambios en algunos archivos:
 
-![Salida del comando git status](/images/git-stash/changes.png "Salida del comando git status")
+![Salida del comando git status](/images/git-stash/changes.webp "Salida del comando git status")
 
 Como se ve en la imagen, nos encontramos en la rama `develop` y realize 2 cambios: Una modificación en el archivo `MainLayout.astro` y agregue un nuevo archivo `como-usar-git-stash.md` el cual aún no tiene seguimiento por git.
 
@@ -40,11 +40,11 @@ Ahora si queremos cambiarnos a la rama `main` nos podemos encontrar con 2 situac
 
 Ahora es donde podemos hacer uso del comando `git stash`
 
-![Salida del comando git stash](/images/git-stash/git-stash-u.png "Salida del comando git stash")
+![Salida del comando git stash](/images/git-stash/git-stash-u.webp "Salida del comando git stash")
 
 Como vemos en la imagen anterior al hacer uso del comando `git stash`, donde también incluí la opción `-u` para se incluyeran los archivos que aún no se están haciendo seguimiento con git, los archivos se almacenaron en un stash.
 
-![Salida del comando git stash list](/images/git-stash/git-stash-list.png "Salida del comando git stash list")
+![Salida del comando git stash list](/images/git-stash/git-stash-list.webp "Salida del comando git stash list")
 
 Ahora ya podemos movernos con libertar entre las ramas, sin perder nuestros cambios previos o agregarlos en un commit.
 
@@ -52,6 +52,6 @@ Ahora ya podemos movernos con libertar entre las ramas, sin perder nuestros camb
 
 Pero y ahora ¿Cómo recupero mis cambios?, es muy fácil, lo único que debemos hacer es, ejecutar el comando `git stash pop` o si tenemos más de un stash, podemos obtenerlos según su índice con `git stash pop stash@{0}`
 
-![Salida del comando git stash pop](/images/git-stash/git-stash-pop.png "Salida del comando git stash pop")
+![Salida del comando git stash pop](/images/git-stash/git-stash-pop.webp "Salida del comando git stash pop")
 
 Puedes encontrar mas información sobre `git stash` en la <a href="https://git-scm.com/docs/git-stash" target="_blank" title="Documentación de git" rel="nofollow noopener">documentación.</a>
