@@ -29,17 +29,17 @@ const { item } = Astro.props;
 </head>
 <body class="bg-black">
     <div class="flex justify-center">
-        <section class="w-[1200px] h-[630px] p-14 flex flex-col items-center justify-center bg-lime-50">
+        <section class="w-[1200px] h-[630px] py-14 px-20 flex flex-col items-center justify-center bg-lime-50">
             <div class="w-full flex flex-col justify-center items-start grow space-y-2">
                 <p class="text-2xl font-semibold font-mono text-slate-800 ml-2">jhonachata.dev</p>
-                <h1 class="text-7xl font-bold font-body text-cyan-700">{ item.data.title }</h1>
+                <h1 class="text-7xl font-bold text-cyan-700">{ item.data.title }</h1>
             </div>
             <div class="w-full h-1/4 text-xl flex justify-between items-center font-mono">
                 <div class="flex items-center space-x-2">
                     <img src="/images/profile.jpeg" class="w-20 h-20 rounded-full" alt="Jhon Achata" />
                     <div>
-                        <h2 class="underline font-bold">Jhon Achata</h2>
-                        <p>{ formatDate(item.data.publishedAt) }</p>
+                        <h2 class="font-bold">Jhon Achata</h2>
+                        <p>Fullstack developer</p>
                     </div>
                 </div>
                 <p class="font-semibold">@jhonachata</p>

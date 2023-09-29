@@ -23,7 +23,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "og:generate": "node src/scripts/og.cjs && yarn webp",
+    "og:generate": "node src/scripts/og.cjs",
     "webp": "cd public/images && find . -type f -name \"*.png\" -exec sh -c 'cwebp -q 80 \"$0\" -o \"${0%.png}.webp\" && rm \"$0\"' {} \\;"
   },
   "dependencies": {

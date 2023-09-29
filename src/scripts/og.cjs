@@ -34,7 +34,7 @@ const screenshot = async (slug) => {
   const page = await browser.newPage();
 
   await page.setViewport({ width: 1200, height: 630 });
-  await page.goto(`https://jhonachata.dev/og/${slug}/`, { waitUntil: 'networkidle0' });
+  await page.goto(`http://localhost:3000/og/${slug}/`, { waitUntil: 'networkidle0' });
   
   try {
     fs.statSync(`public/images/og`);
