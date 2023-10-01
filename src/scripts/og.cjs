@@ -5,6 +5,8 @@ const puppeteer = require('puppeteer');
 
 const postsDirectory = path.join(process.cwd(), 'src/content/posts');
 
+const param_slug = process.argv.find(arg => arg.startsWith('--slug='))?.split('=')[1];
+
 fs.readdir(postsDirectory, (err, files) => {
   if (err) {
     console.error(err);
@@ -16,6 +18,11 @@ fs.readdir(postsDirectory, (err, files) => {
       const filePath = path.join(postsDirectory, file);
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const { data } = matter(fileContents);
+
+      if (param_slug !== undefined) {
+        return !data.draft && data.slug === param_slug;
+      }
+
       return !data.draft;
     }).map(file => {
       const filePath = path.join(postsDirectory, file);
@@ -23,7 +30,7 @@ fs.readdir(postsDirectory, (err, files) => {
       const { data } = matter(fileContents);
       return data.slug;
     });
-
+    
     slugs.forEach(async (slug) => {
       await screenshot(slug);
     });
