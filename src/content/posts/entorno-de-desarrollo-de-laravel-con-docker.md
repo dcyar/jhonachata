@@ -6,11 +6,12 @@ publishedAt: 2020-03-22
 excerpt: En mi máquina funcionaba, ¿lo haz escuchado alguna vez? En este post veremos como usar docker para crear un entorno de desarrollo para laravel y trabajar de forma mas profesional
 tags: ['docker', 'php', 'laravel']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [¿Qué es Docker?](#qué-es-docker "docker")
 - [Implementar un entorno de desarrollo de Laravel con Docker](#implementar-un-entorno-de-desarrollo-de-laravel-con-docker "Implementar un entorno de desarrollo de Laravel con Docker")
-
----
+</div>
 
 > En mi máquina funcionaba, ¿lo haz escuchado alguna vez?
 

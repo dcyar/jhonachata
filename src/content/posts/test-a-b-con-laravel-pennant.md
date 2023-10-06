@@ -6,14 +6,15 @@ publishedAt: 2023-02-10
 excerpt: Junto con el lanzamiento de Laravel 10, el team de laravel nos incluye el paquete Pennant, una herramienta que nos facilitará la introducción de nuevos features, realizar pruebas A/B y mucho más
 tags: ['test-a-b', 'pennant', 'laravel']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Introducción](#introducción "Introducción")
 - [Instalación de Laravel Pennant](#instalación-de-laravel-pennant "Instalación de Laravel Pennant")
 - [Agregar una nueva Feature](#agregar-una-nueva-feature "Agregar una nueva Feature")
 - [Reglas y configuración de la Feature](#reglas-y-configuración-de-la-feature "Reglas y configuración de la Feature")
 - [Implementar la Feature](#implementar-la-feature "Implementar la Feature")
-
----
+</div>
 
 ## Introducción
 

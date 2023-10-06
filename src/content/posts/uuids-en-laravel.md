@@ -6,13 +6,14 @@ publishedAt: 2022-11-29
 excerpt: En lugar de usar números enteros auto incrementados como claves principales de nuestros modelos de Eloquent, ahora podemos optar por usar UUID en su lugar
 tags: ['uuid', 'laravel']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Introducción](#introducción "Introducción")
 - [Configuración inicial de la aplicación](#configuración-inicial-de-la-aplicación "Configuración inicial de la aplicación")
 - [Modelo Task y migraciones](#modelo-task-y-migraciones "Modelo Task y migraciones")
 - [Resultado](#resultado "Resultado")
-
----
+</div>
 
 ## Introducción
 

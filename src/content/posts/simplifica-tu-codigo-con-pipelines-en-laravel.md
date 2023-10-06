@@ -6,13 +6,14 @@ publishedAt: 2023-03-14
 excerpt: Los pipelines son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada
 tags: ['laravel', 'pipelines', 'optimizacion']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Estructura de un pipeline de laravel](#estructura-de-un-pipeline-de-laravel "Estructura de un pipeline de laravel")
 - [Caso de uso](#caso-de-uso "Caso de uso")
 - [Aplicamos la solución con Pipelines](#aplicamos-la-solución-con-pipelines "Aplicamos la solución con Pipelines")
 - [Conclusión](#conclusión "Conclusión")
-
----
+</div>
 
 Los `pipelines` son una forma de encadenar diferentes acciones o procesos sobre un elemento, de forma que podamos trabajar de manera mas eficiente y ordenada. En lugar de tener que definir todos los pasos necesarios en un solo lugar podemos crear sub procesos que se apliquen al elemento que le pasamos a un pipeline.
 

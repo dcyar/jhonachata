@@ -6,11 +6,12 @@ publishedAt: 2023-02-25
 excerpt: Laravel trae consigo múltiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos
 tags: ['laravel', 'query-builder', 'orm']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Incrementar o decrementar una columna](#incrementar-o-decrementar-una-columna "Incrementar o decrementar una columna")
 - [Incrementar o decrementar múltiples columnas](#incrementar-o-decrementar-múltiples-columna "Incrementar o decrementar múltiples columnas")
-
----
+</div>
 
 Laravel trae consigo múltiples utilidades para hacer operaciones de forma sencilla y una de ellas es el poder incrementar o decrementar los valores de las columnas de nuestra base de datos.
 

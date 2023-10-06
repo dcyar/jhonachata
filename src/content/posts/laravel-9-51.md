@@ -6,13 +6,14 @@ publishedAt: 2023-02-09
 excerpt: Laravel sail es una de las herramientas del ecosistema de laravel que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente
 tags: ['laravel', 'docker', 'sail']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Métodos para instalar sail en laravel](#métodos-para-instalar-sail-en-laravel "Métodos para instalar sail en laravel")
     - [Usando laravel installer](#usando-laravel-installer "Usando laravel installer")
     - [Usando curl](#usando-curl "Usando curl")
 - [Agregar más servicios con sail:add](#agregar-más-servicios-con-sailadd "Agregar más servicios con sail:add")
-
----
+</div>
 
 <a href="https://laravel.com/docs/10.x/sail" target="_blank" title="Laravel sail" rel="nofollow noopener">Laravel Sail</a> es una de las herramientas del ecosistema de <a href="https://laravel.com/" target="_blank" title="Laravel" rel="nofollow noopener">Laravel</a> que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente.
 

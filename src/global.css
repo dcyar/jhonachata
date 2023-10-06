@@ -26,3 +26,8 @@
     src: url('/fonts/Karla-Regular.woff2');
     font-display: swap;
 }
+
+.indice {
+    background-color: #fffbeb;
+    padding: 0.5rem;
+}

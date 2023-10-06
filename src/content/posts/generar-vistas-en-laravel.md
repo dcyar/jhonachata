@@ -6,13 +6,14 @@ publishedAt: 2023-09-15
 excerpt: Aprende cómo generar vistas en Laravel de manera rápida y sencilla utilizando Artisan, la herramienta de línea de comandos de Laravel.
 tags: ['laravel', 'artisan', 'views']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Introducción](#introducción "Introducción")
 - [Crear una vista con el comando make:view](#crear-una-vista-con-el-comando-makeview "Crear una vista con el comando make:view")
 - [Personalizar la extensión de la vista](#personalizar-la-extensión-de-la-vista "Personalizar la extensión de la vista")
 - [Generar tests para la vista](#generar-tests-para-la-vista "Generar tests para la vista")
-
----
+</div>
 
 ## Introducción
 

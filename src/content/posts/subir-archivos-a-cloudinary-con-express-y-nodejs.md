@@ -6,13 +6,14 @@ publishedAt: 2022-12-04
 excerpt: Las aplicaciones web a menudo requieren la funcionalidad de permitir a los usuarios cargar archivos, como imágenes de perfil, documentos necesarios para la aplicación o videos de presentación, etc.
 tags: ['nodejs', 'express', 'cloudinary']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Introducción](#introducción "Introducción")
 - [Configuración inicial de la aplicación](#configuración-inicial-de-la-aplicación "Configuración inicial de la aplicación")
 - [Configuración de Cloudinary](#configuración-de-cloudinary "Configuración de Cloudinary")
 - [Integrar cloudinary en nuestra aplicación](#integrar-cloudinary-en-nuestra-aplicación "Integrar cloudinary en nuestra aplicación")
-
---- 
+</div>
 
 ## Introducción
 

@@ -6,14 +6,15 @@ publishedAt: 2022-12-17
 excerpt: En esta ocasión realizaremos un servidor web básico con Go (Golang), para este ejemplo usaremos los módulos que vienen por defecto con Go
 tags: ['go', 'golang', 'http', 'web-server']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Primeros pasos](#primeros-pasos "Primeros pasos")
 - [Hola mundo en Go](#hola-mundo-en-go "Hola mundo en Go")
 - [Servidor básico con el módulo http](#servidor-básico-con-el-módulo-http "Servidor básico con el módulo http")
 - [Primera ruta de nuestra aplicación](#primera-ruta-de-nuestra-aplicación "Primera ruta de nuestra aplicación")
 - [Servir archivos estáticos](#servir-archivos-estáticos "Servir archivos estáticos")
-
----
+</div>
 
 En esta ocasión realizaremos un servidor web básico con <a href="https://go.dev/" target="_blank" title="Página de Golang" rel="nofollow noopener">Go (Golang)</a>, para este ejemplo usaremos los módulos que vienen por defecto con `Go`
 

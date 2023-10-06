@@ -6,13 +6,12 @@ publishedAt: 2023-01-03
 excerpt: El comando git stash es una función muy útil de git, nos permite guardar temporalmente para aplicarlos luego. Esto es muy útil cuando se trabaja con múltiples ramas
 tags: ['git', 'stash']
 ---
-
-**Indice del contenido:**
+<div class="indice">
+Indice del contenido:
 
 - [¿Cómo usar git stash?](#cómo-usar-git-stash "¿Cómo usar git stash?")
 - [Recuperar los cambios del stash](#recuperar-los-cambios-del-stash "Recuperar los cambios del stash")
-
----
+</div>
 
 El comando `git stash` es una función muy útil de git, nos permite guardar temporalmente cambios para aplicarlos luego. Esto es muy útil cuando se trabaja con múltiples ramas y se quiere ir cambiando entre ellas sin tener la necesidad de hacer commit de los cambios.
 

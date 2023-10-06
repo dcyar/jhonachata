@@ -6,11 +6,12 @@ publishedAt: 2023-04-07
 excerpt: La sintaxis invocable de primera clase (First class callable syntax), es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante
 tags: ['php']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Ejemplo de como utilizarlo](#ejemplo-de-como-utilizarlo "Ejemplo de como utilizarlo")
 - [Usando la sintaxis invocable de primera clase](#usando-la-sintaxis-invocable-de-primera-clase "Usando la sintaxis invocable de primera clase")
-
----
+</div>
 
 La <a href="https://www.php.net/manual/en/functions.first_class_callable_syntax.php" target="_blank" title="Documentación de php" rel="nofollow noopener">sintaxis invocable de primera clase (First class callable syntax)</a>, es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante, esta opción esta disponible desde `PHP 8.1`.
 

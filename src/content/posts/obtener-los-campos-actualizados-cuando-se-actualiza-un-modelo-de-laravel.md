@@ -6,13 +6,14 @@ publishedAt: 2023-09-03
 excerpt: En este artículo, te presentaremos una valiosa funcionalidad de los modelos Eloquent en Laravel que te permite identificar qué campos se han actualizado al ejecutar una operación de actualización en un modelo.
 tags: ['laravel', 'eloquent', 'tip']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Entendiendo la funcionalidad](#entendiendo-la-funcionalidad "Entendiendo la funcionalidad")
 - [Identificando cambios](#identificando-cambios "Identificando cambios")
 - [Consideraciones importantes](#consideraciones-importantes "Consideraciones importantes")
 - [Conclusión](#conclusión "Conclusión")
-
----
+</div>
 
 En este artículo, te presentaremos una valiosa funcionalidad de los modelos Eloquent en Laravel que te permite identificar qué campos se han actualizado al ejecutar una operación de actualización en un modelo. Aprenderemos cómo funciona este proceso y cómo puedes aprovecharlo en tus proyectos.
 

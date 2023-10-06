@@ -6,12 +6,13 @@ publishedAt: 2023-08-08
 excerpt: Los slugs son una cadena de texto separada por guiones que muy a menudo usamos para identificar una página web en particular.
 tags: ['javascript', 'tips', 'slugs']
 ---
+<div class="indice">
 Indice del contenido:
+
 - [Introducción](#introducción "Introducción")
 - [Código para generar un slug](#código-para-generar-un-slug "Código para generar un slug")
 - [Usando la función](#usando-la-función "Usando la función")
-
----
+</div>
 
 ## Introducción
 

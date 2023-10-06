@@ -6,11 +6,12 @@ publishedAt: 2022-11-30
 excerpt: Laravel 9.40.0 Singleton Route Resource, rutas para recursos de una sola instancia
 tags: ['laravel', 'feature', 'routes']
 ---
+<div class="indice">
 Indice de contenido:
+
 - [Caso de uso](#caso-de-uso "Caso de uso")
 - [Implementación de Singleton Route Resource](#implementación-de-singleton-route-resource "Implementación de Singleton Route Resource")
-
----
+</div>
 
 El día de ayer se liberó la versión <a href="https://github.com/laravel/framework/releases/tag/v9.42.0" target="_blank" title="Repositorio de laravel" rel="nofollow noopener">9.42.0</a> de laravel y una de las características nuevas son las <a href="https://laravel.com/docs/9.x/controllers#singleton-resource-controllers" target="_blank" title="Documentación de laravel" rel="nofollow noopener">Single Route Resource</a>, que son similares a las `Resource Controller`, con la diferencia que solo nos crea las rutas para `Ver (GET)`, `Editar (GET)` y `Actualizar (PUT|PATCH)`
 
