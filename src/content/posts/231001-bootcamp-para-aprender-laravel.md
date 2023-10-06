@@ -1,6 +1,6 @@
 ---
 type: original
-title: 'Bootcamp para aprender laravel'
+title: 'Bootcamp para aprender laravel desde cero'
 slug: 'bootcamp-para-aprender-laravel'
 publishedAt: 2023-10-01
 excerpt: 'Aprender laravel es realmente muy fácil, el framework cuenta con una muy buena documentación, y ahora incluso con un bootcamp oficial en el cual nos guían paso a paso para construir un proyecto con diferentes stacks'
