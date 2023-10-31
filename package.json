@@ -25,7 +25,7 @@
     "astro": "astro",
     "new:post": "node src/scripts/new-post.cjs",
     "og:generate": "node src/scripts/og.cjs",
-    "webp": "cd public/images && find . -type f -name \"*.png\" -exec sh -c 'cwebp -q 80 \"$0\" -o \"${0%.png}.webp\" && rm \"$0\"' {} \\;"
+    "og:webp": "cd public/images && find . -type f -name \"*.png\" -exec sh -c 'cwebp -q 80 \"$0\" -o \"${0%.png}.webp\" && rm \"$0\"' {} \\;"
   },
   "dependencies": {
     "@astrojs/partytown": "^1.0.3",
