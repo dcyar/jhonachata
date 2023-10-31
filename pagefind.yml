@@ -1,0 +1,3 @@
+exclude_selectors:
+  - ".expressive-code"
+  - ".expressive-code code"

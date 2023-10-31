@@ -24,11 +24,11 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
     post={true}
     og={og}
 >
-    <article itemscope itemtype="https://schema.org/NewsArticle">
+    <article class="mt-4" data-pagefind-body itemscope itemtype="https://schema.org/NewsArticle">
         <header class="space-y-2 border-b border-purple-400 pb-2">
             {
                 tags.length > 0 && (
-                    <ul class="flex flex-wrap text-md text-purple-600 dark:text-purple-400 gap-x-2 gap-y-1">
+                    <ul data-pagefind-ignore class="flex flex-wrap text-md text-purple-600 dark:text-purple-400 gap-x-2 gap-y-1">
                         {tags.map((tag) => (
                             <li class="tracking-wide">#{tag}</li>
                         ))}
@@ -49,7 +49,7 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
         <div class="font-body border-b mt-2 border-slate-300 pb-4 prose prose-md max-w-full prose-indigo dark:prose-invert dark:prose-a:text-indigo-400 dark:prose-headings:text-slate-100 dark:prose-p:text-slate-100 prose-img:w-full prose-headings:before:content-['#'] prose-headings:before:text-slate-400/75 prose-headings:before:mr-2">
             <slot />
         </div>
-        <section class="flex justify-between text-sm font-mono dark:text-slate-100 mt-2">
+        <section data-pagefind-ignore class="flex justify-between text-sm font-mono dark:text-slate-100 mt-2">
             {
                 previousPost && (<h3><span>Te puede interesar: <a href={`/${previousPost.slug}/`} title={previousPost.data.title} class="w-full p-2 font-semibold text-purple-600 dark:text-purple-400">{ previousPost.data.title }</a></span></h3>)
             }

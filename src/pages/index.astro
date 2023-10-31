@@ -18,6 +18,7 @@ const projects = orderByDate(projectsCollection).slice(0, 5);
     <!-- <section class="pb-2 flex text-3xl text-indigo-700 dark:text-purple-50 font-bold font-mono gap-x-1">
         # <h2 class="underline">Posts recientes</h2>
     </section> -->
+    <div id="search" class="md:mt-5"></div>
     <div class="divide-y-2">
         {
             posts.map(({slug, data: post}) => (
@@ -56,10 +57,20 @@ const projects = orderByDate(projectsCollection).slice(0, 5);
         ))
     }
 
-<div class="flex md:justify-end">
-    <a href="/proyectos/" class="flex items-center gap-x-2 text-indigo-600">
-        Ver más proyectos
-        <RightArrowIcon />
-    </a>
-</div>
+    <div class="flex md:justify-end">
+        <a href="/proyectos/" class="flex items-center gap-x-2 text-indigo-600">
+            Ver más proyectos
+            <RightArrowIcon />
+        </a>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({
+                element: "#search",
+                showSubResults: true,
+                debounceTimeoutMs: 500,
+                showImages: false
+            });
+        });
+    </script>
 </Layout>

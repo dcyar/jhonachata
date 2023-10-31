@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "new:post": "node src/scripts/new-post.cjs",
@@ -42,6 +42,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "astro-compress": "^2.0.15",
     "astro-robots-txt": "^1.0.0",
+    "pagefind": "^1.0.3",
     "puppeteer": "^21.3.6"
   }
 }
