@@ -19,17 +19,17 @@ Los entornos de desarrollo son un punto muy importante al momento de iniciar un 
 
 En el ecosistema de **PHP** hay varias opciones para trabajar de forma local, hay opciones como:
 
--   <a href="https://www.apachefriends.org/es/index.html" target="_blank" title="xampp" rel="nofollow noopener">XAMPP</a>
--   <a href="http://www.wampserver.com/en/" target="_blank" title="wamp" rel="nofollow noopener">WAMPP</a>
--   <a href="https://laragon.org/" target="_blank" title="laragon" rel="nofollow noopener">LARAGON</a>
+-   <a href="https://www.apachefriends.org/es/index.html" target="_blank" title="xampp" rel="nofollow">XAMPP</a>
+-   <a href="http://www.wampserver.com/en/" target="_blank" title="wamp" rel="nofollow">WAMPP</a>
+-   <a href="https://laragon.org/" target="_blank" title="laragon" rel="nofollow">LARAGON</a>
 
 Que funcionan muy bien cuando estamos desarrollando un proyecto nosotros solos, pero ¿que sucede si hay un equipo de más de una persona trabajando en ese proyecto?. Si todos trabajan en entornos diferentes, al momento de subir los cambios pueden ocurrir errores de funcionamiento para los demás miembros del equipo cuando vayan a probar los nuevos cambios.
 
 Y si estas desarrollando el proyecto en **Windows**, podría ocurrir problemas cuando este se sube a producción, ya que los servidores ejecutan **Linux**, y este necesita una configuración adicional.
 
-## ¿Qué es <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a>?
+## ¿Qué es <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow">Docker</a>?
 
-<a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estas se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
+<a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow">Docker</a> es una plataforma abierta para desarrolladores y administradores de sistemas con la que se pueden desarrollar, enviar y ejecutar aplicaciones distribuidas, y estas se pueden ejecutar ya sea en computadoras portátiles, maquinas virtuales de centros de datos o en la nube.
 
 > Docker está transformando la forma en que se desarrolla, distribuye y ejecuta el software. **La ventaja: podemos encapsular todo el entorno para pasarlo a producción con las mismas características**.
 
@@ -39,9 +39,9 @@ Docker nos ayuda a no malgastar nuestro tiempo configurando el entorno, y las de
 
 ## Implementar un entorno de desarrollo de Laravel con Docker
 
-Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" target="_blank" title="Página de laravel" rel="nofollow noopener">Laravel</a> en Windows.
+Ahora, vamos a ver una de tantas configuraciones de entorno de desarrollo para trabajar con el framework <a href="https://laravel.com/" target="_blank" title="Página de laravel" rel="nofollow">Laravel</a> en Windows.
 
-1. Primero es necesario tener <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow noopener">Docker</a> instalado.
+1. Primero es necesario tener <a href="https://www.docker.com/" target="_blank" title="Página de docker" rel="nofollow">Docker</a> instalado.
 
 2. En la carpeta donde queremos tener el proyecto ejecutamos los siguientes comandos.
 
@@ -83,4 +83,4 @@ El proyecto de laravel estará listo para usarlo en `localhost`, `phpmyadmin` lo
 
 Y eso es todo, ya tenemos todo listo para construir nuestros proyectos con laravel y docker.
 
-El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" title="repositorio github" rel="nofollow noopener">github</a>.
+El proyecto en <a href="https://github.com/dcyar/laravel-docker-starter" target="_blank" title="repositorio github" rel="nofollow">github</a>.

@@ -18,7 +18,7 @@ Indice de contenido:
 
 ## Introducción
 
-Junto con el lanzamiento de <a href="https://laravel.com/docs/10.x" target="_blank" title="Documentación de laravel" rel="nofollow noopener">Laravel 10</a>, el team de laravel nos incluye el paquete <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">Pennant</a>, una herramienta que nos facilitará la introducción de **nuevos features**, **realizar pruebas A/B** y mucho más.
+Junto con el lanzamiento de <a href="https://laravel.com/docs/10.x" target="_blank" title="Documentación de laravel" rel="nofollow">Laravel 10</a>, el team de laravel nos incluye el paquete <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow">Pennant</a>, una herramienta que nos facilitará la introducción de **nuevos features**, **realizar pruebas A/B** y mucho más.
 
 En esta ocasión veremos un ejemplo de como usar esta herramienta para realizar pruebas A/B sobre la implementación de una nueva **página de Dashboard**.
 
@@ -29,7 +29,7 @@ Para este ejemplo ya tengo creado una aplicación de laravel que incluye únicam
 > Cabe señalar que a fecha de hoy, aún no es oficial el lanzamiento de la versión 10 del framework, entonces la instalación se debe hacer con el siguiente comando `laravel new my-site --dev`, con esto, se instalará el proyecto con la versión 10 de laravel.
 
 ## Instalación de Laravel Pennant
-Para agregar el paquete a nuestro proyecto, ejecutaremos estos comando en nuestra terminal (ver la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">documentación de Laravel Pennant</a> para mas detalles)
+Para agregar el paquete a nuestro proyecto, ejecutaremos estos comando en nuestra terminal (ver la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow">documentación de Laravel Pennant</a> para mas detalles)
 
 1. Instalar Laravel Pennant:
 ```bash title="Terminal"
@@ -205,4 +205,4 @@ Listo, eso es todo, ahora si iniciamos sesión con cada usuario, podremos ver el
 
 <hr />
 
-Si quieres saber mas a cerca de `Laravel Pennant`, puedes visitar la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow noopener">documentación oficial</a>.
+Si quieres saber mas a cerca de `Laravel Pennant`, puedes visitar la <a href="https://laravel.com/docs/10.x/pennant" target="_blank" title="Documentación de pennant" rel="nofollow">documentación oficial</a>.

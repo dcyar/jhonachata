@@ -19,7 +19,7 @@ Indice de contenido:
 
 En este artículo aprenderás cómo generar vistas de manera rápida y sencilla utilizando `artisan`, la herramienta de línea de comandos de `Laravel`. Descubre cómo crear vistas con diferentes extensiones, cómo personalizar la estructura de directorios y cómo generar los tests.
 
-> En la versión <a href="https://github.com/laravel/framework/releases/tag/v10.23.0" target="_blank" title="Repositorio de laravel" rel="nofollow noopener">10.23.0</a> del framework se agregó el comando de artisan `make:view` que nos permite generar vistas con múltiples opciones disponibles
+> En la versión <a href="https://github.com/laravel/framework/releases/tag/v10.23.0" target="_blank" title="Repositorio de laravel" rel="nofollow">10.23.0</a> del framework se agregó el comando de artisan `make:view` que nos permite generar vistas con múltiples opciones disponibles
 
 ## Crear una vista con el comando make:view
 

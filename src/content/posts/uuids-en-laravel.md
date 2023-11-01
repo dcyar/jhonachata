@@ -21,7 +21,7 @@ En lugar de usar números enteros auto incrementados como claves principales de 
 
 > Los **UUID** son identificadores alfanuméricos únicos universales que tienen 36 caracteres de largo.
 
-En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.1" target="_blank" title="Release de laravel" rel="nofollow noopener">9.30.1</a> de laravel, se agregó la opción de poder usar **UUID** como identificadores de los modelos de eloquent (<a href="https://github.com/laravel/framework/pull/44074" target="_blank" title="Pull request" rel="nofollow noopener">PR #44074</a>).
+En la versión <a href="https://github.com/laravel/framework/releases/tag/v9.30.1" target="_blank" title="Release de laravel" rel="nofollow">9.30.1</a> de laravel, se agregó la opción de poder usar **UUID** como identificadores de los modelos de eloquent (<a href="https://github.com/laravel/framework/pull/44074" target="_blank" title="Pull request" rel="nofollow">PR #44074</a>).
 
 ¿Cómo podemos lograr esto?, te muestro a continuación:
 
@@ -42,7 +42,7 @@ laravel new uuid
 curl -s "https://laravel.build/uuid?with=mysql" | bash
 ```
 
-En mi caso, usaré <a href="https://laravel.com/docs/9.x/sail" target="_blank" title="Laravel sail" rel="nofollow noopener">laravel sail</a>, que esta disponible para Mac y Linux, en Windows se debe configurar previamente <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" title="Documentación windows wsl" rel="nofollow noopener">WSL (Windows Subsystem for Linux)</a>
+En mi caso, usaré <a href="https://laravel.com/docs/9.x/sail" target="_blank" title="Laravel sail" rel="nofollow">laravel sail</a>, que esta disponible para Mac y Linux, en Windows se debe configurar previamente <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" title="Documentación windows wsl" rel="nofollow">WSL (Windows Subsystem for Linux)</a>
 
 Levantamos el proyecto:
 
@@ -116,4 +116,4 @@ $task = Task::create([
 $task->id; // "97ddb274-d2d6-4dfb-b23d-6f7c50f58f51"
 ```
 
-Puedes encontrar mas información acerca de los **Uuid** en la <a href="https://laravel.com/docs/9.x/eloquent#uuid-and-ulid-keys" class="font-semibold text-red-600" target="_blank" title="Documentación laravel" rel="nofollow noopener">documentación de laravel.</a>
+Puedes encontrar mas información acerca de los **Uuid** en la <a href="https://laravel.com/docs/9.x/eloquent#uuid-and-ulid-keys" class="font-semibold text-red-600" target="_blank" title="Documentación laravel" rel="nofollow">documentación de laravel.</a>

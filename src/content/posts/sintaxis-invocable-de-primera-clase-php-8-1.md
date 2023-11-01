@@ -13,7 +13,7 @@ Indice de contenido:
 - [Usando la sintaxis invocable de primera clase](#usando-la-sintaxis-invocable-de-primera-clase "Usando la sintaxis invocable de primera clase")
 </div>
 
-La <a href="https://www.php.net/manual/en/functions.first_class_callable_syntax.php" target="_blank" title="Documentación de php" rel="nofollow noopener">sintaxis invocable de primera clase (First class callable syntax)</a>, es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante, esta opción esta disponible desde `PHP 8.1`.
+La <a href="https://www.php.net/manual/en/functions.first_class_callable_syntax.php" target="_blank" title="Documentación de php" rel="nofollow">sintaxis invocable de primera clase (First class callable syntax)</a>, es una forma de escribir el encadenamiento de funciones mucho mas limpio y elegante, esta opción esta disponible desde `PHP 8.1`.
 
 ## Ejemplo de como utilizarlo
 
@@ -27,7 +27,7 @@ array_map(function($letter) {
 // resultado: ['A', 'B', 'C']
 ```
 
-Podemos simplificar el código anterior usando las <a href="https://www.php.net/manual/es/functions.arrow.php" title="Documentación de php" target="_blank" rel="nofollow noopener">funciones de flecha</a>, disponibles desde `PHP 7.4`.
+Podemos simplificar el código anterior usando las <a href="https://www.php.net/manual/es/functions.arrow.php" title="Documentación de php" target="_blank" rel="nofollow">funciones de flecha</a>, disponibles desde `PHP 7.4`.
 
 ```php
 array_map(
@@ -42,7 +42,7 @@ Ya se ve un poco mejor, cierto?, pero vayamos más allá.
 
 ## Usando la sintaxis invocable de primera clase
 
-<a href="https://www.php.net/manual/en/functions.first_class_callable_syntax.php" target="_blank" title="Documentación de php" rel="nofollow noopener">Sintaxis invocable de primera clase (First class callable syntax)</a>, es una forma escribir el código de tal manera que evitemos el código repetitivo.
+<a href="https://www.php.net/manual/en/functions.first_class_callable_syntax.php" target="_blank" title="Documentación de php" rel="nofollow">Sintaxis invocable de primera clase (First class callable syntax)</a>, es una forma escribir el código de tal manera que evitemos el código repetitivo.
 
 Usemos esta opción en el ejemplo anterior:
 

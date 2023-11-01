@@ -15,7 +15,7 @@ Indice de contenido:
 - [Agregar más servicios con sail:add](#agregar-más-servicios-con-sailadd "Agregar más servicios con sail:add")
 </div>
 
-<a href="https://laravel.com/docs/10.x/sail" target="_blank" title="Laravel sail" rel="nofollow noopener">Laravel Sail</a> es una de las herramientas del ecosistema de <a href="https://laravel.com/" target="_blank" title="Laravel" rel="nofollow noopener">Laravel</a> que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente.
+<a href="https://laravel.com/docs/10.x/sail" target="_blank" title="Laravel sail" rel="nofollow">Laravel Sail</a> es una de las herramientas del ecosistema de <a href="https://laravel.com/" target="_blank" title="Laravel" rel="nofollow">Laravel</a> que nos facilita el desarrollo con el uso de docker que nos permite usar diferentes servicios fácilmente.
 
 Cuando queremos crear un nuevo proyecto de `laravel` y usarlo con `sail`, podemos seguir 2 caminos.
 

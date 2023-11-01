@@ -33,7 +33,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
     <div class="columns-2 flex justify-evenly border-t border-slate-500 text-center text-xs uppercase divide-x divide-slate-500 tracking-widest">
         {
             demo && (
-                <a href={demo} title={`Demo del proyecto ${title}`} rel="nofollow noopener" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex justify-center items-center space-x-1">
+                <a href={demo} title={`Demo del proyecto ${title}`} rel="nofollow" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex justify-center items-center space-x-1">
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"
@@ -48,7 +48,7 @@ const { href, title, body, tags, demo, repo } = Astro.props;
         }
         {
             repo && (
-                <a href={repo} title={`Repositorio del proyecto ${title}`} rel="nofollow noopener" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex items-center justify-center space-x-1">
+                <a href={repo} title={`Repositorio del proyecto ${title}`} rel="nofollow" target="_blank" class="w-full p-2 hover:bg-slate-300 dark:hover:bg-slate-600 flex items-center justify-center space-x-1">
                     <svg
                         viewBox="0 0 24 24"
                         aria-hidden="true"

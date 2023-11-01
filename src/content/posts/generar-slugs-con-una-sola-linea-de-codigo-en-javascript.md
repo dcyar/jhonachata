@@ -18,7 +18,7 @@ Indice del contenido:
 
 Los slugs son una cadena de texto separada por guiones que muy a menudo usamos para identificar una página web en particular.
 
-Muchas veces habrás visto que los slugs son generados automáticamente por algún CMS o plataforma. <a href="https://wordpress.org/" target="_blank" title="Wordpress" rel="nofollow noopener">WordPress</a> es un claro ejemplo, en `WordPress` los slugs son generados a partir del titulo de una publicación.
+Muchas veces habrás visto que los slugs son generados automáticamente por algún CMS o plataforma. <a href="https://wordpress.org/" target="_blank" title="Wordpress" rel="nofollow">WordPress</a> es un claro ejemplo, en `WordPress` los slugs son generados a partir del titulo de una publicación.
 
 En algunos casos puede que quieras generar un slug en algún proyecto en el que estés trabajando, y no necesitas ninguna biblioteca externa para lograr esto, en este articulo veremos como, con una sola linea de código en javascript podemos generar un slug.
 

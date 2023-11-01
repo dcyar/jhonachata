@@ -46,4 +46,4 @@ En esta ocasión vimos como proteger el contenido de una ruta, pero también pod
 - Borrar recursos
 - Etc.
 
-Puedes encontrar mas información en la <a href="https://laravel.com/docs/10.x/authentication#password-confirmation" target="_blank" title="Documentación de laravel" rel="nofollow noopener">documentación.</a>
+Puedes encontrar mas información en la <a href="https://laravel.com/docs/10.x/authentication#password-confirmation" target="_blank" title="Documentación de laravel" rel="nofollow">documentación.</a>

@@ -16,7 +16,7 @@ Indice de contenido:
 - [Servir archivos estáticos](#servir-archivos-estáticos "Servir archivos estáticos")
 </div>
 
-En esta ocasión realizaremos un servidor web básico con <a href="https://go.dev/" target="_blank" title="Página de Golang" rel="nofollow noopener">Go (Golang)</a>, para este ejemplo usaremos los módulos que vienen por defecto con `Go`
+En esta ocasión realizaremos un servidor web básico con <a href="https://go.dev/" target="_blank" title="Página de Golang" rel="nofollow">Go (Golang)</a>, para este ejemplo usaremos los módulos que vienen por defecto con `Go`
 
 ## Primeros pasos
 
@@ -56,7 +56,7 @@ Listo, ya logramos imprimir el **Hola Mundo** en la terminal, pero esto no es lo
 
 ## Servidor básico con el módulo http
 
-Primero hagamos unos cambios en el archivo `main.go`, haremos uso del módulo <a href="https://pkg.go.dev/net/http" target="_blank" title="Módulo http" rel="nofollow noopener">http</a> de Go para inicializar nuestro servidor
+Primero hagamos unos cambios en el archivo `main.go`, haremos uso del módulo <a href="https://pkg.go.dev/net/http" target="_blank" title="Módulo http" rel="nofollow">http</a> de Go para inicializar nuestro servidor
 
 ```go title="main.go" del={3, 15} ins={4-9, 12, 16-27}
 package main

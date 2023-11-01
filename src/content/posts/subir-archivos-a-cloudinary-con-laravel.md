@@ -19,13 +19,13 @@ Indice de contenido:
 
 En este artículo aprenderás cómo subir archivos a `Cloudinary` con `Laravel` de una manera sencilla y eficiente.
 
-> <a href="https://cloudinary.com/" target="_blank" title="cloudinary" rel="nofollow noopener">Cloudinary</a> es una plataforma de gestión de imágenes y videos en la nube que ofrece una amplia gama de funcionalidades, como almacenamiento, optimización y transformación de archivos multimedia. Con Laravel, puedes integrar fácilmente Cloudinary en tu aplicación y subir archivos de manera segura y rápida.
+> <a href="https://cloudinary.com/" target="_blank" title="cloudinary" rel="nofollow">Cloudinary</a> es una plataforma de gestión de imágenes y videos en la nube que ofrece una amplia gama de funcionalidades, como almacenamiento, optimización y transformación de archivos multimedia. Con Laravel, puedes integrar fácilmente Cloudinary en tu aplicación y subir archivos de manera segura y rápida.
 
 Una de las características más importantes de las aplicaciones web, son las subidas de archivos por parte de los usuarios, como una foto de perfil, algún documento requerido por nuestra aplicación, un video de presentación, etc.
 
 En esta ocasión veremos un ejemplo de como lograr esto con `Laravel`, además de integrarlo con `cloudinary`
 
-Si quieres ver código completo, puedes ver el repositorio en <a href="https://github.com/dcyar-learning/laravel-cloudinary" target="_blank" title="repositorio github" rel="nofollow noopener">Github</a>
+Si quieres ver código completo, puedes ver el repositorio en <a href="https://github.com/dcyar-learning/laravel-cloudinary" target="_blank" title="repositorio github" rel="nofollow">Github</a>
 
 ## Configuración inicial de la aplicación
 
@@ -37,11 +37,11 @@ laravel new laravel-cloudinary --git
 
 *Le pasamos el flag `--git` para que se inicialice git en el proyecto al terminar la instalación*
 
-Modificamos la vista `welcome` que viene por defecto para dejarlo con el siguiente diseño (<a href="https://github.com/dcyar-learning/laravel-cloudinary/blob/main/resources/views/welcome.blade.php" target="_blank" title="Archivo welcome en github" rel="nofollow noopener">ver código</a>):
+Modificamos la vista `welcome` que viene por defecto para dejarlo con el siguiente diseño (<a href="https://github.com/dcyar-learning/laravel-cloudinary/blob/main/resources/views/welcome.blade.php" target="_blank" title="Archivo welcome en github" rel="nofollow">ver código</a>):
 
 ![Vista de bienvenida](/images/laravel-cloudinary/welcome-view.webp "Vista de bienvenida")
 
-Seguido instalaremos el paquete <a href="https://github.com/cloudinary-devs/cloudinary-laravel/#installation" target="_blank" title="paquete cloudinary laravel" rel="nofollow noopener">cloudinary-devs/cloudinary-laravel</a>, que nos facilitará la integración con `cloudinary`
+Seguido instalaremos el paquete <a href="https://github.com/cloudinary-devs/cloudinary-laravel/#installation" target="_blank" title="paquete cloudinary laravel" rel="nofollow">cloudinary-devs/cloudinary-laravel</a>, que nos facilitará la integración con `cloudinary`
 
 ```bash title="Terminal"
 composer require cloudinary-labs/cloudinary-laravel
@@ -55,7 +55,7 @@ php artisan vendor:publish --provider="CloudinaryLabs\CloudinaryLaravel\Cloudina
 
 ## Configuración de cloudinary
 
-A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank" title="Cloudinary" rel="nofollow noopener">Cloudinary</a>.
+A continuación vamos a crear una cuenta gratuita en <a href="https://cloudinary.com/" target="_blank" title="Cloudinary" rel="nofollow">Cloudinary</a>.
 
 ![Página de registro de cloudinary](/images/express-cloudinary/cloudinary-register.webp "Página de registro de cloudinary")
 
@@ -85,7 +85,7 @@ Route::post('/upload', function (Request $request) {
 });
 ```
 
-El contenido de la vista `result` la podemos encontrar en <a href="https://github.com/dcyar-learning/laravel-cloudinary/blob/main/resources/views/result.blade.php" target="_blank" title="Archivo welcome en github" rel="nofollow noopener">este enlace</a>.
+El contenido de la vista `result` la podemos encontrar en <a href="https://github.com/dcyar-learning/laravel-cloudinary/blob/main/resources/views/result.blade.php" target="_blank" title="Archivo welcome en github" rel="nofollow">este enlace</a>.
 
 Ahora si vamos al formulario, adjuntamos un archivo (una imagen en este caso) y pulsamos en el botón de **SUBIR**, obtendremos el siguiente resultado:
 
@@ -97,6 +97,6 @@ Si visitamos la pestaña de `Media Library` en cloudinary podremos ver la carpet
 
 Eso es todo, ahora ya podemos agregar la funcionalidad de subir archivos a cloudinary a nuestros proyectos.
 
-Si quieres ver el código completo, puedes ver el <a href="https://github.com/dcyar-learning/laravel-cloudinary" target="_blank" title="repositorio del proyecto" rel="nofollow noopener">repositorio en github</a>
+Si quieres ver el código completo, puedes ver el <a href="https://github.com/dcyar-learning/laravel-cloudinary" target="_blank" title="repositorio del proyecto" rel="nofollow">repositorio en github</a>
 
 También te recomiendo otro artículo para <a href="/subir-archivos-a-cloudinary-con-express-y-nodejs" title="artículo para subir archivos a cloudinary con nodejs y express">subir archivos a cloudinary con NodeJS y Express</a>

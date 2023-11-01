@@ -31,3 +31,8 @@
     background-color: #fffbeb;
     padding: 0.5rem;
 }
+
+.indice li a {
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+}

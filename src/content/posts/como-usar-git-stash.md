@@ -25,7 +25,7 @@ Es en estas situaciones donde podemos hacer uso de `git stash`.
 
 ## ¿Cómo usar git stash?
 
-Bien, entonces ¿cómo lo uso?, pues es bastante fácil, pongamos como ejemplo el repositorio de este blog (que de hecho puedes encontrar el código en <a href="https://github.com/dcyar/jhonachata" target="_blank" title="Repositorio del proyecto" rel="nofollow noopener">github</a>), en el cual he realizado cambios en algunos archivos:
+Bien, entonces ¿cómo lo uso?, pues es bastante fácil, pongamos como ejemplo el repositorio de este blog (que de hecho puedes encontrar el código en <a href="https://github.com/dcyar/jhonachata" target="_blank" title="Repositorio del proyecto">github</a>), en el cual he realizado cambios en algunos archivos:
 
 ![Salida del comando git status](/images/git-stash/changes.webp "Salida del comando git status")
 
@@ -53,4 +53,4 @@ Pero y ahora ¿Cómo recupero mis cambios?, es muy fácil, lo único que debemos
 
 ![Salida del comando git stash pop](/images/git-stash/git-stash-pop.webp "Salida del comando git stash pop")
 
-Puedes encontrar mas información sobre `git stash` en la <a href="https://git-scm.com/docs/git-stash" target="_blank" title="Documentación de git" rel="nofollow noopener">documentación.</a>
+Puedes encontrar mas información sobre `git stash` en la <a href="https://git-scm.com/docs/git-stash" target="_blank" title="Documentación de git" rel="nofollow">documentación.</a>

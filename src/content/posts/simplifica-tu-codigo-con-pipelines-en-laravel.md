@@ -96,4 +96,4 @@ Al final de cada pipe debemos devolver el elemento que le pasamos al pipeline al
 
 Como vimos, los `Pipelines en laravel`, son una funcionalidad muy util que nos permite simplicar nuestro código y hacerlo mas eficiente.
 
-Como dato adicional, solo podremos encontrar documentación sobre los Pipelines en la version 10.x del framework, pero podemos usarlo en <a href="https://packagist.org/packages/illuminate/pipeline" target="_blank" title="Paquete pipeline" rel="nofollow noopener">cualquier versión</a>, ya que este viene por defecto en el core.
+Como dato adicional, solo podremos encontrar documentación sobre los Pipelines en la version 10.x del framework, pero podemos usarlo en <a href="https://packagist.org/packages/illuminate/pipeline" target="_blank" title="Paquete pipeline" rel="nofollow">cualquier versión</a>, ya que este viene por defecto en el core.

@@ -61,4 +61,4 @@ $user->decrementEach([
 ]);
 ```
 
-Ver más detalles en la <a href="https://laravel.com/docs/10.x/queries#increment-and-decrement" target="_blank" title="Documentación de laravel" rel="nofollow noopener">documentación de laravel</a>.
+Ver más detalles en la <a href="https://laravel.com/docs/10.x/queries#increment-and-decrement" target="_blank" title="Documentación de laravel" rel="nofollow">documentación de laravel</a>.
