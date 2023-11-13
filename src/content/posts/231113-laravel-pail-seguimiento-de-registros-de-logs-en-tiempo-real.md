@@ -48,9 +48,7 @@ composer require laravel/pail
 
 Para usar el paquete **Laravel Pail**, unicamente debemos ejecutar siguiente comando en nuestra terminal:
 
-```bash title="Terminal"
-php artisan pail
-```
+![Laravel Pail](/images/laravel-pail/laravel-pail.webp "Laravel Pail comando")
 
 El comando también tiene opciones para obtener mas información de los logs
 
