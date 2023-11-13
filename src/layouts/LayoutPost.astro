@@ -15,7 +15,7 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
 ---
 
 <MainLayout
-    title={`${title} — Jhon Achata`}
+    title={`${title}`}
     description={description}
     path={path}
     nofollow={nofollow}
@@ -46,7 +46,7 @@ const previousPost = entries.length >= 1 || (entries.length - 1) === 0 ? entries
             </p>
         </header>
         <!-- <article class="font-body w-full border-b border-gray-300 pb-4 prose-lg prose-headings:font-semibold prose-p:text-lg prose-img:w-full prose-a:text-red-700 dark:prose-a:text-red-400 prose-a:font-bold dark:text-slate-100 dark:prose-h2:text-slate-100 dark:prose-h3:text-slate-100 dark:prose-h4:text-slate-100 dark:prose-blockquote:text-slate-100 dark:prose-strong:text-purple-400 prose-img:shadow-md prose-li:list-disc prose-li:my-0 prose-blockquote:border-l-4 prose-blockquote:text-slate-600"> -->
-        <div class="font-body border-b mt-2 border-slate-300 pb-4 prose prose-md max-w-full prose-indigo dark:prose-invert dark:prose-a:text-indigo-400 dark:prose-headings:text-slate-100 dark:prose-p:text-slate-100 prose-img:w-full prose-headings:before:content-['#'] prose-headings:before:text-slate-400/75 prose-headings:before:mr-2">
+        <div class="font-body border-b mt-2 border-slate-300 pb-4 prose prose-md max-w-full prose-indigo dark:prose-invert dark:prose-a:text-indigo-400 dark:prose-headings:text-slate-100 dark:prose-p:text-slate-100 prose-img:w-full prose-headings:before:content-['#'] prose-headings:before:text-slate-400/75 prose-headings:before:mr-2 prose-headings:mt-10">
             <slot />
         </div>
         <section data-pagefind-ignore class="flex justify-between text-sm font-mono dark:text-slate-100 mt-2">
