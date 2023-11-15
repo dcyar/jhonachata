@@ -28,7 +28,9 @@ const url = import.meta.env.PUBLIC_APP_URL;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        
+        <meta property="og:site_name" content="Jhon Achata" />
+        <meta property="og:description" content={description} />
+
         <SEO
             title={title}
             description={description}
@@ -36,7 +38,10 @@ const url = import.meta.env.PUBLIC_APP_URL;
                 basic: {
                     title: title,
                     type: post ? 'article' : 'website',
-                    image: og ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp` : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`
+                    image: og
+                        ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp`
+                        : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
+                    url: `${url}${path}/`,
                 },
                 article: {
                     publishedTime: publishedAt,
@@ -48,42 +53,18 @@ const url = import.meta.env.PUBLIC_APP_URL;
             }}
             canonical={`${url}${path}/`}
             noindex={noindex}
+            twitter={{
+                card: 'summary',
+                title: title,
+                site: '@jhonachata',
+                creator: '@jhonachata',
+                description: description,
+                image: og
+                    ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp`
+                    : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
+            }},
             extend={{
                 meta: [
-                    {
-                        name: 'og:description',
-                        content: description,
-                    },
-                    {
-                        name: 'og:url',
-                        content: `${url}${path}/`,
-                    },
-                    {
-                        name: 'twitter:creator',
-                        content: '@jhonachata',
-                    },
-                    {
-                        name: 'twitter:card',
-                        content: 'summary',
-                    },
-                    {
-                        name: 'twitter:site',
-                        content: '@jhonachata',
-                    },
-                    {
-                        name: 'twitter:title',
-                        content: title,
-                    },
-                    {
-                        name: 'twitter:description',
-                        content: description,
-                    },
-                    {
-                        name: 'twitter:image',
-                        content: og 
-                            ? `${import.meta.env.PUBLIC_APP_URL}/images/og${path}.webp`
-                            : `${import.meta.env.PUBLIC_APP_URL}/images/preview.jpg`,
-                    },
                     {
                         name: 'author',
                         content: 'Jhon Achata Limachi',

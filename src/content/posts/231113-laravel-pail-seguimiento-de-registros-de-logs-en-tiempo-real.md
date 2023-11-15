@@ -11,6 +11,7 @@ Indice del contenido:
 
 - [Introducción](#introducción "Introducción")
 - [Instalación de Laravel Pail](#instalación-de-laravel-pail "Instalación de Laravel Pail")
+- [Usando Pail para hacer seguimiento de los logs](#usando-pail-para-hacer-seguimiento-de-los-logs "Usando Pail para hacer seguimiento de los logs")
 - [Filtrando logs](#filtrando-logs "Filtrando logs")
     - [Filtro por contenido](#filtro-por-contenido "Filtro por contenido")
     - [Filtro por mensaje](#filtro-por-mensaje "Filtro por mensaje")
