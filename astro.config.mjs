@@ -11,7 +11,9 @@ export default defineConfig({
   site: import.meta.env.VITE_APP_URL,
   integrations: [
     tailwind(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/og/'),
+    }),
     Compress(),
     robotsTxt(),
     partytown(),
