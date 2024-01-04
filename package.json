@@ -28,11 +28,11 @@
     "og:webp": "cd public/images && find . -type f -name \"*.png\" -exec sh -c 'cwebp -q 80 \"$0\" -o \"${0%.png}.webp\" && rm \"$0\"' {} \\;"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.0.3",
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^3.1.1",
-    "astro": "^2.10.3",
+    "@astrojs/partytown": "^2.0.3",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.0.9",
     "astro-expressive-code": "^0.26.1",
     "astro-seo": "^0.8.0",
     "tailwind-scrollbar-hide": "^1.1.7",
